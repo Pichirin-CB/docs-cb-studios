@@ -1,42 +1,23 @@
 :root {
+  --accent: #e7e7e7;
+  --accent-strong: #ffffff;
+  --bg: #000000;
+  --bg-grad-1: #0a0a0a;
+  --bg-grad-2: #111111;
+  --surface: rgba(18, 18, 18, 0.86);
+  --surface-strong: rgba(22, 22, 22, 0.94);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --text-main: #f5f5f5;
+  --text-soft: #c2c2c2;
+  --text-muted: #8e8e8e;
+  --code-bg: #050505;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 10px;
   --content-width: 980px;
   --font-sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Consolas", monospace;
-}
-
-:root[data-theme="dark"] {
-  --accent: #5ac8fa;
-  --accent-strong: #0a84ff;
-  --bg: #070b14;
-  --bg-grad-1: #0f1729;
-  --bg-grad-2: #111827;
-  --surface: rgba(20, 28, 46, 0.8);
-  --surface-strong: rgba(24, 35, 59, 0.92);
-  --surface-border: rgba(109, 136, 179, 0.26);
-  --text-main: #edf2ff;
-  --text-soft: #b5c4df;
-  --text-muted: #87a0c8;
-  --code-bg: #0b1222;
-  --shadow: 0 24px 60px rgba(2, 8, 20, 0.45);
-}
-
-:root[data-theme="light"] {
-  --accent: #007aff;
-  --accent-strong: #005bd6;
-  --bg: #eef4ff;
-  --bg-grad-1: #dae9ff;
-  --bg-grad-2: #f7faff;
-  --surface: rgba(255, 255, 255, 0.86);
-  --surface-strong: rgba(255, 255, 255, 0.95);
-  --surface-border: rgba(126, 150, 184, 0.25);
-  --text-main: #111827;
-  --text-soft: #415169;
-  --text-muted: #5f6f8a;
-  --code-bg: #111827;
-  --shadow: 0 24px 48px rgba(11, 35, 64, 0.12);
 }
 
 html,
@@ -48,35 +29,14 @@ body {
   font-family: var(--font-sans);
   color: var(--text-main);
   background:
-    radial-gradient(50% 40% at 15% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%),
-    radial-gradient(45% 40% at 95% 10%, color-mix(in srgb, var(--accent-strong) 18%, transparent), transparent 70%),
+    radial-gradient(52% 42% at 15% 0%, rgba(255, 255, 255, 0.06), transparent 72%),
+    radial-gradient(46% 42% at 95% 8%, rgba(255, 255, 255, 0.04), transparent 72%),
     linear-gradient(180deg, var(--bg-grad-1), var(--bg-grad-2) 28%, var(--bg) 100%);
   background-attachment: fixed;
 }
 
 a {
   color: var(--accent);
-}
-
-#theme-toggle {
-  position: fixed;
-  top: 14px;
-  right: 18px;
-  z-index: 9999;
-  border: 1px solid var(--surface-border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text-main);
-  font: 600 0.78rem/1 var(--font-sans);
-  letter-spacing: 0.01em;
-  padding: 0.58rem 0.9rem;
-  cursor: pointer;
-  backdrop-filter: blur(16px);
-  box-shadow: var(--shadow);
-}
-
-#theme-toggle:hover {
-  border-color: color-mix(in srgb, var(--accent) 50%, var(--surface-border));
 }
 
 .app-name {
@@ -90,7 +50,7 @@ a {
 }
 
 .app-nav {
-  margin-right: 106px;
+  margin-right: 16px;
 }
 
 .app-nav a {
@@ -121,7 +81,7 @@ a {
 
 .sidebar ul li.active > a {
   color: var(--text-main);
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .search {
@@ -194,7 +154,7 @@ a {
 
 .markdown-section p code,
 .markdown-section li code {
-  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-main);
   border-radius: 7px;
   padding: 2px 6px;
@@ -252,8 +212,8 @@ a {
 
 section.cover {
   background:
-    radial-gradient(50% 45% at 15% 10%, rgba(10, 132, 255, 0.32), transparent 70%),
-    radial-gradient(45% 45% at 85% 20%, rgba(90, 200, 250, 0.25), transparent 70%),
+    radial-gradient(52% 45% at 15% 10%, rgba(255, 255, 255, 0.08), transparent 72%),
+    radial-gradient(46% 45% at 85% 20%, rgba(255, 255, 255, 0.05), transparent 72%),
     linear-gradient(180deg, var(--bg-grad-1), var(--bg));
 }
 
@@ -270,24 +230,17 @@ section.cover .cover-main > p:last-child a:last-child {
 }
 
 section.cover .cover-main > p:last-child a:last-child:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--text-main);
+  border-color: var(--text-main);
 }
 
 @media (max-width: 960px) {
   .app-nav {
-    margin-right: 84px;
+    margin-right: 0;
   }
 }
 
 @media (max-width: 768px) {
-  #theme-toggle {
-    top: 10px;
-    right: 10px;
-    font-size: 0.72rem;
-    padding: 0.52rem 0.76rem;
-  }
-
   .content {
     padding-top: 14px;
   }
