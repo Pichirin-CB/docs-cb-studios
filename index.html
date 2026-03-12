@@ -2,83 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CB Studios Docs</title>
-  <meta name="description" content="Modern Docsify documentation template for FiveM scripts." />
-  <meta name="theme-color" content="#090807" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./logo.png" />
-  <link rel="shortcut icon" type="image/png" href="./logo.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
-  <link rel="stylesheet" href="./styles/ios.css" />
+  <title>SMDZ STUDIOS – FIVEM SCRIPT DOCUMENTATION</title>
+
+  <!-- SEO meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Dark-mode technical documentation for SMDZ Studios FiveM scripts: installation, configuration, usage guides and developer references." />
+  <meta name="keywords" content="SMDZ Studios, FiveM scripts, FiveM resources, GTA RP, ESX, QBCore, script documentation, installation guide, configuration, exports, events" />
+  <meta name="author" content="SMDZ Studios" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SMDZ STUDIOS – FIVEM SCRIPT DOCUMENTATION" />
+  <meta property="og:description" content="Official documentation for SMDZ Studios FiveM resources. Fast, readable, dark-mode docs for your server." />
+  <meta property="og:image" content="https://docs.smdz-studios.com/assets/logo.png" />
+  <meta property="og:url" content="https://docs.smdz-studios.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SMDZ STUDIOS – FIVEM SCRIPT DOCUMENTATION" />
+  <meta name="twitter:description" content="Dark-mode documentation for SMDZ Studios FiveM scripts." />
+  <meta name="twitter:image" content="https://docs.smdz-studios.com/assets/logo.png" />
+
+  <!-- Docsify theme (dark) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="app">Loading documentation...</div>
+  <!-- Global announcement bar – content & style controlled from banner-config.js -->
+  <div id="announcement-bar" class="announcement-bar">
+    <span id="announcement-text" class="announcement-text"></span>
+  </div>
+
+  <!-- Page loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="page-loader-inner">
+      <div class="page-loader-logo">
+        <img src="assets/logo.png" alt="SMDZ Studios Logo" />
+      </div>
+      <div class="page-loader-spinner"></div>
+      <p class="page-loader-text">Preparing SMDZ Studios docs…</p>
+    </div>
+  </div>
+
+  <div id="app" class="app-hidden">Loading SMDZ Studios documentation...</div>
+
+
+  <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button">
+    ↓
+  </button>
+
 
   <script>
     window.$docsify = {
-      name: "CB Studios Docs",
-      repo: "",
-      nameLink: "#/",
+      name: 'SMDZ Studios',
+      repo: '',
       loadSidebar: true,
-      loadNavbar: false,
-      subMaxLevel: 2,
-      auto2top: true,
-      maxLevel: 3,
-      coverpage: true,
-      notFoundPage: true,
+      subMaxLevel: 3,
+      autoHeader: true,
+      coverpage: false,
+      themeColor: '#509205',
+      maxLevel: 4,
+      homepage: 'home.md',
+
       search: {
         maxAge: 86400000,
-        paths: "auto",
-        placeholder: "Search script, event, export...",
-        noData: "No results found"
+        paths: 'auto',
+        placeholder: 'Search SMDZ scripts...',
+        noData: 'No results for this query.',
+        depth: 3
       },
-      copyCode: {
-        buttonText: "Copy",
-        errorText: "Failed",
-        successText: "Copied"
+
+      alias: {
+        '/_sidebar.md': '/_sidebar.md',
+        '/.*/_sidebar.md': '/_sidebar.md'
       },
-      pagination: {
-        previousText: "Previous",
-        nextText: "Next",
-        crossChapter: true
-      },
+
       plugins: [
-        function (hook) {
+
+        function (hook, vm) {
           hook.doneEach(function () {
-            const section = document.querySelector(".markdown-section");
-            if (!section) return;
+            var sidebarParent = document.querySelector('.sidebar');
+            var nav = document.querySelector('.sidebar-nav');
+            if (sidebarParent && nav && !document.querySelector('.brand-header')) {
+              var header = document.createElement('div');
+              header.className = 'brand-header';
+              header.innerHTML =
+                '<div class="sidebar-logo-wrapper">' +
+                  '<img src="assets/logo.png" alt="SMDZ Studios Logo" />' +
+                '</div>' +
+                '<div class="sidebar-menu-label"><strong>MENU</strong></div>';
+              sidebarParent.insertBefore(header, sidebarParent.firstChild);
+            }
+          });
+        },
 
-            const animatedNodes = section.querySelectorAll(
-              "h1, h2, h3, p, ul, ol, pre, table, blockquote, hr"
-            );
-
-            animatedNodes.forEach(function (node, index) {
-              node.classList.remove("is-visible");
-              node.classList.add("reveal-item");
-              node.style.setProperty("--stagger", String(index));
-            });
-
-            requestAnimationFrame(function () {
-              animatedNodes.forEach(function (node) {
-                node.classList.add("is-visible");
-              });
-            });
+        function (hook, vm) {
+          hook.afterEach(function (html, next) {
+            var footerHtml =
+              '<div class="smdz-footer">' +
+                '© 2025 - 2026 SMDZ Studios · All rights reserved · Not affiliated with R* Games<br />' +
+                'Made with 💚 by SMDZ Studios' +
+                '<div class="smdz-footer-logos">' +
+                  '<img src="assets/smdz.png" alt="SMDZ Studios" />' +
+                  '<img src="assets/cfx.png" alt="Cfx.re" />' +
+                  '<img src="assets/esx.png" alt="ESX" />' +
+                  '<img src="assets/qbcore.png" alt="QBCore" />' +
+                  '<img src="assets/qbox.png" alt="Qbox" />' +
+                  // '<img src="assets/vrp.png" alt="vRP" />' +
+                '</div>' +
+              '</div>';
+            next(html + footerHtml);
           });
         }
       ]
     };
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- Docsify core (AFTER window.$docsify) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- Official Docsify plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- Prism languages -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-lua.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+
+
+  <script src="banner-config.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('scroll-toggle-btn');
+      var app = document.getElementById('app');
+      var loader = document.getElementById('page-loader');
+
+
+      if (btn) {
+        function isAtBottom() {
+          return window.innerHeight + window.scrollY >= document.body.offsetHeight - 4;
+        }
+
+        function updateButtonState() {
+          if (isAtBottom()) {
+            btn.textContent = '↑';
+            btn.setAttribute('data-direction', 'up');
+          } else {
+            btn.textContent = '↓';
+            btn.setAttribute('data-direction', 'down');
+          }
+        }
+
+        btn.addEventListener('click', function () {
+          if (btn.getAttribute('data-direction') === 'up') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+          }
+        });
+
+        window.addEventListener('scroll', updateButtonState);
+        window.addEventListener('resize', updateButtonState);
+        updateButtonState();
+      }
+
+
+      if (window.SMDZ_BANNER_CONFIG) {
+        var bar = document.getElementById('announcement-bar');
+        if (bar) {
+          var cfg = window.SMDZ_BANNER_CONFIG;
+
+          if (!cfg.enabled) {
+            bar.style.display = 'none';
+          } else {
+
+            if (cfg.type) {
+              bar.classList.add('announcement-type-' + cfg.type);
+            }
+
+
+            if (cfg.layout === 'compact') {
+              bar.classList.add('announcement-layout-compact');
+            }
+
+
+            if (cfg.align === 'left') {
+              bar.classList.add('announcement-align-left');
+            } else {
+              bar.classList.add('announcement-align-center');
+            }
+
+
+            var inner = document.createElement('div');
+            inner.className = 'announcement-inner';
+
+            var content = document.createElement('div');
+            content.className = 'announcement-content';
+
+            if (cfg.icon) {
+              var icon = document.createElement('span');
+              icon.className = 'announcement-icon';
+              icon.textContent = cfg.icon;
+              content.appendChild(icon);
+            }
+
+            var textBlock = document.createElement('div');
+            textBlock.className = 'announcement-text-block';
+
+            if (cfg.title) {
+              var title = document.createElement('div');
+              title.className = 'announcement-title';
+              title.textContent = cfg.title;
+              textBlock.appendChild(title);
+            }
+
+            if (cfg.subtitle) {
+              var subtitle = document.createElement('div');
+              subtitle.className = 'announcement-subtitle';
+              subtitle.innerHTML = cfg.subtitle;
+              textBlock.appendChild(subtitle);
+            }
+
+            content.appendChild(textBlock);
+            inner.appendChild(content);
+
+
+            if (cfg.cta && cfg.cta.enabled && cfg.cta.label && cfg.cta.url) {
+              var cta = document.createElement('a');
+              cta.className = 'announcement-cta';
+              cta.href = cfg.cta.url;
+              cta.target = cfg.cta.target || '_blank';
+              cta.rel = 'noopener';
+              cta.textContent = cfg.cta.label;
+              inner.appendChild(cta);
+            }
+
+
+            bar.innerHTML = '';
+            bar.appendChild(inner);
+
+            requestAnimationFrame(function () {
+              bar.classList.add('announcement-visible');
+            });
+          }
+        }
+      }
+
+
+      setTimeout(function () {
+        if (loader) {
+          loader.classList.add('page-loader-hidden');
+        }
+        if (app) {
+          app.classList.remove('app-hidden');
+        }
+      }, 3000);
+    });
+  </script>
 </body>
 </html>

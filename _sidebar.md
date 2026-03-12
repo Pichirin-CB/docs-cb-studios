@@ -1,12 +1,29 @@
-- Introduction
-  - [Home](README.md)
+- 🏠 **INFORMATION**
+  - [Home](/home.md)
+  - [Changelog](/changelog.md)
+  
+- 📬 **SUPPORT**
+  - [Get Support](/support.md)
+  - [FAQ](/faq.md)
+  - [Common Problems](/problems.md)
+  - [Asset Escrow System](/fxap.md)
 
-- Guides
-  - [Quickstart](guide/quickstart.md)
-  - [Recommended Structure](guide/structure.md)
+- 💲 **PAID RESOURCES**
+  - [🧰 | Fast Repair — v 1.0](/scripts/fast-repair.md)
+  - [🚗 | Speed For Zones](/scripts/speed-for-zones.md)
+  - [📐 | HUD 2D Builder](/scripts/hud2d-builder.md)
+  - [🚌 | Bus Travel](/scripts/bus-travel.md)
+  <!-- - [🎁 | Welcome Pack](/scripts/welcome-pack.md) -->
+  - [🔖 | Evidence Markers](/scripts/evidence-markers.md)
+  - [🐄 | Rancher Job](/scripts/rancher-job.md)
+  - [📡 | Emergency GPS](/scripts/emergency-gps.md)
+  - [📱 | LB Phone APP - Emergency Alerts](/scripts/app-emergency-alerts.md)
 
-- Templates
-  - [Script Template](template/script-doc-template.md)
+- 🎨 **REDESINGS**
+  - [🎨 | Ox Target (Crystal Style)](/scripts/ox-target-redesing-crystal.md)
 
-- Scripts
-  - [sample-heist](scripts/sample-heist.md)
+
+- 🔥 **FREE RESOURCES**
+  - [🗺️ | Premium Radar & Minimap Toggle](/scripts/toggle-minimap.md)
+
+
