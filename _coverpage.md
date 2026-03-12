@@ -1,6 +1,8 @@
-![logo](/_media/fivem-docs-mark.svg)
+![CB Studios Logo](/logo.png)
 
 # CB Studios Docs
+
+<p class="hero-badge">SVTA Premium Gold Dark</p>
 
 > Structured, production-ready docs for FiveM resources.
 

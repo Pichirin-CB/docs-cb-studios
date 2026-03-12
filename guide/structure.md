@@ -6,7 +6,6 @@
 .
 |-- index.html
 |-- README.md
-|-- _navbar.md
 |-- _sidebar.md
 |-- styles/
 |   `-- ios.css
