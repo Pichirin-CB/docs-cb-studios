@@ -19,7 +19,7 @@
 
 # 🧩 OVERVIEW:
 - **Name:** `fast_repair_sergioomdz`
-- **Author:** SMDZ Studios
+- **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - **Framework:** ESX / QBCore 
 - **Version:** `1.2.0`
 - **Status:** <span class="badge badge--eol">END OF LIFE (DISCONTINUED)</span>

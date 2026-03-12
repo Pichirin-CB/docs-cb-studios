@@ -20,7 +20,7 @@
 
 # 🧩 **OVERVIEW:**
 - 📌 **Name:** `smdz_rancher_job`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QBX / Standalone (STANDALONE NOT TESTED)
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>

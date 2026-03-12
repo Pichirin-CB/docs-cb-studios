@@ -14,7 +14,7 @@
   ></iframe>
 </div>
 
-> This file is a **ready-to-fill template** for a new SMDZ Studios script.  
+> This file is a **ready-to-fill template** for a new 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 script.  
 > In future chats, you can paste this file and I will help you fill each section with real data for your script.
 
 ---
@@ -22,7 +22,7 @@
 # 🧩 OVERVIEW:
 
 - 📌 **Name:** `smdz_example` <!-- change to your resource name -->
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / Standalone <!-- choose one -->
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** `Stable`  
@@ -34,7 +34,7 @@ Badges (optional):
 - <span class="badge badge--legacy">Legacy</span>
 
 **Short description:**  
-_Example_: “Lightweight example script demonstrating how SMDZ Studios documents FiveM resources.”
+_Example_: “Lightweight example script demonstrating how 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 documents FiveM resources.”
 
 Replace this with a **1–2 sentence** description of what the script does.
 
@@ -67,7 +67,7 @@ resources/[smdz]/smdz_example
 3. Add the resource to your `server.cfg`:
 
 ```bash
-## SMDZ Studios
+## 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 ensure smdz_example
 ```
 

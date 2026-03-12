@@ -450,6 +450,6 @@ If you have gone through:
 • Steps to reproduce:  1, 2, 3...
 ```
 
-Then go to **[Support](support.md)** and contact SMDZ Studios by **email** or **Discord**.
+Then go to **[Support](support.md)** and contact 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 by **email** or **Discord**.
 
 The more precise your report, the **faster** and **better** the help you will receive.

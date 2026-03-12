@@ -20,7 +20,7 @@
 
 # 🧩 OVERVIEW:
 - 📌 **Name:** `smdz_hud2d_builder`
-- 🧑‍💻 **Author:** **SMDZ Studios**
+- 🧑‍💻 **Author:** **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬**
 - 🧭 **Framework:** Standalone
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>
@@ -83,7 +83,7 @@ resources/[smdz]/smdz_hud2d_builder/snippets/
 3. Add to `server.cfg`:
 
 ```bash
-## SMDZ Studios
+## 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 ensure smdz_hud2d_builder
 ```
 
@@ -111,7 +111,7 @@ Other important files:
 ## **CONFIG.LUA**
 ```lua
 --[[
-    SMDZ Studios - smdz_hud2d_builder
+    𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 - smdz_hud2d_builder
     Main configuration file.
 
     💡 Tip:
@@ -304,7 +304,7 @@ Config.Notifications = {
 ## **KEYS_CONFIG.LUA**
 ```lua
 --[[
-    SMDZ Studios - smdz_hud2d_builder
+    𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 - smdz_hud2d_builder
     Keybind configuration file.
 
     📌 All key values are FiveM **control IDs** (PC).

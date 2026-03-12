@@ -17,7 +17,7 @@
 
 # 🧩 **OVERVIEW:**
 - 📌 **Name:** `smdz_bus_travels`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QB Box / Standalone
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>

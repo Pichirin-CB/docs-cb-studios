@@ -18,7 +18,7 @@
 
 # 🧩 **OVERVIEW:**
 - 📌 **Name:** `ox_target` by Overextended
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QBX / VRP / ND
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>

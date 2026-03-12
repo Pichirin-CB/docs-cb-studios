@@ -18,7 +18,7 @@
 # 🧩 **OVERVIEW:**
 
 - 📌 **Name:** `smdz_evidence_markers`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QBX / Standalone
 - 🧾 **Version:** `1.1.1`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>

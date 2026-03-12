@@ -1,11 +1,11 @@
 # 🆘 **SUPPORT:**
 
-This page explains **how to request support in a way that is fast, clear and professional** for both you and SMDZ Studios.
+This page explains **how to request support in a way that is fast, clear and professional** for both you and 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬.
 
-For any question, bug or installation issue related to **SMDZ Studios** FiveM scripts, please use one of the following official channels:
+For any question, bug or installation issue related to **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬** FiveM scripts, please use one of the following official channels:
 
 - 📧 **Email:** `smdzstudios@gmail.com`  
-- 💬 **Discord:** [Join the SMDZ Studios Discord](https://discord.gg/XraafphzrQ)
+- 💬 **Discord:** [Join the 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Discord](https://discord.gg/XraafphzrQ)
 
 Discord is usually the **fastest** way to get help, especially when screenshots or short videos are needed.
 
@@ -52,14 +52,14 @@ To avoid long back‑and‑forth conversations and to get a useful answer on the
    - Only include the parts of your config that are related to the problem.  
    - Remove or mask any secrets (webhooks, API keys, passwords) before sharing.
 
-The more precise and complete this information is, the faster SMDZ Studios can identify the root cause and provide a real solution instead of guesses.
+The more precise and complete this information is, the faster 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 can identify the root cause and provide a real solution instead of guesses.
 
 ---
 
 # 🧪 **BUG REPORTS & QUALITY FEEDBACK:**
 
 Well‑written bug reports and detailed feedback are extremely valuable.  
-They help SMDZ Studios make each script **more stable, faster and easier to configure** for the entire community.
+They help 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 make each script **more stable, faster and easier to configure** for the entire community.
 
 <!-- <div class="tip"> -->
   <p>
@@ -76,7 +76,7 @@ When reporting a bug, try to provide:
 - ✅ Relevant parts of your configuration (with sensitive data removed).  
 - ✅ `resmon 1` screenshots if the bug is related to performance.
 
-If a bug is confirmed, reproducible and has a noticeable impact, SMDZ Studios may, at its sole discretion:
+If a bug is confirmed, reproducible and has a noticeable impact, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 may, at its sole discretion:
 
 - Offer an additional script copy  
 - Apply a discount to a future purchase  

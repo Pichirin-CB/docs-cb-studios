@@ -17,7 +17,7 @@
 
 # 🧩 **OVERVIEW:**
 - 📌 **Name:** `smdz_lb_emergency_app`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QB Box
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>
@@ -599,7 +599,7 @@ Config.App = { -- App metadata and asset configuration.
     DescriptionKey = "app.description", -- Locale key for the app description.
     Description = "", -- Fallback description if the key is missing.
     DeveloperKey = "app.developer", -- Locale key for the developer name.
-    Developer = "SMDZ Studios", -- Fallback developer if the key is missing.
+    Developer = "𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬", -- Fallback developer if the key is missing.
     Size = 59812, -- App size shown in the phone app list.
     DefaultApp = false, -- If set, controls whether the app is installed by default.
     Icon = "ui/dist/app-icon.jpg", -- Icon path  or URL.

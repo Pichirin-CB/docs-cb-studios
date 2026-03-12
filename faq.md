@@ -1,6 +1,6 @@
 # ❓ **FAQ – FREQUENTLY ASKED QUESTIONS:**
 
-This page collects common questions about **SMDZ Studios** FiveM scripts and documentation.  
+This page collects common questions about **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬** FiveM scripts and documentation.  
 You can treat it as a “first stop” before opening a ticket.
 
 ---
@@ -25,7 +25,7 @@ If you are not sure how to merge a specific update, you can always ask in **Supp
 
 # 🧱 **WHICH FRAMEWORKS ARE SUPPORTED?:**
 
-Most SMDZ Studios scripts focus on the main modern FiveM ecosystems:
+Most 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts focus on the main modern FiveM ecosystems:
 
 - **ESX** (including ESX Legacy).  
 - **QBCore**.  

@@ -1,4 +1,4 @@
-// SMDZ Studios — Global announcement bar configuration
+// 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 — Global announcement bar configuration
 
 window.SMDZ_BANNER_CONFIG = {
   enabled: false,

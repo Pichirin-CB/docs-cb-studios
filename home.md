@@ -1,6 +1,6 @@
 <div class="hero-logo-panel">
   <div class="hero-logo-inner">
-    <img src="assets/logo.png" alt="SMDZ Studios Logo" style="max-width: 390px; max-height: 390px;" />
+    <img src="assets/logo.png" alt="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Logo" style="max-width: 390px; max-height: 390px;" />
   </div>
 </div>
 <div class="hero-header-wrapper" style="margin-top: 0.5rem; margin-bottom: 1.8rem; text-align: center;">
@@ -42,7 +42,7 @@ If you are here because you just purchased a script, follow this path before tou
 
 # 🧭 **WHAT YOU WILL FIND IN THESE DOCS:**
 
-Think of this documentation as a focused hub for **server owners** and **developers** using SMDZ Studios scripts:
+Think of this documentation as a focused hub for **server owners** and **developers** using 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts:
 
 <div class="feature-row">
   <div class="feature-card">
@@ -72,7 +72,7 @@ Think of this documentation as a focused hub for **server owners** and **develop
 
 # 🧩 **HOW TO USE THESE DOCS EFFICIENTLY:**
 
-To avoid wasting time and to keep your server stable, use this flow whenever you work with an SMDZ Studios resource:
+To avoid wasting time and to keep your server stable, use this flow whenever you work with an 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 resource:
 
 1. **Start from the script page**  
    - Read the page of the script you are installing or updating from top to bottom.  
@@ -92,7 +92,7 @@ To avoid wasting time and to keep your server stable, use this flow whenever you
 
 4. **Go to support when you have a real, reproducible issue**  
    - When something feels “off” and you can reproduce it, move to **[Support](support.md)**.  
-   - There you will find exactly what information to include so that SMDZ Studios can help effectively.
+   - There you will find exactly what information to include so that 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 can help effectively.
 
 ---
 
@@ -110,4 +110,4 @@ Depending on what you need right now:
   → Visit **[Support](support.md)** for contact details and what to include in your ticket so it can be handled quickly and professionally.  
 
 Use the **search bar** in the sidebar whenever you remember a keyword but not the exact page name.  
-Everything here is designed to save you time and reduce guesswork when running your FiveM server with SMDZ Studios scripts. 💚
+Everything here is designed to save you time and reduce guesswork when running your FiveM server with 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts. 💚

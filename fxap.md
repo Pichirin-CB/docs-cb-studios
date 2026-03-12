@@ -1,6 +1,6 @@
 # ASSET ESCROW SYSTEM (CFX.RE / TEBEX):
 
-The **Asset Escrow** system is used by Cfx.re and Tebex to protect premium FiveM resources, including several scripts created by **SMDZ Studios**.  
+The **Asset Escrow** system is used by Cfx.re and Tebex to protect premium FiveM resources, including several scripts created by **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬**.  
 This page is written for **server owners**, even if you do not have a deep technical background. The goal is to explain, in clear language, what this system does and how to resolve the most common problems related to it.
 
 ---
@@ -34,8 +34,8 @@ All three must align correctly.
 
 ### STEP 1 – PURCHASE ON TEBEX:
 
-- All official SMDZ Studios scripts are sold exclusively via:  
-  👉 **[SMDZ Studios Tebex Store](https://smdz-studios.tebex.io/)**
+- All official 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts are sold exclusively via:  
+  👉 **[𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Tebex Store](https://smdz-studios.tebex.io/)**
 
 When you purchase a script:
 
@@ -55,7 +55,7 @@ To verify or create this link:
 2. Log into your **Tebex account** in the same browser session.
 3. Follow the instructions in Tebex/Keymaster to link your accounts (if they are not already linked).
 4. Confirm that:
-   - The Cfx.re account shown in Keymaster is the one you intend to use for your SMDZ Studios assets.
+   - The Cfx.re account shown in Keymaster is the one you intend to use for your 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 assets.
    - This account is the same one that appears as owning your purchase in the Tebex control panel.
 
 ---
@@ -115,7 +115,7 @@ Editing protected areas can:
 
 - Prevent the resource from starting.
 - Trigger additional errors or unexpected behaviour.
-- Make it much harder for SMDZ Studios to support you, because the resource no longer matches the released version.
+- Make it much harder for 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 to support you, because the resource no longer matches the released version.
 
 ---
 
@@ -296,7 +296,7 @@ This error often points to **network or connectivity problems** between your ser
 1. Verify that the server has full internet connectivity.
 2. Temporarily relax strict firewall rules or DDoS protections and test again.
 3. Restart the server after making changes.
-4. If the error continues, contact your hosting provider and SMDZ Studios support with:
+4. If the error continues, contact your hosting provider and 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 support with:
    - Detailed console logs.
    - Information about your hosting environment (VPS, dedicated machine, game panel, etc.).
 
@@ -304,9 +304,9 @@ This error often points to **network or connectivity problems** between your ser
 
 # 📌 **BEST PRACTICES WHEN USING ASSET ESCROW:**
 
-To maintain a stable and secure environment while using escrowed SMDZ Studios scripts:
+To maintain a stable and secure environment while using escrowed 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts:
 
-- Always purchase from the **official SMDZ Studios Tebex store**.
+- Always purchase from the **official 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Tebex store**.
 - Make sure your **Tebex**, **Cfx.re**, and **server license key** are all aligned.
 - Only modify:
   - Configuration files.
@@ -329,15 +329,15 @@ If, after following this guide, you still experience problems:
    - Full console log from server startup until the error appears.
    - A short description of what you have already tried.
 
-2. Visit the **[Support](support.md)** page and contact SMDZ Studios through the official email or Discord.
+2. Visit the **[Support](support.md)** page and contact 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 through the official email or Discord.
 
-With complete and precise information, SMDZ Studios can diagnose entitlement and escrow issues quickly and provide a clear resolution path.
+With complete and precise information, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 can diagnose entitlement and escrow issues quickly and provide a clear resolution path.
 
 ---
 
 # COMMON PROBLEMS & TROUBLESHOOTING:
 
-The following guide is designed to help **server owners of any experience level** systematically diagnose and resolve common issues with SMDZ Studios scripts.  
+The following guide is designed to help **server owners of any experience level** systematically diagnose and resolve common issues with 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts.  
 Each section follows the same structure:
 
 1. **What you see** in game or in the console.  
@@ -744,7 +744,7 @@ If you still experience high usage, gather:
 
 # 📬 **WHEN TO CONTACT SUPPORT:**
 
-If you have worked through the relevant section for your problem and still cannot resolve the issue, SMDZ Studios is available to assist.
+If you have worked through the relevant section for your problem and still cannot resolve the issue, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is available to assist.
 
 ### INFORMATION THAT GREATLY SPEEDS UP SUPPORT:
 
@@ -762,4 +762,4 @@ Prepare the following details:
 
 Then visit the **[Support](support.md)** page and use the provided email or Discord contact.
 
-A clear and structured report allows SMDZ Studios to analyse your situation quickly and provide accurate, professional guidance for your specific case.
+A clear and structured report allows 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 to analyse your situation quickly and provide accurate, professional guidance for your specific case.

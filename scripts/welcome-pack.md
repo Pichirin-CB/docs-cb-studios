@@ -20,7 +20,7 @@ A modern **welcome rewards** system for FiveM servers. Spawn NPCs, open a premiu
 # 🧩 **OVERVIEW:**
 
 - 📌 **Name:** `smdz_welcome_pack`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QBX / Standalone
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>
@@ -82,7 +82,7 @@ sql/install.sql
 4. Add the resource to `server.cfg`:
 
 ```bash
-## SMDZ Studios
+## 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 ensure smdz_welcome_pack
 ```
 

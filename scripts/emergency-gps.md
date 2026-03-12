@@ -18,7 +18,7 @@
 # 🧩 **OVERVIEW:**
 
 - 📌 **Name:** `smdz_emergency_gps`
-- 🧑‍💻 **Author:** SMDZ Studios
+- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
 - 🧭 **Framework:** ESX / QBCore / QBX
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">Stable</span>
