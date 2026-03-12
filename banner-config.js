@@ -1,10 +1,10 @@
 // SMDZ Studios — Global announcement bar configuration
 
 window.SMDZ_BANNER_CONFIG = {
-  enabled: true,
+  enabled: false,
 
   // "info" | "alert" | "sale" | "maintenance" | "announcement" | "warning"
-  type: "info",
+  type: "sale",
 
   // "full" | "compact"
   layout: "compact",
