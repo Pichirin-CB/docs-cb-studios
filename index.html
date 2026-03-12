@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CB Studios Docs</title>
+  <meta name="description" content="Documentacion de scripts FiveM con Docsify" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="./styles/ios.css" />
+</head>
+<body>
+  <div id="app">Cargando documentacion...</div>
+
+  <script>
+    window.$docsify = {
+      name: "CB Studios Docs",
+      repo: "",
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      maxLevel: 3,
+      coverpage: false,
+      notFoundPage: true,
+      search: {
+        maxAge: 86400000,
+        paths: "auto",
+        placeholder: "Buscar script, evento, export...",
+        noData: "Sin resultados"
+      },
+      copyCode: {
+        buttonText: "Copiar",
+        errorText: "Error",
+        successText: "Copiado"
+      },
+      pagination: {
+        previousText: "Anterior",
+        nextText: "Siguiente",
+        crossChapter: true
+      },
+      alias: {
+        "/.*/_sidebar.md": "/_sidebar.md",
+        "/.*/_navbar.md": "/_navbar.md"
+      }
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+</body>
+</html>
