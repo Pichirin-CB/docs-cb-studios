@@ -1,12 +1,12 @@
-- Introduccion
-  - [Inicio](/README.md)
+- Introduction
+  - [Home](/README.md)
 
-- Guias
+- Guides
   - [Quickstart](/guide/quickstart.md)
-  - [Estructura recomendada](/guide/structure.md)
+  - [Recommended Structure](/guide/structure.md)
 
-- Plantillas
-  - [Template de script](/template/script-doc-template.md)
+- Templates
+  - [Script Template](/template/script-doc-template.md)
 
 - Scripts
   - [sample-heist](/scripts/sample-heist/README.md)

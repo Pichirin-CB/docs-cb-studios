@@ -1,24 +1,24 @@
 # sample-heist / Commands
 
-## Comandos admin
+## Admin commands
 
 ### `/heiststart`
 
-Fuerza inicio de evento (solo staff).
+Force-starts a heist session (staff only).
 
-Permiso sugerido:
+Suggested permission:
 
 - `group.admin`
 
 ### `/heistreset`
 
-Resetea cooldown y estado activo.
+Resets cooldown and active state.
 
-Permiso sugerido:
+Suggested permission:
 
 - `group.superadmin`
 
-## Ejemplo ACE
+## ACE example
 
 ```cfg
 add_ace group.admin command.heiststart allow

@@ -1,12 +1,12 @@
 # sample-heist / Config
 
-## Variables principales
+## Core settings
 
 ```lua
 Config.Debug = false
-Config.Locale = "es"
+Config.Locale = "en"
 Config.RequiredPolice = 2
-Config.GlobalCooldown = 45 -- minutos
+Config.GlobalCooldown = 45 -- minutes
 Config.StartItem = "heist_card"
 ```
 
@@ -22,7 +22,7 @@ Config.Rewards = {
 }
 ```
 
-## Zones
+## Zone coordinates
 
 ```lua
 Config.Zones = {
@@ -32,7 +32,7 @@ Config.Zones = {
 }
 ```
 
-## Buenas practicas
+## Best practices
 
-- No dejes `Debug = true` en produccion.
-- Usa cooldown mayor a 30 min para economias sensibles.
+- Keep `Debug = false` in production.
+- Use 30+ minute cooldown for stable server economy balance.

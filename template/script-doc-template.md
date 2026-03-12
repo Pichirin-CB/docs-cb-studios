@@ -1,30 +1,32 @@
 # <script-name>
 
-Estado: `stable`  
+Status: `stable`  
 Version: `0.1.0`  
-Ultima actualizacion: `YYYY-MM-DD`
+Last updated: `YYYY-MM-DD`
 
 ## Overview
 
-Descripcion corta del script y problema que resuelve en tu servidor.
+Write a short description of what the resource does and which server problem it solves.
 
-## Features
+## Feature Highlights
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Key feature 1
+- Key feature 2
+- Key feature 3
 
-## Requisitos
+## Requirements
 
-- FXServer artifact: `xxxx`
-- Framework: `ESX` o `QBCore`
-- Dependencias: `ox_lib`, `oxmysql`, etc.
+| Item | Value |
+| --- | --- |
+| FXServer artifact | `xxxx` |
+| Framework | `ESX` or `QBCore` |
+| Dependencies | `ox_lib`, `oxmysql`, etc. |
 
-## Instalacion
+## Installation
 
-1. Copia la carpeta del recurso a `resources/[local]/<script-name>`.
-2. Verifica dependencias en `resources/[standalone]`.
-3. Asegura el recurso en `server.cfg`:
+1. Copy the resource folder to `resources/[local]/<script-name>`.
+2. Verify required dependencies are installed.
+3. Add ensures in `server.cfg`:
 
 ```cfg
 ensure <dependency-1>
@@ -32,25 +34,25 @@ ensure <dependency-2>
 ensure <script-name>
 ```
 
-## Configuracion rapida
+## Quick Configuration
 
 ```lua
 Config.Debug = false
-Config.Locale = "es"
+Config.Locale = "en"
 Config.Framework = "qb"
 ```
 
-## Uso basico
+## Basic Usage
 
-Describe como lo usa un jugador y como lo usa staff/admin.
+Explain the normal player flow and any admin/staff controls.
 
-## Integraciones
+## Integrations
 
-- Inventario: `ox_inventory` / `qb-inventory`
+- Inventory: `ox_inventory` / `qb-inventory`
 - Target: `ox_target` / `qb-target`
 - UI: `ox_lib`
 
-## Referencia tecnica
+## Technical Reference
 
 - [Config](./config.md)
 - [Events](./events.md)
@@ -60,15 +62,15 @@ Describe como lo usa un jugador y como lo usa staff/admin.
 
 ## FAQ
 
-### No inicia el recurso
+### Resource does not start
 
-- Revisa el orden de `ensure`
-- Revisa dependencias faltantes
+- Confirm ensure order in `server.cfg`.
+- Confirm dependency names and folder names.
 
-### No se ejecuta un evento
+### Event is not firing
 
-- Verifica nombre del evento y lado correcto (client/server)
+- Verify exact event name and the correct side (`client` or `server`).
 
-## Soporte
+## Support
 
-Define canal oficial de soporte (Discord, GitHub issues, etc.).
+Add your official support channel (Discord, GitHub Issues, or ticket system).

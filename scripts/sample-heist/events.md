@@ -4,18 +4,18 @@
 
 ### `sample-heist:server:start`
 
-Inicia validaciones del robo.
+Runs start validation for the heist flow.
 
-Parametros:
+Parameters:
 
 - `source` (`number`)
 - `zoneId` (`string`)
 
 ### `sample-heist:server:finish`
 
-Entrega recompensa y aplica cooldown.
+Applies rewards and starts cooldown.
 
-Parametros:
+Parameters:
 
 - `source` (`number`)
 - `result` (`table`)
@@ -24,23 +24,23 @@ Parametros:
 
 ### `sample-heist:client:beginPhase`
 
-Inicia fase visual para el jugador.
+Starts the phase visuals and objective logic.
 
-Parametros:
+Parameters:
 
 - `phaseId` (`number`)
 - `data` (`table`)
 
 ### `sample-heist:client:policeAlert`
 
-Muestra alerta policial.
+Pushes dispatch data to police players.
 
-Parametros:
+Parameters:
 
 - `coords` (`vector3`)
 - `label` (`string`)
 
-## Ejemplo de uso
+## Usage example
 
 ```lua
 RegisterNetEvent("sample-heist:client:beginPhase", function(phaseId, data)

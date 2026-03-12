@@ -1,6 +1,6 @@
-# Estructura recomendada
+# Recommended Structure
 
-## Arbol base
+## Base tree
 
 ```text
 .
@@ -16,7 +16,7 @@
 |-- template/
 |   `-- script-doc-template.md
 `-- scripts/
-    `-- <nombre-script>/
+    `-- <script-name>/
         |-- README.md
         |-- config.md
         |-- events.md
@@ -25,24 +25,24 @@
         `-- changelog.md
 ```
 
-## Estandar de secciones en README de script
+## README standard for each script
 
-1. Overview (que hace el recurso)
+1. Overview
 2. Features
-3. Requisitos
-4. Instalacion
-5. Configuracion rapida
-6. Integraciones (ESX/QB/ox_lib/etc)
-7. FAQ corta
-8. Links tecnicos a pages (`config`, `events`, `exports`, `commands`)
+3. Requirements
+4. Installation
+5. Quick configuration
+6. Integrations
+7. FAQ
+8. Technical links (`config`, `events`, `exports`, `commands`, `changelog`)
 
-## Convencion de codigo
+## Code block conventions
 
-- `lua` para snippets de cliente/servidor
-- `cfg` para fragments de `server.cfg`
-- `json` para data config cuando aplique
+- Use `lua` for client/server snippets.
+- Use `cfg` for `server.cfg` examples.
+- Use `json` when documenting structured config files.
 
-## Versionado
+## Versioning
 
-- `major.minor.patch` (ejemplo: `2.3.1`)
-- Changelog con fecha `YYYY-MM-DD`
+- Follow `major.minor.patch` (example: `2.3.1`).
+- Changelog date format: `YYYY-MM-DD`.

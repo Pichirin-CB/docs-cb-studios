@@ -1,38 +1,38 @@
 # Quickstart
 
-## 1) Ejecutar docs en local
+## 1) Run docs locally
 
 ```bash
 npx docsify-cli serve .
 ```
 
-## 2) Convencion por script
+## 2) Use one folder per script
 
-Cada script debe vivir en:
-
-```text
-scripts/<nombre-script>/
-```
-
-Minimo recomendado:
+Every script should live in:
 
 ```text
-scripts/<nombre-script>/README.md
-scripts/<nombre-script>/config.md
-scripts/<nombre-script>/events.md
-scripts/<nombre-script>/exports.md
-scripts/<nombre-script>/commands.md
-scripts/<nombre-script>/changelog.md
+scripts/<script-name>/
 ```
 
-## 3) Agregar nuevo script al menu
+Recommended minimum:
 
-Edita `/_sidebar.md` y anade tus enlaces.
+```text
+scripts/<script-name>/README.md
+scripts/<script-name>/config.md
+scripts/<script-name>/events.md
+scripts/<script-name>/exports.md
+scripts/<script-name>/commands.md
+scripts/<script-name>/changelog.md
+```
 
-## 4) Reglas basicas de documentacion
+## 3) Add your script to navigation
 
-- Define requisitos claros (framework, dependencias, version de artifact).
-- Explica instalacion en pasos cortos.
-- Separa referencias tecnicas (events, exports, commands) en paginas propias.
-- Incluye ejemplos de codigo reales.
-- Mantiene changelog en orden descendente.
+Edit `/_sidebar.md` and add links for each page.
+
+## 4) Documentation quality rules
+
+- Define clear requirements (framework, dependencies, artifact version).
+- Keep installation steps short and verifiable.
+- Separate technical references (`events`, `exports`, `commands`) into dedicated pages.
+- Include real code examples.
+- Keep changelog entries in descending order by date.

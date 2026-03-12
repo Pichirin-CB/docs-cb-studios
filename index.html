@@ -1,47 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CB Studios Docs</title>
-  <meta name="description" content="Documentacion de scripts FiveM con Docsify" />
+  <meta name="description" content="Modern Docsify documentation template for FiveM scripts." />
+  <meta name="theme-color" content="#070b14" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
   <link rel="stylesheet" href="./styles/ios.css" />
 </head>
 <body>
-  <div id="app">Cargando documentacion...</div>
+  <div id="app">Loading documentation...</div>
+  <button id="theme-toggle" type="button" aria-label="Toggle color theme"></button>
 
   <script>
+    const THEME_KEY = "cb_docs_theme";
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      const button = document.getElementById("theme-toggle");
+      if (button) {
+        button.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+      }
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      applyTheme(savedTheme || "dark");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      const button = document.getElementById("theme-toggle");
+      button.addEventListener("click", function () {
+        const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+        localStorage.setItem(THEME_KEY, nextTheme);
+        applyTheme(nextTheme);
+      });
+    });
+
     window.$docsify = {
       name: "CB Studios Docs",
       repo: "",
+      nameLink: "/",
       loadSidebar: true,
       loadNavbar: true,
       subMaxLevel: 2,
       auto2top: true,
       maxLevel: 3,
-      coverpage: false,
+      coverpage: true,
       notFoundPage: true,
       search: {
         maxAge: 86400000,
         paths: "auto",
-        placeholder: "Buscar script, evento, export...",
-        noData: "Sin resultados"
+        placeholder: "Search script, event, export...",
+        noData: "No results found"
       },
       copyCode: {
-        buttonText: "Copiar",
-        errorText: "Error",
-        successText: "Copiado"
+        buttonText: "Copy",
+        errorText: "Failed",
+        successText: "Copied"
       },
       pagination: {
-        previousText: "Anterior",
-        nextText: "Siguiente",
+        previousText: "Previous",
+        nextText: "Next",
         crossChapter: true
       },
       alias: {

@@ -1,36 +1,36 @@
-# CB Studios - Docsify Template para FiveM
+# CB Studios FiveM Docs
 
-Documentacion base para scripts de FiveM con estructura estandar, ordenada y facil de mantener.
+A production-ready Docsify template for documenting FiveM resources with clear technical references, consistent structure, and a polished iOS-inspired interface.
 
-## Empezar rapido
+## Quick Start
 
-1. Abre este proyecto en tu editor.
-2. Sirve los archivos estaticos en local.
-3. Entra a `http://localhost:3000` (o el puerto de tu servidor).
-
-Ejemplo con Node:
+1. Open this folder in your editor.
+2. Start a local static server.
+3. Visit `http://localhost:3000`.
 
 ```bash
 npx docsify-cli serve .
 ```
 
-## Que incluye esta plantilla
+## What You Get
 
-- Navegacion lateral por categorias
-- Navbar superior
-- Buscador
-- Copiar codigo
-- Paginacion entre paginas
-- Estilo visual tipo iOS
-- Plantilla lista para duplicar por cada script
+- Structured sidebar and top navigation
+- Full-text search
+- Copy code button
+- Previous/next pagination
+- Dark iOS-style visual system
+- Reusable script documentation template
+- Example script docs split by technical area
 
-## Navegacion recomendada
+## Documentation Flow
 
-- `guide/quickstart.md`: setup inicial del servidor
-- `guide/structure.md`: convenciones de documentacion
-- `template/script-doc-template.md`: base reutilizable
-- `scripts/sample-heist/*`: ejemplo completo
+- Read [Quickstart](/guide/quickstart.md)
+- Follow [Documentation Structure](/guide/structure.md)
+- Duplicate [Script Template](/template/script-doc-template.md)
+- Use [`scripts/sample-heist/`](/scripts/sample-heist/README.md) as a live example
 
-## Siguiente paso
+## Recommended Next Step
 
-Duplica `template/script-doc-template.md` dentro de `scripts/<nombre-script>/README.md` y completa cada seccion.
+Create your first resource page by copying:
+
+`template/script-doc-template.md -> scripts/<your-script-name>/README.md`

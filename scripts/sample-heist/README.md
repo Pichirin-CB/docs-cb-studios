@@ -1,34 +1,34 @@
 # sample-heist
 
-Estado: `stable`  
+Status: `stable`  
 Version: `1.2.0`  
-Ultima actualizacion: `2026-03-11`
+Last updated: `2026-03-11`
 
 ## Overview
 
-`sample-heist` agrega un sistema de robo por fases con cooldown global, policias requeridos y recompensas configurables.
+`sample-heist` is a multi-phase robbery system with global cooldown, required police count, and configurable rewards.
 
 ## Features
 
-- Inicio por item o comando admin
-- Fases con checkpoints
-- Alertas policiales
-- Cooldown por servidor
-- Hooks para logs externos
+- Start via item usage or admin command
+- Multi-step phase flow with checkpoints
+- Police dispatch alerts
+- Server-wide cooldown lock
+- Hooks for external logs and analytics
 
-## Requisitos
+## Requirements
 
-- Framework: `QBCore` (adaptable a ESX)
-- Dependencias:
-  - `ox_lib`
-  - `oxmysql`
-  - `ox_target`
+| Item | Value |
+| --- | --- |
+| Framework | `QBCore` (ESX adaptable) |
+| Dependencies | `ox_lib`, `oxmysql`, `ox_target` |
+| Runtime | OneSync enabled |
 
-## Instalacion
+## Installation
 
-1. Copia `sample-heist` a `resources/[local]/sample-heist`.
-2. Importa SQL si aplica.
-3. Asegura dependencias y recurso:
+1. Copy `sample-heist` to `resources/[local]/sample-heist`.
+2. Import SQL data if your build includes persistence tables.
+3. Ensure dependencies and script in `server.cfg`:
 
 ```cfg
 ensure ox_lib
@@ -37,14 +37,14 @@ ensure ox_target
 ensure sample-heist
 ```
 
-## Flujo de juego
+## Gameplay Flow
 
-1. Jugador activa punto de inicio.
-2. Se valida `policeOnline` y cooldown.
-3. Se ejecutan fases del robo.
-4. Si completa, recibe recompensa.
+1. Player interacts with the start point.
+2. Script validates police count and cooldown state.
+3. Phase sequence begins and synchronizes to involved players.
+4. Completion triggers payout and cooldown.
 
-## Referencia tecnica
+## Technical Reference
 
 - [Config](./config.md)
 - [Events](./events.md)

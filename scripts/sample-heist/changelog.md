@@ -2,15 +2,15 @@
 
 ## 1.2.0 - 2026-03-11
 
-- Se agrega cooldown global configurable
-- Se optimiza sync de fases
-- Se agrega export `GetHeistState`
+- Added configurable global cooldown
+- Improved phase synchronization
+- Added `GetHeistState` export
 
 ## 1.1.0 - 2026-02-20
 
-- Se agrega soporte `ox_target`
-- Se ajustan recompensas por zona
+- Added `ox_target` support
+- Rebalanced zone reward values
 
 ## 1.0.0 - 2026-01-30
 
-- Release inicial
+- Initial release

@@ -1,8 +1,8 @@
-* [Inicio](/)
-* Guias
+* [Home](/)
+* Guides
   * [Quickstart](/guide/quickstart.md)
-  * [Estructura](/guide/structure.md)
-* Plantilla
-  * [Template Script](/template/script-doc-template.md)
-* Ejemplo
+  * [Structure](/guide/structure.md)
+* Template
+  * [Script Template](/template/script-doc-template.md)
+* Example
   * [sample-heist](/scripts/sample-heist/README.md)

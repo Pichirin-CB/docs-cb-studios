@@ -4,7 +4,7 @@
 
 ### `IsInHeist()`
 
-Retorna si el jugador local esta en una sesion activa.
+Returns whether the local player is currently in an active heist.
 
 ```lua
 local inHeist = exports["sample-heist"]:IsInHeist()
@@ -14,7 +14,7 @@ local inHeist = exports["sample-heist"]:IsInHeist()
 
 ### `GetHeistState()`
 
-Retorna estado global del recurso.
+Returns the current global heist state object.
 
 ```lua
 local state = exports["sample-heist"]:GetHeistState()
@@ -23,7 +23,7 @@ print(state.cooldownEndsAt)
 
 ### `ForceResetHeist()`
 
-Resetea estado global (uso admin / mantenimiento).
+Force-resets active state and cooldown (admin/maintenance usage).
 
 ```lua
 exports["sample-heist"]:ForceResetHeist()
