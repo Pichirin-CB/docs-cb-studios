@@ -1,6 +1,6 @@
 # ASSET ESCROW SYSTEM (CFX.RE / TEBEX):
 
-The **Asset Escrow** system is used by Cfx.re and Tebex to protect premium FiveM resources, including several scripts created by **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬**.  
+The **Asset Escrow** system is used by Cfx.re and Tebex to protect premium FiveM resources, including several scripts created by **CB Studios**.  
 This page is written for **server owners**, even if you do not have a deep technical background. The goal is to explain, in clear language, what this system does and how to resolve the most common problems related to it.
 
 ---
@@ -34,8 +34,8 @@ All three must align correctly.
 
 ### STEP 1 – PURCHASE ON TEBEX:
 
-- All official 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts are sold exclusively via:  
-  👉 **[𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Tebex Store](https://smdz-studios.tebex.io/)**
+- All official CB Studios scripts are sold exclusively via:  
+  👉 **[CB Studios Tebex Store](https://store.pichirincb.com/)**
 
 When you purchase a script:
 
@@ -55,7 +55,7 @@ To verify or create this link:
 2. Log into your **Tebex account** in the same browser session.
 3. Follow the instructions in Tebex/Keymaster to link your accounts (if they are not already linked).
 4. Confirm that:
-   - The Cfx.re account shown in Keymaster is the one you intend to use for your 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 assets.
+   - The Cfx.re account shown in Keymaster is the one you intend to use for your CB Studios assets.
    - This account is the same one that appears as owning your purchase in the Tebex control panel.
 
 ---
@@ -66,7 +66,7 @@ Your FiveM server uses a **server license key**, created in Keymaster. This key 
 
 For the escrow checks to pass, the following must be true:
 
-- The Cfx.re account that owns the **server license key** must also own (or have been transferred) the SMDZ script.
+- The Cfx.re account that owns the **server license key** must also own (or have been transferred) the CB script.
 - The license key you place in `server.cfg` must be the one associated with that account.
 
 If the ownership does not match, you will see errors about missing entitlements or assets not being owned.
@@ -115,7 +115,7 @@ Editing protected areas can:
 
 - Prevent the resource from starting.
 - Trigger additional errors or unexpected behaviour.
-- Make it much harder for 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 to support you, because the resource no longer matches the released version.
+- Make it much harder for CB Studios to support you, because the resource no longer matches the released version.
 
 ---
 
@@ -130,7 +130,7 @@ When a new version of an escrowed script is published, you should follow a metho
    For example:
 
    ```bash
-   cp resources/[smdz]/smdz_example/config.lua backups/smdz_example_config_backup.lua
+   cp resources/[cb]/cb_example/config.lua backups/cb_example_config_backup.lua
    ```
 
 2. **Download the latest version** from the official Tebex download link.
@@ -138,13 +138,13 @@ When a new version of an escrowed script is published, you should follow a metho
 3. **Remove the old resource folder** from your server:
 
    ```bash
-   rm -rf resources/[smdz]/smdz_example
+   rm -rf resources/[cb]/cb_example
    ```
 
 4. **Extract the new version** into your resources directory:
 
    ```bash
-   unzip smdz_example_latest.zip -d resources/[smdz]/
+   unzip cb_example_latest.zip -d resources/[cb]/
    ```
 
 5. **Re‑apply your configuration changes carefully:**
@@ -206,7 +206,7 @@ Your server is trying to start an asset that the **current Cfx.re account** (the
 **Console example:**
 
 ```text
-You lack the required entitlement to use smdz_prop_finder
+You lack the required entitlement to use cb_deadzone-extract
 ```
 
 This error indicates that the server is missing a valid **entitlement** for the asset. This is closely related to ownership, but can also involve temporary or environmental conditions.
@@ -296,7 +296,7 @@ This error often points to **network or connectivity problems** between your ser
 1. Verify that the server has full internet connectivity.
 2. Temporarily relax strict firewall rules or DDoS protections and test again.
 3. Restart the server after making changes.
-4. If the error continues, contact your hosting provider and 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 support with:
+4. If the error continues, contact your hosting provider and CB Studios support with:
    - Detailed console logs.
    - Information about your hosting environment (VPS, dedicated machine, game panel, etc.).
 
@@ -304,9 +304,9 @@ This error often points to **network or connectivity problems** between your ser
 
 # 📌 **BEST PRACTICES WHEN USING ASSET ESCROW:**
 
-To maintain a stable and secure environment while using escrowed 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts:
+To maintain a stable and secure environment while using escrowed CB Studios scripts:
 
-- Always purchase from the **official 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Tebex store**.
+- Always purchase from the **official CB Studios Tebex store**.
 - Make sure your **Tebex**, **Cfx.re**, and **server license key** are all aligned.
 - Only modify:
   - Configuration files.
@@ -323,21 +323,21 @@ If, after following this guide, you still experience problems:
 
 1. Gather the following information:
 
-   - Script name and version (for example: `smdz_prop_finder v1.0.0`).
+   - Script name and version (for example: `cb_deadzone-extract v1.0.0`).
    - Framework and version (ESX / QBCore / Standalone).
    - Tebex purchase ID.
    - Full console log from server startup until the error appears.
    - A short description of what you have already tried.
 
-2. Visit the **[Support](support.md)** page and contact 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 through the official email or Discord.
+2. Visit the **[Support](support.md)** page and contact CB Studios through the official email or Discord.
 
-With complete and precise information, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 can diagnose entitlement and escrow issues quickly and provide a clear resolution path.
+With complete and precise information, CB Studios can diagnose entitlement and escrow issues quickly and provide a clear resolution path.
 
 ---
 
 # COMMON PROBLEMS & TROUBLESHOOTING:
 
-The following guide is designed to help **server owners of any experience level** systematically diagnose and resolve common issues with 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts.  
+The following guide is designed to help **server owners of any experience level** systematically diagnose and resolve common issues with CB Studios scripts.  
 Each section follows the same structure:
 
 1. **What you see** in game or in the console.  
@@ -351,7 +351,7 @@ Each section follows the same structure:
 ### WHAT YOU SEE:
 
 - The script does not appear as `started` in the console.
-- You call `ensure smdz_example` and immediately see errors in red.
+- You call `ensure cb_example` and immediately see errors in red.
 - Players cannot access any menu or feature belonging to the script.
 
 ---
@@ -362,8 +362,8 @@ Before anything else, quickly confirm:
 
 ```text
 [ ] The folder name of the resource is correct and has no typos.
-[ ] The resource is placed in an appropriate folder, for example: resources/[smdz]/smdz_example
-[ ] The line in server.cfg uses exactly the same name: ensure smdz_example
+[ ] The resource is placed in an appropriate folder, for example: resources/[cb]/cb_example
+[ ] The line in server.cfg uses exactly the same name: ensure cb_example
 [ ] All frameworks and required dependencies are started BEFORE this script.
 [ ] You have looked at the server console during startup for errors mentioning this resource.
 ```
@@ -375,7 +375,7 @@ Before anything else, quickly confirm:
 **Typical console message:**
 
 ```text
-Could not find resource smdz_example.
+Could not find resource cb_example.
 ```
 
 This means the server cannot find a resource with that exact name.
@@ -386,20 +386,20 @@ This means the server cannot find a resource with that exact name.
 2. Ensure the path looks like this (as an example):
 
    ```text
-   resources/[smdz]/smdz_example
+   resources/[cb]/cb_example
    ```
 
 3. In `server.cfg`, confirm you are using:
 
    ```bash
-   ensure smdz_example
+   ensure cb_example
    ```
 
 4. Avoid:
 
-   - Spaces: `smdz example`
-   - Extra text: `smdz_example-main`
-   - Incorrect capitalization: `SMDZ_Example`
+   - Spaces: `cb example`
+   - Extra text: `cb_example-main`
+   - Incorrect capitalization: `CB_Example`
 
 ---
 
@@ -428,7 +428,7 @@ No such export oxmysql:execute
    ```bash
    ensure oxmysql
    ensure es_extended   # or qb-core
-   ensure smdz_example
+   ensure cb_example
    ```
 
 4. Fully restart the server and observe the console again.
@@ -443,7 +443,7 @@ If the script is protected, some errors will relate to Asset Escrow or entitleme
 
 ```text
 This asset is not owned by this account
-You lack the required entitlement to use smdz_prop_finder
+You lack the required entitlement to use cb_deadzone-extract
 Failed to verify protected resource
 ```
 
@@ -491,12 +491,12 @@ If the adapter is missing or misconfigured, you might see:
    - **Recommended:** `oxmysql`
    - **Legacy:** `mysql-async`
 2. Install and configure the adapter with your DB credentials.
-3. Make sure the adapter is started before any framework or SMDZ script, for example:
+3. Make sure the adapter is started before any framework or CB script, for example:
 
    ```bash
    ensure oxmysql
    ensure es_extended   # or qb-core
-   ensure smdz_example
+   ensure cb_example
    ```
 
 4. Restart the server and check if the connection errors disappear.
@@ -508,12 +508,12 @@ If the adapter is missing or misconfigured, you might see:
 If the script expects certain database tables that do not exist, you might see:
 
 ```text
-[oxmysql] [ERROR] Table 'mydb.smdz_example' doesn't exist
+[oxmysql] [ERROR] Table 'mydb.cb_example' doesn't exist
 ```
 
 **How to resolve:**
 
-1. Look inside the resource directory for `.sql` files, such as `smdz_example.sql`.
+1. Look inside the resource directory for `.sql` files, such as `cb_example.sql`.
 2. Open your database manager (phpMyAdmin, HeidiSQL, DBeaver, etc.).
 3. Select the correct database used by your FiveM server.
 4. Import the `.sql` file(s).
@@ -563,12 +563,12 @@ Each framework provides a way to define permission groups or roles:
 
 ### B. ACE PERMISSIONS:
 
-Some SMDZ scripts use ACE, FiveM’s built‑in permission system, on top of the framework’s system.
+Some CB scripts use ACE, FiveM’s built‑in permission system, on top of the framework’s system.
 
 **Example of an ACE restriction:**
 
 ```text
-Access denied for command /smdz_admin
+Access denied for command /cb_admin
 ```
 
 **How to configure ACE:**
@@ -576,7 +576,7 @@ Access denied for command /smdz_admin
 1. In your `server.cfg`, add lines similar to:
 
    ```bash
-   add_ace group.admin smdz.scripts allow
+   add_ace group.admin cb.scripts allow
    add_principal identifier.license:xxxxxxxxxxxxxxxx group.admin
    ```
 
@@ -610,19 +610,19 @@ If this value does not match your real setup, the resource will fail to initiali
 1. Open the script’s main configuration file.
 2. Locate the framework mode option.
 3. Set it to `ESX`, `QBCore`, or `Standalone` exactly as documented.
-4. Confirm that the appropriate framework resource (e.g. `es_extended` or `qb-core`) is installed and started before the SMDZ script.
+4. Confirm that the appropriate framework resource (e.g. `es_extended` or `qb-core`) is installed and started before the CB script.
 
 ---
 
 ### B. START ORDER OF FRAMEWORKS:
 
-Even if the framework is properly configured, it must be loaded **before** the SMDZ script.
+Even if the framework is properly configured, it must be loaded **before** the CB script.
 
 **Example of a correct order:**
 
 ```bash
 ensure es_extended   # or qb-core
-ensure smdz_example
+ensure cb_example
 ```
 
 If the order is reversed, the framework variables will not be available when the script initializes.
@@ -681,7 +681,7 @@ Modern FiveM servers often use several external systems:
 - **Target systems:** `qb-target`, `ox_target`, `qtarget`, etc.
 - **Notification systems:** `ox_lib`, `mythic_notify`, `okokNotify`, and others.
 
-SMDZ scripts usually include configuration options that allow you to choose which one to use.
+CB scripts usually include configuration options that allow you to choose which one to use.
 
 **Typical configuration block:**
 
@@ -694,7 +694,7 @@ Config.Notification = 'ox_lib'      -- 'mythic', 'okok', etc.
 
 1. Decide which target and notification systems you want to standardize on across your server.
 2. Make sure those systems are actually installed and started.
-3. Set the configuration values in the SMDZ script to exactly match these resource names.
+3. Set the configuration values in the CB script to exactly match these resource names.
 4. Restart the server and test in‑game.
 
 ---
@@ -716,7 +716,7 @@ FiveM provides a built‑in resource monitor that you can enable in the console:
 resmon 1
 ```
 
-This command shows per‑resource CPU usage. Focus on the line that corresponds to the SMDZ script (for example `smdz_example`) and note:
+This command shows per‑resource CPU usage. Focus on the line that corresponds to the CB script (for example `cb_example`) and note:
 
 - The average **ms** value.
 - Whether there are frequent spikes.
@@ -730,7 +730,7 @@ This command shows per‑resource CPU usage. Focus on the line that corresponds 
    - Extremely large areas or lists processed every frame.
 2. Increase wait times moderately or reduce the size and frequency of scanning operations.
 3. Disable optional diagnostic features, such as heavy debug printing or visualization.
-4. Test the script on a **minimal test server** (only framework + DB + SMDZ script) to rule out interference from other resources.
+4. Test the script on a **minimal test server** (only framework + DB + CB script) to rule out interference from other resources.
 
 If you still experience high usage, gather:
 
@@ -744,14 +744,14 @@ If you still experience high usage, gather:
 
 # 📬 **WHEN TO CONTACT SUPPORT:**
 
-If you have worked through the relevant section for your problem and still cannot resolve the issue, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 is available to assist.
+If you have worked through the relevant section for your problem and still cannot resolve the issue, CB Studios is available to assist.
 
 ### INFORMATION THAT GREATLY SPEEDS UP SUPPORT:
 
 Prepare the following details:
 
 ```text
-• Script name:         smdz_example
+• Script name:         cb_example
 • Script version:      v1.0.0
 • Framework:           ESX / QBCore / Standalone
 • Tebex purchase ID:   ################
@@ -762,4 +762,4 @@ Prepare the following details:
 
 Then visit the **[Support](support.md)** page and use the provided email or Discord contact.
 
-A clear and structured report allows 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 to analyse your situation quickly and provide accurate, professional guidance for your specific case.
+A clear and structured report allows CB Studios to analyse your situation quickly and provide accurate, professional guidance for your specific case.

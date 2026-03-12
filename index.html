@@ -2,119 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 – FIVEM SCRIPT DOCUMENTATION</title>
+  <title>CB Studios - FIVEM SCRIPT DOCUMENTATION</title>
 
-  <!-- SEO meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta name="description" content="Dark-mode technical documentation for 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 FiveM scripts: installation, configuration, usage guides and developer references." />
-  <meta name="keywords" content="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬, FiveM scripts, FiveM resources, GTA RP, ESX, QBCore, script documentation, installation guide, configuration, exports, events" />
-  <meta name="author" content="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬" />
+  <meta name="description" content="Dark-mode technical documentation for CB Studios FiveM scripts: installation, configuration, usage guides and developer references." />
+  <meta name="keywords" content="CB Studios, FiveM scripts, FiveM resources, GTA RP, ESX, QBCore, script documentation, installation guide, configuration, exports, events" />
+  <meta name="author" content="CB Studios" />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 – FIVEM SCRIPT DOCUMENTATION" />
-  <meta property="og:description" content="Official documentation for 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 FiveM resources. Fast, readable, dark-mode docs for your server." />
-  <meta property="og:image" content="https://docs.smdz-studios.com/assets/logo.png" />
-  <meta property="og:url" content="https://docs.smdz-studios.com/" />
+  <meta property="og:title" content="CB Studios - FIVEM SCRIPT DOCUMENTATION" />
+  <meta property="og:description" content="Official documentation for CB Studios FiveM resources. Fast, readable, dark-mode docs for your server." />
+  <meta property="og:image" content="https://docs.pichirincb.com/assets/logo.png" />
+  <meta property="og:url" content="https://docs.pichirincb.com/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 – FIVEM SCRIPT DOCUMENTATION" />
-  <meta name="twitter:description" content="Dark-mode documentation for 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 FiveM scripts." />
-  <meta name="twitter:image" content="https://docs.smdz-studios.com/assets/logo.png" />
+  <meta name="twitter:title" content="CB Studios - FIVEM SCRIPT DOCUMENTATION" />
+  <meta name="twitter:description" content="Dark-mode documentation for CB Studios FiveM scripts." />
+  <meta name="twitter:image" content="https://docs.pichirincb.com/assets/logo.png" />
 
-  <!-- Docsify theme (dark) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
 
-  <!-- Custom styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Global announcement bar – content & style controlled from banner-config.js -->
   <div id="announcement-bar" class="announcement-bar">
     <span id="announcement-text" class="announcement-text"></span>
   </div>
 
-  <!-- Page loader -->
   <div id="page-loader" class="page-loader">
     <div class="page-loader-inner">
       <div class="page-loader-logo">
-        <img src="assets/logo.png" alt="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Logo" />
+        <img src="assets/logo.png" alt="CB Studios Logo" />
       </div>
       <div class="page-loader-spinner"></div>
-      <p class="page-loader-text">Preparing 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 docs…</p>
+      <p class="page-loader-text">Preparing CB Studios docs...</p>
     </div>
   </div>
 
-  <div id="app" class="app-hidden">Loading 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 documentation...</div>
-
+  <div id="app" class="app-hidden">Loading CB Studios documentation...</div>
 
   <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button">
-    ↓
+    &#8595;
   </button>
-
 
   <script>
     window.$docsify = {
-      name: '𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬',
-      repo: '',
+      name: "CB Studios",
+      repo: "",
       loadSidebar: true,
       subMaxLevel: 3,
       autoHeader: true,
       coverpage: false,
-      themeColor: '#34b6ff',
+      themeColor: "#34b6ff",
       maxLevel: 4,
-      homepage: 'home.md',
+      homepage: "home.md",
 
       search: {
         maxAge: 86400000,
-        paths: 'auto',
-        placeholder: 'Search SMDZ scripts...',
-        noData: 'No results for this query.',
+        paths: "auto",
+        placeholder: "Search CB scripts...",
+        noData: "No results for this query.",
         depth: 3
       },
 
       alias: {
-        '/_sidebar.md': '/_sidebar.md',
-        '/.*/_sidebar.md': '/_sidebar.md'
+        "/_sidebar.md": "/_sidebar.md",
+        "/.*/_sidebar.md": "/_sidebar.md"
       },
 
       plugins: [
-
-        function (hook, vm) {
+        function (hook) {
           hook.doneEach(function () {
-            var sidebarParent = document.querySelector('.sidebar');
-            var nav = document.querySelector('.sidebar-nav');
-            if (sidebarParent && nav && !document.querySelector('.brand-header')) {
-              var header = document.createElement('div');
-              header.className = 'brand-header';
+            var sidebarParent = document.querySelector(".sidebar");
+            var nav = document.querySelector(".sidebar-nav");
+            if (sidebarParent && nav && !document.querySelector(".brand-header")) {
+              var header = document.createElement("div");
+              header.className = "brand-header";
               header.innerHTML =
                 '<div class="sidebar-logo-wrapper">' +
-                  '<img src="assets/logo.png" alt="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Logo" />' +
-                '</div>' +
+                  '<img src="assets/logo.png" alt="CB Studios Logo" />' +
+                "</div>" +
                 '<div class="sidebar-menu-label"><strong>MENU</strong></div>';
               sidebarParent.insertBefore(header, sidebarParent.firstChild);
             }
           });
         },
 
-        function (hook, vm) {
+        function (hook) {
           hook.afterEach(function (html, next) {
             var footerHtml =
-              '<div class="smdz-footer">' +
-                '© 2025 - 2026 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 · All rights reserved · Not affiliated with R* Games<br />' +
-                'Made with 💚 by 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬' +
-                '<div class="smdz-footer-logos">' +
-                  '<img src="assets/smdz.png" alt="𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬" />' +
+              '<div class="cb-footer">' +
+                "&copy; 2025 - 2026 CB Studios &middot; All rights reserved &middot; Not affiliated with R* Games<br />" +
+                "Made with love by CB Studios" +
+                '<div class="cb-footer-logos">' +
+                  '<img src="assets/cb.png" alt="CB Studios" />' +
                   '<img src="assets/cfx.png" alt="Cfx.re" />' +
                   '<img src="assets/esx.png" alt="ESX" />' +
                   '<img src="assets/qbcore.png" alt="QBCore" />' +
                   '<img src="assets/qbox.png" alt="Qbox" />' +
-                  // '<img src="assets/vrp.png" alt="vRP" />' +
-                '</div>' +
-              '</div>';
+                "</div>" +
+              "</div>";
             next(html + footerHtml);
           });
         }
@@ -122,29 +112,23 @@
     };
   </script>
 
-  <!-- Docsify core (AFTER window.$docsify) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-
-  <!-- Official Docsify plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 
-  <!-- Prism languages -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-lua.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 
-
   <script src="banner-config.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var btn = document.getElementById('scroll-toggle-btn');
-      var app = document.getElementById('app');
-      var loader = document.getElementById('page-loader');
-
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("scroll-toggle-btn");
+      var app = document.getElementById("app");
+      var loader = document.getElementById("page-loader");
 
       if (btn) {
         function isAtBottom() {
@@ -153,80 +137,75 @@
 
         function updateButtonState() {
           if (isAtBottom()) {
-            btn.textContent = '↑';
-            btn.setAttribute('data-direction', 'up');
+            btn.textContent = "\u2191";
+            btn.setAttribute("data-direction", "up");
           } else {
-            btn.textContent = '↓';
-            btn.setAttribute('data-direction', 'down');
+            btn.textContent = "\u2193";
+            btn.setAttribute("data-direction", "down");
           }
         }
 
-        btn.addEventListener('click', function () {
-          if (btn.getAttribute('data-direction') === 'up') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        btn.addEventListener("click", function () {
+          if (btn.getAttribute("data-direction") === "up") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
           } else {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
           }
         });
 
-        window.addEventListener('scroll', updateButtonState);
-        window.addEventListener('resize', updateButtonState);
+        window.addEventListener("scroll", updateButtonState);
+        window.addEventListener("resize", updateButtonState);
         updateButtonState();
       }
 
-
-      if (window.SMDZ_BANNER_CONFIG) {
-        var bar = document.getElementById('announcement-bar');
+      if (window.CB_BANNER_CONFIG) {
+        var bar = document.getElementById("announcement-bar");
         if (bar) {
-          var cfg = window.SMDZ_BANNER_CONFIG;
+          var cfg = window.CB_BANNER_CONFIG;
 
           if (!cfg.enabled) {
-            bar.style.display = 'none';
+            bar.style.display = "none";
           } else {
-
             if (cfg.type) {
-              bar.classList.add('announcement-type-' + cfg.type);
+              bar.classList.add("announcement-type-" + cfg.type);
             }
 
-
-            if (cfg.layout === 'compact') {
-              bar.classList.add('announcement-layout-compact');
+            if (cfg.layout === "compact") {
+              bar.classList.add("announcement-layout-compact");
             }
 
-
-            if (cfg.align === 'left') {
-              bar.classList.add('announcement-align-left');
+            if (cfg.align === "left") {
+              bar.classList.add("announcement-align-left");
             } else {
-              bar.classList.add('announcement-align-center');
+              bar.classList.add("announcement-align-center");
             }
 
+            var inner = document.createElement("div");
+            inner.className = "announcement-inner";
 
-            var inner = document.createElement('div');
-            inner.className = 'announcement-inner';
-
-            var content = document.createElement('div');
-            content.className = 'announcement-content';
+            var content = document.createElement("div");
+            content.className = "announcement-content";
 
             if (cfg.icon) {
-              var icon = document.createElement('span');
-              icon.className = 'announcement-icon';
+              var icon = document.createElement("span");
+              icon.className = "announcement-icon";
               icon.textContent = cfg.icon;
               content.appendChild(icon);
             }
 
-            var textBlock = document.createElement('div');
-            textBlock.className = 'announcement-text-block';
+            var textBlock = document.createElement("div");
+            textBlock.className = "announcement-text-block";
 
             if (cfg.title) {
-              var title = document.createElement('div');
-              title.className = 'announcement-title';
+              var title = document.createElement("div");
+              title.className = "announcement-title";
               title.textContent = cfg.title;
               textBlock.appendChild(title);
             }
 
             if (cfg.subtitle) {
-              var subtitle = document.createElement('div');
-              subtitle.className = 'announcement-subtitle';
+              var subtitle = document.createElement("div");
+              subtitle.className = "announcement-subtitle";
               subtitle.innerHTML = cfg.subtitle;
               textBlock.appendChild(subtitle);
             }
@@ -234,35 +213,32 @@
             content.appendChild(textBlock);
             inner.appendChild(content);
 
-
             if (cfg.cta && cfg.cta.enabled && cfg.cta.label && cfg.cta.url) {
-              var cta = document.createElement('a');
-              cta.className = 'announcement-cta';
+              var cta = document.createElement("a");
+              cta.className = "announcement-cta";
               cta.href = cfg.cta.url;
-              cta.target = cfg.cta.target || '_blank';
-              cta.rel = 'noopener';
+              cta.target = cfg.cta.target || "_blank";
+              cta.rel = "noopener";
               cta.textContent = cfg.cta.label;
               inner.appendChild(cta);
             }
 
-
-            bar.innerHTML = '';
+            bar.innerHTML = "";
             bar.appendChild(inner);
 
             requestAnimationFrame(function () {
-              bar.classList.add('announcement-visible');
+              bar.classList.add("announcement-visible");
             });
           }
         }
       }
 
-
       setTimeout(function () {
         if (loader) {
-          loader.classList.add('page-loader-hidden');
+          loader.classList.add("page-loader-hidden");
         }
         if (app) {
-          app.classList.remove('app-hidden');
+          app.classList.remove("app-hidden");
         }
       }, 1000);
     });

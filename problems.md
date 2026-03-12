@@ -87,8 +87,8 @@ And remove the server folder and replace it with the newly downloaded version.
 **Symptoms (console examples):**
 
 ```text
-Could not find resource smdz_example.
-Resource smdz_exmaple does not exist.
+Could not find resource cb_example.
+Resource cb_exmaple does not exist.
 ```
 
 **Steps:**
@@ -96,15 +96,15 @@ Resource smdz_exmaple does not exist.
 1. Check the **folder name**:
    - Should be exactly something like:
      ```text
-     resources/[smdz]/smdz_example
+     resources/[cb]/cb_example
      ```
 2. Check `server.cfg`:
    ```bash
-   ensure smdz_example
+   ensure cb_example
    ```
 3. Avoid:
-   - Spaces: `smdz example`
-   - Capitalization mismatches: `SMDZ_Example`
+   - Spaces: `cb example`
+   - Capitalization mismatches: `CB_Example`
 
 ---
 
@@ -123,12 +123,12 @@ No such export oxmysql:execute
 **Steps:**
 
 1. Open the script’s docs page and find the **REQUIREMENTS** section.
-2. In `server.cfg`, ensure dependencies start **before** the SMDZ script, e.g.:
+2. In `server.cfg`, ensure dependencies start **before** the CB script, e.g.:
 
    ```bash
    ensure oxmysql
    ensure es_extended   # or qb-core
-   ensure smdz_example
+   ensure cb_example
    ```
 
 3. Restart the server and re‑check the console.
@@ -141,7 +141,7 @@ No such export oxmysql:execute
 
 ```text
 This asset is not owned by this account
-You lack the required entitlement to use smdz_prop_finder
+You lack the required entitlement to use cb_deadzone-extract
 Failed to verify protected resource
 ```
 
@@ -201,7 +201,7 @@ Check the console for words like:
    ```bash
    ensure oxmysql
    ensure es_extended  # or qb-core
-   ensure smdz_example
+   ensure cb_example
    ```
 
 ---
@@ -211,12 +211,12 @@ Check the console for words like:
 **Errors:**
 
 ```text
-[oxmysql] [ERROR] Table 'dbname.smdz_example' doesn't exist
+[oxmysql] [ERROR] Table 'dbname.cb_example' doesn't exist
 ```
 
 **Steps:**
 
-1. Look in the script files for `.sql` (e.g. `smdz_example.sql`).
+1. Look in the script files for `.sql` (e.g. `cb_example.sql`).
 2. In your DB manager (phpMyAdmin, HeidiSQL, DBeaver…):
    - Select your FiveM database.
    - Import the `.sql` file.
@@ -263,7 +263,7 @@ Each framework handles perms differently:
 **Error examples:**
 
 ```text
-Access denied for command /smdz_admin
+Access denied for command /cb_admin
 ```
 
 **Steps:**
@@ -271,7 +271,7 @@ Access denied for command /smdz_admin
 1. In `server.cfg`, add something like:
 
    ```bash
-   add_ace group.admin smdz.scripts allow
+   add_ace group.admin cb.scripts allow
    add_principal identifier.license:xxxxxxxxxxxxxxxx group.admin
    ```
 
@@ -306,11 +306,11 @@ Config.Framework = 'ESX'       -- 'ESX', 'QBCore' or 'Standalone'
 
 ### 🧱 B. FRAMEWORK START ORDER:
 
-Make sure frameworks start **before** SMDZ scripts:
+Make sure frameworks start **before** CB scripts:
 
 ```bash
 ensure es_extended   # or qb-core
-ensure smdz_example
+ensure cb_example
 ```
 
 ---
@@ -400,7 +400,7 @@ Use the built‑in profiler:
 resmon 1
 ```
 
-Look specifically at the line for the SMDZ script, e.g. `smdz_example`.
+Look specifically at the line for the CB script, e.g. `cb_example`.
 
 - **Idle usage** in ms should be low.
 - Compare with other heavy scripts on your server.
@@ -415,7 +415,7 @@ Look specifically at the line for the SMDZ script, e.g. `smdz_example`.
 2. Try:
    - Increasing timers slightly.
    - Disabling optional, heavy features (e.g. debug visuals).
-3. Test on a **clean server** with only the framework + SMDZ script to isolate.
+3. Test on a **clean server** with only the framework + CB script to isolate.
 
 If it still seems heavy, gather:
 
@@ -441,7 +441,7 @@ If you have gone through:
 ### 🧾 PREPARE THIS INFORMATION:
 
 ```text
-• Script name:         smdz_example
+• Script name:         cb_example
 • Script version:      v1.0.0
 • Framework:           ESX / QBCore / Standalone
 • Tebex purchase ID:   ################
@@ -450,6 +450,6 @@ If you have gone through:
 • Steps to reproduce:  1, 2, 3...
 ```
 
-Then go to **[Support](support.md)** and contact 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 by **email** or **Discord**.
+Then go to **[Support](support.md)** and contact CB Studios by **email** or **Discord**.
 
 The more precise your report, the **faster** and **better** the help you will receive.

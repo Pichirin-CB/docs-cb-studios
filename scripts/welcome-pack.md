@@ -3,7 +3,7 @@
     width="640"
     height="360"
     src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-    title="smdz_welcome_pack showcase"
+    title="cb_welcome_pack showcase"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -19,8 +19,8 @@ A modern **welcome rewards** system for FiveM servers. Spawn NPCs, open a premiu
 
 # 🧩 **OVERVIEW:**
 
-- 📌 **Name:** `smdz_welcome_pack`
-- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
+- 📌 **Name:** `cb_welcome_pack`
+- 🧑‍💻 **Author:** CB Studios
 - 🧭 **Framework:** ESX / QBCore / QBX / Standalone
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** <span class="badge badge--stable">STABLE</span>
@@ -66,11 +66,11 @@ Note: If you use `mysql-async`, replace `@oxmysql/lib/MySQL.lua` with `@mysql-as
 
 # 🛠️ **INSTALLATION:**
 
-1. Download the resource: `smdz_welcome_pack.zip`.
+1. Download the resource: `cb_welcome_pack.zip`.
 2. Extract into your FiveM resources:
 
 ```text
-resources/[smdz]/smdz_welcome_pack
+resources/[cb]/cb_welcome_pack
 ```
 
 3. Import the SQL file (optional if auto-create enabled):
@@ -82,14 +82,14 @@ sql/install.sql
 4. Add the resource to `server.cfg`:
 
 ```bash
-## 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
-ensure smdz_welcome_pack
+## CB Studios
+ensure cb_welcome_pack
 ```
 
 5. Restart or start the resource:
 
 ```bash
-start smdz_welcome_pack
+start cb_welcome_pack
 ```
 
 6. Check the server console for errors.
@@ -116,8 +116,8 @@ Config.Fuel = 'auto'
 Config.DefaultVehicleFuel = 100
 
 Config.RouteInventoryIcons = 'nui://ox_inventory/web/images/'
-Config.NUILogo = 'nui://smdz_welcome_pack/nui/assets/logo.png'
-Config.NUIVehicleImage = 'nui://smdz_welcome_pack/nui/assets/vehicles/default.png'
+Config.NUILogo = 'nui://cb_welcome_pack/nui/assets/logo.png'
+Config.NUIVehicleImage = 'nui://cb_welcome_pack/nui/assets/vehicles/default.png'
 ```
 
 ## 🔧 Key Settings (Quick Reference)
@@ -185,7 +185,7 @@ Config.NPCs = {
       saveToGarage = true,
       garageType = 'car',
       defaultGarage = nil,
-      image = 'nui://smdz_welcome_pack/nui/assets/vehicles/primo.png',
+      image = 'nui://cb_welcome_pack/nui/assets/vehicles/primo.png',
       spawnPoints = { vec4(-1038.7433, -2678.1826, 13.2235, 147.6143) }
     }
   }
@@ -267,7 +267,7 @@ The owner panel shows:
 | Config | Description |
 | --- | --- |
 | `Config.RouteInventoryIcons` | Base icon path (default: `nui://ox_inventory/web/images/`) |
-| `Config.NUILogo` | Logo image path (default: `nui://smdz_welcome_pack/nui/assets/logo.png`) |
+| `Config.NUILogo` | Logo image path (default: `nui://cb_welcome_pack/nui/assets/logo.png`) |
 | `Config.NUIVehicleImage` | Default vehicle image path |
 
 NUI assets:
@@ -292,7 +292,7 @@ NUI assets:
 | ox_lib | `ox_lib:notify` |
 | okokNotify | `okokNotify:Alert` |
 | mythic_notify | `mythic_notify:client:SendAlert` |
-| Custom | `smdz_welcome_pack:notify` |
+| Custom | `cb_welcome_pack:notify` |
 
 ---
 
@@ -317,7 +317,7 @@ NUI assets:
 Config.Webhook = {
   enabled = true,
   url = 'https://discord.com/api/webhooks/...',
-  username = 'SMDZ Welcome',
+  username = 'CB Welcome',
   avatar = '',
   color = 16766720
 }
@@ -355,19 +355,19 @@ Set `Config.Debug = true` to view detailed logs. All debug prints use locale key
 
 | Event name | Parameters | Description |
 | --- | --- | --- |
-| `smdz_welcome_pack:claimPack` | `npcId` | Claim items/money only |
-| `smdz_welcome_pack:claimVehicle` | `npcId` | Claim vehicle only |
-| `smdz_welcome_pack:claimAll` | `npcId`, `code` | Claim everything + creator code |
-| `smdz_welcome_pack:claimOwnerReward` | `code`, `usesRequired` | Claim creator owner reward tier |
+| `cb_welcome_pack:claimPack` | `npcId` | Claim items/money only |
+| `cb_welcome_pack:claimVehicle` | `npcId` | Claim vehicle only |
+| `cb_welcome_pack:claimAll` | `npcId`, `code` | Claim everything + creator code |
+| `cb_welcome_pack:claimOwnerReward` | `code`, `usesRequired` | Claim creator owner reward tier |
 
 ## Client Events
 
 | Event name | Parameters | Description |
 | --- | --- | --- |
-| `smdz_welcome_pack:spawnVehicle` | `data` | Spawns and optionally warps player into vehicle |
-| `smdz_welcome_pack:notify` | `message` | Shows fallback notification |
-| `smdz_welcome_pack:openOwner` | `data` | Opens creator owner rewards NUI |
-| `smdz_welcome_pack:ownerRewardClaimed` | `code`, `usesRequired` | Updates owner rewards UI after claim |
+| `cb_welcome_pack:spawnVehicle` | `data` | Spawns and optionally warps player into vehicle |
+| `cb_welcome_pack:notify` | `message` | Shows fallback notification |
+| `cb_welcome_pack:openOwner` | `data` | Opens creator owner rewards NUI |
+| `cb_welcome_pack:ownerRewardClaimed` | `code`, `usesRequired` | Updates owner rewards UI after claim |
 
 ## Exports
 
@@ -400,7 +400,7 @@ The command suggestion is registered on client load and localized via `CMD_VIEWM
 # 🗃️ **DATABASE:**
 
 ```sql
-CREATE TABLE IF NOT EXISTS smdz_welcome (
+CREATE TABLE IF NOT EXISTS cb_welcome (
   identifier VARCHAR(64) NOT NULL,
   npc_id VARCHAR(64) NOT NULL,
   claimed_pack TINYINT(1) DEFAULT 0,
@@ -408,14 +408,14 @@ CREATE TABLE IF NOT EXISTS smdz_welcome (
   PRIMARY KEY (identifier)
 );
 
-CREATE TABLE IF NOT EXISTS smdz_welcome_codes (
+CREATE TABLE IF NOT EXISTS cb_welcome_codes (
   code VARCHAR(64) NOT NULL,
   uses INT NOT NULL DEFAULT 0,
   last_used TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (code)
 );
 
-CREATE TABLE IF NOT EXISTS smdz_welcome_code_claims (
+CREATE TABLE IF NOT EXISTS cb_welcome_code_claims (
   code VARCHAR(64) NOT NULL,
   owner_key VARCHAR(96) NOT NULL,
   uses_required INT NOT NULL,
@@ -464,5 +464,5 @@ CREATE TABLE IF NOT EXISTS smdz_welcome_code_claims (
 # ⚠️ **IMPORTANT WARNING:**
 🚫 **DO NOT CHANGE THE RESOURCE FOLDER NAME!**
 
-⚖️ If you rename the folder, the script will NOT function and will stop automatically for security reasons. Check: https://smdz-studios.tebex.io/legal
+⚖️ If you rename the folder, the script will NOT function and will stop automatically for security reasons. Check: https://store.pichirincb.com/legal
 🧩 *If you have an open source version, you can remove this security in the first lines of server.lua, sv_main.lua, etc.*

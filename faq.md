@@ -1,6 +1,6 @@
 # ❓ **FAQ – FREQUENTLY ASKED QUESTIONS:**
 
-This page collects common questions about **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬** FiveM scripts and documentation.  
+This page collects common questions about **CB Studios** FiveM scripts and documentation.  
 You can treat it as a “first stop” before opening a ticket.
 
 ---
@@ -25,7 +25,7 @@ If you are not sure how to merge a specific update, you can always ask in **Supp
 
 # 🧱 **WHICH FRAMEWORKS ARE SUPPORTED?:**
 
-Most 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 scripts focus on the main modern FiveM ecosystems:
+Most CB Studios scripts focus on the main modern FiveM ecosystems:
 
 - **ESX** (including ESX Legacy).  
 - **QBCore**.  
@@ -50,7 +50,7 @@ A few general recommendations:
 - Read the “Performance” or “Configuration” sections of each script:
   - Many options let you tune update intervals, range checks and debug features.
 
-If you believe a specific SMDZ script is heavier than it should be, gather:
+If you believe a specific CB script is heavier than it should be, gather:
 
 - `resmon` screenshots.  
 - Number of players connected.  
@@ -62,7 +62,7 @@ If you believe a specific SMDZ script is heavier than it should be, gather:
 
 # 📜 **WHAT ABOUT LICENSING AND ASSET ESCROW?:**
 
-Some SMDZ scripts are protected using the **Asset Escrow** system from Cfx.re and Tebex.
+Some CB scripts are protected using the **Asset Escrow** system from Cfx.re and Tebex.
 
 - This protects core logic from being modified or leaked.  
 - You can still edit configuration, translations and documented integration files.  
@@ -78,7 +78,7 @@ For a detailed explanation (including common entitlement errors and how to solve
 
 A very good support message usually contains:
 
-- Script name and version (for example `smdz_example v1.0.0`).  
+- Script name and version (for example `cb_example v1.0.0`).  
 - Framework (ESX / QBCore / Standalone) and any relevant version details.  
 - Tebex purchase ID.  
 - Server artifacts build number.  

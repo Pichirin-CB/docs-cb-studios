@@ -6,7 +6,7 @@
     width="640"
     height="360"
     src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-    title="smdz_example showcase"
+    title="cb_example showcase"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -14,15 +14,15 @@
   ></iframe>
 </div>
 
-> This file is a **ready-to-fill template** for a new 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 script.  
+> This file is a **ready-to-fill template** for a new CB Studios script.  
 > In future chats, you can paste this file and I will help you fill each section with real data for your script.
 
 ---
 
 # 🧩 OVERVIEW:
 
-- 📌 **Name:** `smdz_example` <!-- change to your resource name -->
-- 🧑‍💻 **Author:** 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
+- 📌 **Name:** `cb_example` <!-- change to your resource name -->
+- 🧑‍💻 **Author:** CB Studios
 - 🧭 **Framework:** ESX / QBCore / Standalone <!-- choose one -->
 - 🧾 **Version:** `1.0.0`
 - ✅ **Status:** `Stable`  
@@ -34,7 +34,7 @@ Badges (optional):
 - <span class="badge badge--legacy">Legacy</span>
 
 **Short description:**  
-_Example_: “Lightweight example script demonstrating how 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 documents FiveM resources.”
+_Example_: “Lightweight example script demonstrating how CB Studios documents FiveM resources.”
 
 Replace this with a **1–2 sentence** description of what the script does.
 
@@ -57,24 +57,24 @@ Fill this with the real dependencies of your script.
 
 Describe the exact installation steps.
 
-1. Download the resource: `smdz_example.zip` <!-- change name if needed -->
+1. Download the resource: `cb_example.zip` <!-- change name if needed -->
 2. Extract the folder into your FiveM `resources` directory, for example:
 
 ```text
-resources/[smdz]/smdz_example
+resources/[cb]/cb_example
 ```
 
 3. Add the resource to your `server.cfg`:
 
 ```bash
-## 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬
-ensure smdz_example
+## CB Studios
+ensure cb_example
 ```
 
 4. Restart your server or start the resource manually:
 
 ```bash
-start smdz_example
+start cb_example
 ```
 
 5. Check the server console for errors.
@@ -142,8 +142,8 @@ Use this section for server owners and developers who integrate your script with
 
 ```lua
 -- Example: triggered when a player uses the example feature
-AddEventHandler('smdz_example:usedFeature', function(playerId, data)
-    print(('[smdz_example] Player %s used %s'):format(playerId, data.feature))
+AddEventHandler('cb_example:usedFeature', function(playerId, data)
+    print(('[cb_example] Player %s used %s'):format(playerId, data.feature))
 end)
 ```
 
@@ -151,12 +151,12 @@ Document all of your server events in a table:
 
 | Event name                 | Parameters                       | Description                                  |
 |----------------------------|----------------------------------|----------------------------------------------|
-| `smdz_example:usedFeature` | `playerId`, `data`              | Fired when player uses the example feature   |
+| `cb_example:usedFeature` | `playerId`, `data`              | Fired when player uses the example feature   |
 
 ### Client Events
 
 ```lua
-RegisterNetEvent('smdz_example:notify', function(message)
+RegisterNetEvent('cb_example:notify', function(message)
     -- Show a notification using your framework or custom UI
 end)
 ```
@@ -165,16 +165,16 @@ List client events the same way:
 
 | Event name            | Parameters          | Description                      |
 |-----------------------|---------------------|----------------------------------|
-| `smdz_example:notify` | `message` (string)  | Shows a notification to player  |
+| `cb_example:notify` | `message` (string)  | Shows a notification to player  |
 
 ### Exports
 
 ```lua
 -- client.lua
-local isActive = exports['smdz_example']:IsFeatureActive(playerId)
+local isActive = exports['cb_example']:IsFeatureActive(playerId)
 
 -- server.lua
-exports['smdz_example']:GiveReward(playerId, amount)
+exports['cb_example']:GiveReward(playerId, amount)
 ```
 
 Describe each export:
@@ -196,8 +196,8 @@ List common problems you expect users to hit and how to solve them.
 
 1. **Resource does not start**
    - Check console for red errors.
-   - Make sure the folder name matches exactly (for example `smdz_example`).
-   - Confirm `ensure smdz_example` is in `server.cfg`.
+   - Make sure the folder name matches exactly (for example `cb_example`).
+   - Confirm `ensure cb_example` is in `server.cfg`.
 
 2. **Database errors**
    - Check connection credentials.
@@ -236,7 +236,7 @@ You can also link to release notes if you keep them somewhere else.
 
 When users ask for support, request at least:
 
-- Script name and version (for example: `smdz_example v1.0.0`).
+- Script name and version (for example: `cb_example v1.0.0`).
 - Framework and version (ESX / QBCore / Standalone).
 - FiveM artifacts/build version.
 - Steps to reproduce the issue.

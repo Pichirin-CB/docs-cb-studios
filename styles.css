@@ -441,7 +441,7 @@ pre code {
 }
 
 /* Footer */
-.smdz-footer {
+.cb-footer {
   margin-top: 2.8rem;
   padding-top: 1.2rem;
   border-top: 1px solid rgba(130, 156, 192, 0.24);
@@ -450,7 +450,7 @@ pre code {
   text-align: center;
 }
 
-.smdz-footer-logos {
+.cb-footer-logos {
   margin-top: 0.76rem;
   display: flex;
   justify-content: center;
@@ -458,14 +458,14 @@ pre code {
   gap: 0.65rem;
 }
 
-.smdz-footer-logos img {
+.cb-footer-logos img {
   max-height: 18px;
   opacity: 0.75;
   filter: saturate(0.76);
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-.smdz-footer-logos img:hover {
+.cb-footer-logos img:hover {
   opacity: 1;
   transform: translateY(-1px);
 }

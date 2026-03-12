@@ -1,6 +1,6 @@
-// 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 — Global announcement bar configuration
+// CB Studios — Global announcement bar configuration
 
-window.SMDZ_BANNER_CONFIG = {
+window.CB_BANNER_CONFIG = {
   enabled: false,
 
   // "info" | "alert" | "sale" | "maintenance" | "announcement" | "warning"
@@ -14,7 +14,7 @@ window.SMDZ_BANNER_CONFIG = {
 
   icon: "💡",
 
-  title: "Discover SMDZ Scripts! Go to our documentation to explore available scripts.",
+  title: "Discover CB Scripts! Go to our documentation to explore available scripts.",
 
   subtitle:
     "",
@@ -22,7 +22,7 @@ window.SMDZ_BANNER_CONFIG = {
   cta: {
     enabled: true,
     label: "Visit Store",
-    url: "https://smdz-studios.tebex.io/",
+    url: "https://store.pichirincb.com/",
     target: "_self"
   }
 };

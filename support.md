@@ -1,11 +1,11 @@
 # 🆘 **SUPPORT:**
 
-This page explains **how to request support in a way that is fast, clear and professional** for both you and 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬.
+This page explains **how to request support in a way that is fast, clear and professional** for both you and CB Studios.
 
-For any question, bug or installation issue related to **𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬** FiveM scripts, please use one of the following official channels:
+For any question, bug or installation issue related to **CB Studios** FiveM scripts, please use one of the following official channels:
 
-- 📧 **Email:** `smdzstudios@gmail.com`  
-- 💬 **Discord:** [Join the 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 Discord](https://discord.gg/XraafphzrQ)
+- 📧 **Email:** `pichirincb@gmail.com`  
+- 💬 **Discord:** [Join the CB Studios Discord](https://discord.gg/hsx6AvBg5s)
 
 Discord is usually the **fastest** way to get help, especially when screenshots or short videos are needed.
 
@@ -16,7 +16,7 @@ Discord is usually the **fastest** way to get help, especially when screenshots 
 To avoid long back‑and‑forth conversations and to get a useful answer on the first reply, always include:
 
 1. **Script name**  
-   - Example: `smdz_example`, `smdz_vehicleshop`, `smdz_dispatch`, etc.
+   - Example: `cb_example`, `cb_vehicleshop`, `cb_dispatch`, etc.
 
 2. **Script version**  
    - Example: `v1.0.3`.  
@@ -43,7 +43,7 @@ To avoid long back‑and‑forth conversations and to get a useful answer on the
 
 7. **Reproduction steps**
    - A short, numbered list that allows the issue to be reproduced on a clean test server, for example:
-     1. Start the server with only the framework + database adapter + the SMDZ script.  
+     1. Start the server with only the framework + database adapter + the CB script.  
      2. Join the server with a fresh character.  
      3. Run `/example` or perform the specific action.  
      4. Observe that the menu does not open and error `XYZ` appears in the console.
@@ -52,14 +52,14 @@ To avoid long back‑and‑forth conversations and to get a useful answer on the
    - Only include the parts of your config that are related to the problem.  
    - Remove or mask any secrets (webhooks, API keys, passwords) before sharing.
 
-The more precise and complete this information is, the faster 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 can identify the root cause and provide a real solution instead of guesses.
+The more precise and complete this information is, the faster CB Studios can identify the root cause and provide a real solution instead of guesses.
 
 ---
 
 # 🧪 **BUG REPORTS & QUALITY FEEDBACK:**
 
 Well‑written bug reports and detailed feedback are extremely valuable.  
-They help 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 make each script **more stable, faster and easier to configure** for the entire community.
+They help CB Studios make each script **more stable, faster and easier to configure** for the entire community.
 
 <!-- <div class="tip"> -->
   <p>
@@ -70,13 +70,13 @@ They help 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 make each script **more stable
 
 When reporting a bug, try to provide:
 
-- ✅ A **minimal test scenario** (for example: only framework + database + the SMDZ script).  
+- ✅ A **minimal test scenario** (for example: only framework + database + the CB script).  
 - ✅ The **exact version** of the script and framework.  
 - ✅ Full console logs from server startup until the error appears.  
 - ✅ Relevant parts of your configuration (with sensitive data removed).  
 - ✅ `resmon 1` screenshots if the bug is related to performance.
 
-If a bug is confirmed, reproducible and has a noticeable impact, 𝐂𝐁│𝐒𝐭𝐮𝐝𝐢𝐨𝐬 may, at its sole discretion:
+If a bug is confirmed, reproducible and has a noticeable impact, CB Studios may, at its sole discretion:
 
 - Offer an additional script copy  
 - Apply a discount to a future purchase  

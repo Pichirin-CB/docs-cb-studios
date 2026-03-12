@@ -3,7 +3,7 @@
 ---
 
 
-## 📡 | SMDZ Emergency GPS - `1.1.0` - 2026-03-02
+## 📡 | CB Emergency GPS - `1.1.0` - 2026-03-02
 
 ### ✨ Highlights
 - Added favorite color support with SQL persistence (same behavior as icon favorites).
@@ -53,7 +53,7 @@
 - Added compatibility layer in `config.lua` to map new structured config to legacy fields used by runtime.
 - Added client and server exports `useItem` and declared them in `fxmanifest.lua`.
 - Updated server logic to support marker definitions under `Config.Markers.Items` and safe ox_inventory export handling.
-- Updated ox_inventory item definitions to call `smdz_evidence_markers.useItem` via server export.
+- Updated ox_inventory item definitions to call `cb_evidence_markers.useItem` via server export.
 - Updated QS inventory item definitions with usable fields (`name`, `type`, `unique`, `useable`, `shouldClose`).
 - Removed all `lj-inventory` support from the inventory bridge.
 - Moved exports into `client/cl_exports.lua` and `server/sv_exports.lua` and added additional utility exports.
