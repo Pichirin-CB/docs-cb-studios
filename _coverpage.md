@@ -5,4 +5,4 @@
 > Structured, production-ready docs for FiveM resources.
 
 [Get Started](#/guide/quickstart.md)
-[View Example](#/scripts/sample-heist/README.md)
+[View Example](#/scripts/sample-heist.md)

@@ -16,16 +16,11 @@
 |-- template/
 |   `-- script-doc-template.md
 `-- scripts/
-    `-- <script-name>/
-        |-- README.md
-        |-- config.md
-        |-- events.md
-        |-- exports.md
-        |-- commands.md
-        `-- changelog.md
+    |-- <script-name>.md
+    `-- <another-script>.md
 ```
 
-## README standard for each script
+## Standard sections for each script file
 
 1. Overview
 2. Features
@@ -34,7 +29,10 @@
 5. Quick configuration
 6. Integrations
 7. FAQ
-8. Technical links (`config`, `events`, `exports`, `commands`, `changelog`)
+8. Events
+9. Exports
+10. Commands
+11. Changelog
 
 ## Code block conventions
 

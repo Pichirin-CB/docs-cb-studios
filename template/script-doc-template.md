@@ -52,13 +52,41 @@ Explain the normal player flow and any admin/staff controls.
 - Target: `ox_target` / `qb-target`
 - UI: `ox_lib`
 
-## Technical Reference
+## Events
 
-- [Config](./config.md)
-- [Events](./events.md)
-- [Exports](./exports.md)
-- [Commands](./commands.md)
-- [Changelog](./changelog.md)
+### `resource:server:eventName`
+
+What it does, plus required parameters.
+
+### `resource:client:eventName`
+
+What it does, plus required parameters.
+
+## Exports
+
+### `GetState()`
+
+Describe return shape and usage.
+
+```lua
+local state = exports["<script-name>"]:GetState()
+```
+
+## Commands
+
+### `/<command>`
+
+What it does and who can use it.
+
+```cfg
+add_ace group.admin command.<command> allow
+```
+
+## Changelog
+
+### `0.1.0` - `YYYY-MM-DD`
+
+- Initial release notes
 
 ## FAQ
 

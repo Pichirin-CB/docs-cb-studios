@@ -5,4 +5,4 @@
 * Template
   * [Script Template](/template/script-doc-template.md)
 * Example
-  * [sample-heist](/scripts/sample-heist/README.md)
+  * [sample-heist](/scripts/sample-heist.md)

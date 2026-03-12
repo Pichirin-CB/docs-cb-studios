@@ -19,18 +19,18 @@ npx docsify-cli serve .
 - Copy code button
 - Previous/next pagination
 - Dark iOS-style visual system
-- Reusable script documentation template
-- Example script docs split by technical area
+- One-file-per-script documentation template
+- Example single-file script reference
 
 ## Documentation Flow
 
 - Read [Quickstart](/guide/quickstart.md)
 - Follow [Documentation Structure](/guide/structure.md)
 - Duplicate [Script Template](/template/script-doc-template.md)
-- Use [`scripts/sample-heist/`](/scripts/sample-heist/README.md) as a live example
+- Use [sample-heist example](/scripts/sample-heist.md)
 
 ## Recommended Next Step
 
 Create your first resource page by copying:
 
-`template/script-doc-template.md -> scripts/<your-script-name>/README.md`
+`template/script-doc-template.md -> scripts/<your-script-name>.md`

@@ -6,33 +6,30 @@
 npx docsify-cli serve .
 ```
 
-## 2) Use one folder per script
+## 2) Use one file per script
 
-Every script should live in:
+Every script should be a single markdown file:
 
 ```text
-scripts/<script-name>/
+scripts/<script-name>.md
 ```
 
-Recommended minimum:
+Example:
 
 ```text
-scripts/<script-name>/README.md
-scripts/<script-name>/config.md
-scripts/<script-name>/events.md
-scripts/<script-name>/exports.md
-scripts/<script-name>/commands.md
-scripts/<script-name>/changelog.md
+scripts/cb-housing.md
+scripts/cb-inventory.md
+scripts/cb-heist.md
 ```
 
 ## 3) Add your script to navigation
 
-Edit `/_sidebar.md` and add links for each page.
+Edit `/_sidebar.md` and add one link per script file.
 
 ## 4) Documentation quality rules
 
 - Define clear requirements (framework, dependencies, artifact version).
 - Keep installation steps short and verifiable.
-- Separate technical references (`events`, `exports`, `commands`) into dedicated pages.
+- Keep technical references (`events`, `exports`, `commands`) as sections inside the same file.
 - Include real code examples.
 - Keep changelog entries in descending order by date.
