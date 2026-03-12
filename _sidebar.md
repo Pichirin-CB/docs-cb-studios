@@ -8,15 +8,16 @@
   - [Common Problems](/problems.md)
   - [Asset Escrow System](/fxap.md)
 
-- **PAID RESOURCES**
+<!-- - **PAID RESOURCES** -->
   <!-- - [🧰 | Fast Repair — v 1.0](/scripts/fast-repair.md) -->
 
 
-- **REDESINGS**
+<!-- - **REDESINGS** -->
   <!-- - [🎨 | Ox Target (Crystal Style)](/scripts/ox-target-redesing-crystal.md) -->
 
 
 - **FREE RESOURCES**
-  <!-- - [🗺️ | Premium Radar & Minimap Toggle](/scripts/toggle-minimap.md) -->
+  - [🔔 | Tactical Notify](/scripts/tactical-notify.md)
+  - [🚁 | Apocalypse Extraction](/scripts/apocalypse-extraction.md)
 
 
