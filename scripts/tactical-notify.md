@@ -1,4 +1,4 @@
-# 🔔 cb_opsNotify - GitBook Documentation
+# 🔔 cb_opsNotify - Full Documentation
 
 # 📌 OVERVIEW
 

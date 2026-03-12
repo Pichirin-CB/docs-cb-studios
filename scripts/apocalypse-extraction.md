@@ -1,4 +1,4 @@
-# 🚁 CB Deadzone Extract - Full GitBook Documentation
+# 🚁 CB Deadzone Extract - Full Documentation
 
 ## 📌 Overview
 `cb_deadzone-extract` is a complete helicopter extraction system for FiveM deadzone gameplay.
