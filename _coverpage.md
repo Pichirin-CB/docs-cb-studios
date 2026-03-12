@@ -1,4 +1,4 @@
-![CB Studios Logo](/logo.png)
+![CB Studios Logo](logo.png)
 
 # CB Studios Docs
 

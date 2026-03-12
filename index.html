@@ -6,8 +6,9 @@
   <title>CB Studios Docs</title>
   <meta name="description" content="Modern Docsify documentation template for FiveM scripts." />
   <meta name="theme-color" content="#090807" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./logo.png" />
+  <link rel="shortcut icon" type="image/png" href="./logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -24,7 +25,7 @@
     window.$docsify = {
       name: "CB Studios Docs",
       repo: "",
-      nameLink: "/",
+      nameLink: "#/",
       loadSidebar: true,
       loadNavbar: false,
       subMaxLevel: 2,
@@ -47,9 +48,6 @@
         previousText: "Previous",
         nextText: "Next",
         crossChapter: true
-      },
-      alias: {
-        "/.*/_sidebar.md": "/_sidebar.md"
       },
       plugins: [
         function (hook) {
