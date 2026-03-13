@@ -1,296 +1,271 @@
 # 🔔 Tactical Notification - Full Documentation
 
-# 📌 OVERVIEW
+<div style="text-align: center;">
+  <img src="https://img.shields.io/badge/CB%20Studios-FiveM%20Development-blue?style=for-the-badge" alt="CB Studios" />
+  <img src="https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QBCore%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
+</div>
 
-`cb_opsNotify` is a complete tactical notification and help-prompt system for FiveM servers.
+------------------------------------------------------------------------
 
-It includes:
+# 📺 Showcase
 
-- NUI notification system with tactical/survival visual style
-- Help prompt interaction API (`CreateHelp` / `RemoveHelp`)
-- Sound-enabled feedback with bundled `pop.ogg`
-- Flexible notification payload parser (string and table signatures)
+<div align="center" style="margin-bottom: 1.5rem;">
+  
+  <iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    title="cb_example showcase"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    style="max-width: 100%; border-radius: 12px;"
+  ></iframe>
+</div>
+
+------------------------------------------------------------------------
+
+# 📖 Overview
+
+| Field | Value |
+|---|---|
+| Resource | `cb_opsNotify` |
+| Author | **CB Studios** |
+| Framework | ESX / QBCore / Standalone |
+| Version | `1.0.0` |
+| Status | Stable |
+| License | `MIT` |
+
+### Description
+
+> `cb_opsNotify` is a tactical and lightweight notification + help-prompt system for FiveM servers, with NUI UI, sound feedback, client/server exports, and automatic compatibility hooks for ESX and QBCore.
+
+------------------------------------------------------------------------
+
+# ✨ Features
+
+- Tactical/survival NUI notification style
+- Help prompt API (`CreateHelp` / `RemoveHelp`)
+- Sound-enabled feedback (`html/sounds/pop.ogg`)
+- Flexible payload parser (string and table signatures)
 - Client and server exports for easy integration
-- Built-in compatibility listeners for common QBCore and ESX notification events
+- Built-in compatibility listeners for common ESX/QBCore events
 - Auto-hook support for `QBCore.Functions.Notify` and `ESX.ShowNotification`
-- Resource lifecycle safety handling (startup/stop cleanup and focus release)
-- Folder-name security validation and anti-rename protection
+- Resource lifecycle safety handling (restart/stop cleanup)
+- Folder-name validation and anti-rename protection
 
-Current version: `1.0.0`  
-License: `MIT`
+------------------------------------------------------------------------
 
----
+# 📦 Requirements
 
-# 📦 REQUIREMENTS
+| Requirement | Details |
+|---|---|
+| FiveM Server | Latest recommended build |
+| Framework | ESX / QBCore / Standalone |
+| Database | Not required |
+| fxmanifest | `fx_version 'cerulean'`, `game 'gta5'`, `lua54 'yes'` |
+| Dependencies | None mandatory |
 
-- ✅ FiveM server (recommended latest artifacts)
-- ✅ `fx_version 'cerulean'`
-- ✅ `lua54 'yes'`
-- ❌ Database dependency required: **No**
-- ❌ Framework dependency required: **No**
+Optional framework resources for auto-hook features:
 
-Optional frameworks for auto-hook features:
 - `qb-core`
 - `es_extended`
 
----
+------------------------------------------------------------------------
 
-# 📥 INSTALLATION
+# 📥 Installation
 
-1. Place the resource in your server `resources` folder:
+### 1️⃣ Download
+
+Download the resource and extract it.
+
+### 2️⃣ Place in resources folder
 
 ```text
 resources/[cb_script]/cb_opsNotify
 ```
 
-2. Add this to `server.cfg`:
+### 3️⃣ Add to server.cfg
 
 ```cfg
 ## CB Studios
 ensure cb_opsNotify
 ```
 
-3. Restart your server or resource:
+### 4️⃣ Restart server
 
 ```cfg
 restart cb_opsNotify
 ```
 
-4. Check server console for startup validation logs.
+### 5️⃣ Verify
 
----
+Check the server console and confirm the resource starts without errors.
 
-# 🧱 RESOURCE STRUCTURE
+------------------------------------------------------------------------
 
-```text
-cb_opsNotify/
-  client.lua
-  server.lua
-  fxmanifest.lua
-  LICENSE
-  README.md
-  custom/
-    main.lua
-  html/
-    index.html
-    style.css
-    script.js
-    sounds/
-      pop.ogg
+# ⚙️ Configuration
+
+This script does not include a dedicated `config.lua` by default.
+
+Main tunable values are in code:
+
+```lua
+-- html/script.js
+-- notificationSound.volume = 0.35
+-- default duration fallback = 5000 ms
+-- minimum duration clamp = 300 ms
+
+-- client.lua / server.lua
+-- notification type normalization
+-- payload parsing signatures
+-- ESX/QBCore hook behavior
 ```
 
----
+### Config Explanation
 
-# ⚙️ CONFIGURATION
+| Option | Description |
+|---|---|
+| `notificationSound.volume` | Notification sound volume |
+| default duration | Used when duration is not provided |
+| minimum duration | Prevents too-short notifications |
+| hook behavior | Controls ESX/QBCore compatibility patching |
 
-This script has **no dedicated `config.lua`** by default.
+------------------------------------------------------------------------
 
-Main tunable values are inside code:
+# 🎮 Usage
 
-- `html/script.js`
-  - `notificationSound.volume = 0.35`
-  - default duration fallback (`5000` ms)
-  - minimum duration clamp (`300` ms)
-- `client.lua` / `server.lua`
-  - notification type normalization
-  - payload parsing (table/text signatures)
-  - framework hook behavior
+### Commands
 
-### Notification Types
-
-Supported types:
-
-- `info`
-- `success`
-- `success-dark`
-- `error`
-- `warning`
-- `primary`
-- `business` (auto-mapped to `primary`)
-
----
-
-# 🎮 USAGE
-
-## Commands
-
-| Command | Description | Permission / Notes |
+| Command | Description | Permission |
 |---|---|---|
-| `/cbopsnotify-unbug` | Releases NUI input/focus if controls get stuck after restart. | Everyone |
-| `/test-key` | Shows a help prompt for 5 seconds. | Test command (`custom/main.lua`) |
-| `/notify-success` | Shows a success notification. | Test command |
-| `/notify-warning` | Shows a warning notification. | Test command |
-| `/notify-error` | Shows an error notification. | Test command |
-| `/notify-business` | Shows business notification style (`primary`). | Test command |
-| `/notify` | Shows default info notification. | Test command |
+| `/cbopsnotify-unbug` | Releases NUI input/focus if controls get stuck | Everyone |
+| `/test-key` | Shows a help prompt for 5 seconds | Everyone (test command) |
+| `/notify-success` | Shows a success notification | Everyone (test command) |
+| `/notify-warning` | Shows a warning notification | Everyone (test command) |
+| `/notify-error` | Shows an error notification | Everyone (test command) |
+| `/notify-business` | Shows business style (mapped to `primary`) | Everyone (test command) |
+| `/notify` | Shows a default info notification | Everyone (test command) |
 
-## Player/Staff Flow
+------------------------------------------------------------------------
 
-- Trigger notifications from scripts using exports or events.
-- Use `CreateHelp` / `RemoveHelp` to manage interaction prompts.
-- UI appears in top-right (notifications) and bottom-center (help prompts).
+### Keybinds
 
----
+| Key | Action |
+|---|---|
+| Dynamic | No fixed keybind. Keys are defined when calling `CreateHelp(key, text)` |
 
-# 🔌 EVENTS & EXPORTS (DEVELOPERS)
+------------------------------------------------------------------------
 
-## Client Events
-
-| Event name | Parameters | Description |
-|---|---|---|
-| `cb_opsNotify:client:showNotification` | `data` (table) | Main event to display notification payload. |
-| `QBCore:Notify` | `message`, `notifyType`, `length` | Compatibility listener for QBCore-style notifications. |
-| `esx:showNotification` | `message`, `notifyType`, `length`, `title` | Compatibility listener when ESX is not actively handling it. |
-| `esx:showAdvancedNotification` | `sender`, `subject`, `msg` | Compatibility listener for ESX advanced format. |
+# 🔌 Developer Integration
 
 ## Server Events
 
-| Event name | Parameters | Description |
+```lua
+RegisterNetEvent('cb_opsNotify:server:showNotification', function(target, arg1, arg2, arg3, arg4)
+    -- Sends notification payload to target client
+end)
+```
+
+| Event | Parameters | Description |
 |---|---|---|
-| `cb_opsNotify:server:showNotification` | `target`, `arg1`, `arg2`, `arg3`, `arg4` | Sends notification payload to a target player (or fallback to source if target is not a number). |
+| `cb_opsNotify:server:showNotification` | `target, arg1, arg2, arg3, arg4` | Sends notification to a target player (or fallback to source if target is invalid) |
 
-## Client Exports
+------------------------------------------------------------------------
 
-```lua
-exports['cb_opsNotify']:ShowNotification(...)
-exports['cb_opsNotify']:CreateHelp(key, text)
-exports['cb_opsNotify']:RemoveHelp(id) -- pass nil to remove all
-```
-
-### `ShowNotification` supported signatures (client)
-
-1. `ShowNotification(title, message, type, duration)`
-2. `ShowNotification(message, type, duration)`
-3. `ShowNotification({ title=..., message=..., type=..., duration=... })`
-
-Accepted table aliases:
-- `message` also accepts `text`, `msg`, `description`
-- `duration` also accepts `time`, `length`
-
-## Server Export
+## Client Events
 
 ```lua
-exports['cb_opsNotify']:ShowNotification(target, ...)
+RegisterNetEvent('cb_opsNotify:client:showNotification', function(data)
+    -- Shows notification payload in NUI
+end)
 ```
 
-### Example
+| Event | Parameters | Description |
+|---|---|---|
+| `cb_opsNotify:client:showNotification` | `data` | Main event to display notification payload |
+| `QBCore:Notify` | `message, notifyType, length` | QBCore compatibility listener |
+| `esx:showNotification` | `message, notifyType, length, title` | ESX compatibility listener |
+| `esx:showAdvancedNotification` | `sender, subject, msg` | ESX advanced compatibility listener |
+
+------------------------------------------------------------------------
+
+## Exports
+
+Example usage:
 
 ```lua
-exports['cb_opsNotify']:ShowNotification(source, 'Welcome to the server', 'success', 5000)
+-- Client
+exports['cb_opsNotify']:ShowNotification('Welcome', 'success', 5000)
+local id = exports['cb_opsNotify']:CreateHelp('E', 'Press to interact')
+exports['cb_opsNotify']:RemoveHelp(id)
 
-exports['cb_opsNotify']:ShowNotification(source, {
-    title = 'Server',
-    message = 'Restart in 10 minutes',
-    type = 'warning',
-    duration = 7000
-})
+-- Server
+exports['cb_opsNotify']:ShowNotification(source, 'Server restart in 10 minutes', 'warning', 7000)
 ```
 
----
+| Export | Side | Description |
+|---|---|---|
+| `ShowNotification(...)` | Client | Displays notifications (supports multiple signatures) |
+| `CreateHelp(key, text)` | Client | Creates a help prompt and returns an ID |
+| `RemoveHelp(id)` | Client | Removes one prompt by ID or all prompts if `id` is nil |
+| `ShowNotification(target, ...)` | Server | Sends a notification payload to a client |
 
-# 🧩 FRAMEWORK COMPATIBILITY
+------------------------------------------------------------------------
 
-## Auto-Hook Behavior
+# 🧪 Debugging & Common Issues
 
-When framework resources are already started (or start later), `cb_opsNotify` attempts to hook:
+### Resource does not start
 
-- `qb-core`
-  - overrides `QBCore.Functions.Notify`
-- `es_extended`
-  - overrides `ESX.ShowNotification`
-  - overrides `ESX.ShowAdvancedNotification`
+- Verify folder name is exactly `cb_opsNotify` (legacy `cb_opsnotify` still accepted)
+- Check `server.cfg` entry
+- Look for validation logs in server console
 
-The script retries hooks for up to ~60 seconds on startup and also re-checks when `qb-core` or `es_extended` starts.
+### Notifications not visible
 
-## Standalone Mode
+- Verify NUI files exist in `html/`
+- Confirm `ui_page` and `files` entries in `fxmanifest.lua`
 
-If no framework is running, the resource still works fully via native events/exports.
+### Controls stuck after restart
 
----
+- Run `/cbopsnotify-unbug`
+- Restart `cb_opsNotify`
 
-# 🎨 UI & UX DETAILS
+### Framework notifications not redirected
 
-- 🔊 Notification sound: `html/sounds/pop.ogg`
-- 🔉 Sound preload enabled on UI load
-- ⏱️ Minimum duration: `300 ms`
-- ⏱️ Default duration: `5000 ms`
-- 📍 Notification placement: top-right
-- 📍 Help prompt placement: bottom-center
-- 📱 Responsive CSS for small screens (`@media max-width: 600px`)
+- Ensure `qb-core` or `es_extended` started correctly
+- Restart `cb_opsNotify` after framework resources
 
----
+------------------------------------------------------------------------
 
-# 🛡️ SECURITY VALIDATION
+# 🔄 Updating the Script
 
-`server.lua` validates folder name before allowing the resource to run:
+1. Backup any custom changes (`custom/main.lua`, NUI files, etc.)
+2. Stop the resource
+3. Replace old version with the new version
+4. Re-apply custom changes
+5. Restart the resource and test with `/notify` or `/test-key`
 
-- Expected name: `cb_opsNotify`
-- Legacy accepted: `cb_opsnotify` (with warning)
-- Any other name: resource is stopped and blocked
+------------------------------------------------------------------------
 
-This prevents renamed-resource misuse and prints clear console diagnostics.
+# 📬 Support
 
----
+When requesting support provide:
 
-# 🧪 DEBUGGING & COMMON ISSUES
+| Information | Example |
+|---|---|
+| Script | `cb_opsNotify v1.0.0` |
+| Framework | ESX / QBCore / Standalone |
+| Server Build | Latest recommended |
+| Issue | Steps to reproduce |
+| Logs | Server/client console output |
+| Folder Name | `cb_opsNotify` |
 
-1. **Resource does not start**
-   - Verify folder name is exactly `cb_opsNotify`.
-   - Check console validation output from `server.lua`.
-   - Confirm `ensure cb_opsNotify` is in `server.cfg`.
+------------------------------------------------------------------------
 
-2. **Notifications not visible**
-   - Confirm NUI files exist (`html/index.html`, `html/style.css`, `html/script.js`).
-   - Make sure `ui_page` and `files` are intact in `fxmanifest.lua`.
-
-3. **Controls stuck after restart**
-   - Run `/cbopsnotify-unbug`.
-   - Restart the resource once.
-
-4. **Framework notifications still using default UI**
-   - Ensure `qb-core` / `es_extended` is started and not failing.
-   - Restart `cb_opsNotify` after framework startup.
-
-5. **Metadata parse issues in manifest**
-   - Keep `fxmanifest.lua` encoded as UTF-8 (without BOM).
-
----
-
-# 🔄 UPDATES
-
-1. Backup any edited files (`custom/main.lua`, NUI style/scripts, framework modifications).
-2. Stop the resource.
-3. Replace with the new version.
-4. Re-apply custom changes.
-5. Start the resource and test with:
-   - `/notify`
-   - `/notify-success`
-   - `/test-key`
-
----
-
-# 📌 NOTES
-
-- `custom/main.lua` contains demo commands and can be customized.
-- `escrow_ignore` includes `custom/*.lua` for safe customization.
-- You can integrate this resource entirely through exports/events without editing framework core files.
-
----
-
-# 📬 SUPPORT
-
-When requesting support, provide:
-
-- Script name and version: `cb_opsNotify v1.0.0`
-- Framework in use: `Standalone`, `QBCore`, or `ESX`
-- FiveM artifact version
-- Exact reproduction steps
-- Server/client console logs
-- Confirmation of folder name (`cb_opsNotify`)
-
----
-
-## 👤 Credits
-- Author: `Pichirin_CB`
-- 💬 Discord: `https://discord.gg/hsx6AvBg5s`
-- 🛒 Store: `https://store.pichirincb.com/`
+<div style="text-align: center;">
+  <strong>CB Studios</strong><br />
+  FiveM Development Resources
+</div>

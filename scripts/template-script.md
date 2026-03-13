@@ -1,4 +1,15 @@
-# Example Script – Template (Ready to Fill)
+# CB Studios -- Script Documentation Template
+
+<div style="text-align: center;">
+  <img src="https://img.shields.io/badge/CB%20Studios-FiveM%20Development-blue?style=for-the-badge" alt="CB Studios" />
+  <img src="https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QBCore%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
+</div>
+
+------------------------------------------------------------------------
+
+# 📺 Showcase
 
 <div align="center" style="margin-bottom: 1.5rem;">
   
@@ -14,232 +25,222 @@
   ></iframe>
 </div>
 
-> This file is a **ready-to-fill template** for a new CB Studios script.  
-> In future chats, you can paste this file and I will help you fill each section with real data for your script.
+------------------------------------------------------------------------
 
----
+# 📖 Overview
 
-# 🧩 OVERVIEW:
+  Field       Value
+  ----------- ---------------------------
+  Resource    `cb_example`
+  Author      **CB Studios**
+  Framework   ESX / QBCore / Standalone
+  Version     `1.0.0`
+  Status      Stable
 
-- 📌 **Name:** `cb_example` <!-- change to your resource name -->
-- 🧑‍💻 **Author:** CB Studios
-- 🧭 **Framework:** ESX / QBCore / Standalone <!-- choose one -->
-- 🧾 **Version:** `1.0.0`
-- ✅ **Status:** `Stable`  
+### Description
 
-Badges (optional):
+Short explanation of the script.
 
-- <span class="badge badge--stable">STABLE</span>
-- <span class="badge badge--beta">Beta</span>
-- <span class="badge badge--legacy">Legacy</span>
+Example:
 
-**Short description:**  
-_Example_: “Lightweight example script demonstrating how CB Studios documents FiveM resources.”
+> A lightweight and optimized FiveM script developed by **CB Studios**,
+> designed to integrate seamlessly with modern server frameworks while
+> maintaining high performance and clean code structure.
 
-Replace this with a **1–2 sentence** description of what the script does.
+------------------------------------------------------------------------
 
----
+# ✨ Features
 
-# 📦 REQUIREMENTS:
+-   Clean and optimized code
+-   Easy installation
+-   Lightweight performance
+-   Fully configurable
+-   Developer-friendly exports
+-   Compatible with modern FiveM servers
 
-Fill this with the real dependencies of your script.
+------------------------------------------------------------------------
 
-- **FiveM server:** latest recommended build.
-- **Framework:** ESX / QBCore / Standalone (pick the one you use).
-- **Dependencies (framework / database / extras):**
-  - `es_extended` / `qb-core` / none
-  - `oxmysql` or `mysql-async`
-  - Other scripts (e.g. target system, inventory, UI, etc.)
+# 📦 Requirements
 
----
+  Requirement    Details
+  -------------- -------------------------------------
+  FiveM Server   Latest recommended build
+  Framework      ESX / QBCore / Standalone
+  Database       oxmysql / mysql-async (if required)
+  Dependencies   Any additional resources
+
+Example dependencies:
+
+-   oxmysql
+-   qb-core
+-   es_extended
+-   target system (if used)
+
+------------------------------------------------------------------------
 
 # 📥 Installation
 
-Describe the exact installation steps.
+### 1️⃣ Download
 
-1. Download the resource: `cb_example.zip` <!-- change name if needed -->
-2. Extract the folder into your FiveM `resources` directory, for example:
+Download the resource and extract it.
 
-```text
-resources/[cb]/cb_example
-```
+### 2️⃣ Place in resources folder
 
-3. Add the resource to your `server.cfg`:
+    resources/[cb]/cb_example
 
-```bash
-## CB Studios
-ensure cb_example
-```
+### 3️⃣ Add to server.cfg
 
-4. Restart your server or start the resource manually:
+    ## CB Studios
+    ensure cb_example
 
-```bash
-start cb_example
-```
+### 4️⃣ Restart server
 
-5. Check the server console for errors.
+    start cb_example
 
----
+### 5️⃣ Verify
 
-# ⚙️ CONFIGURATION:
+Check the server console to confirm the resource started without errors.
 
-Explain your main configuration file(s), usually `config.lua`, `config.json` or similar.
+------------------------------------------------------------------------
 
-```lua
+# ⚙️ Configuration
+
+Example configuration:
+
+``` lua
 Config = {}
 
--- General settings
-Config.Locale = 'en'
+Config.Locale = "en"
 Config.Debug = false
 
--- Example option
 Config.ExampleValue = 100
 
--- Discord webhook (if used)
-Config.DiscordWebhook = ''
+Config.DiscordWebhook = ""
 ```
 
-For each important option, add a short explanation:
+### Config Explanation
 
-- `Config.Locale` – language key, e.g. `en`, `es`, `fr`.
-- `Config.Debug` – enables extra debug prints when `true`.
-- `Config.ExampleValue` – explain what changing this value does.
-- `Config.DiscordWebhook` – webhook URL for logs (if used).
+  Option           Description
+  ---------------- -----------------------------
+  Locale           Language used by the script
+  Debug            Enables debug logging
+  ExampleValue     Example configurable value
+  DiscordWebhook   Webhook URL for logs
 
-When you bring this template in another chat, tell me your real config and I will help you rewrite this section.
+------------------------------------------------------------------------
 
----
-
-# 🎮 USAGE:
-
-Describe how staff and players use the script.
+# 🎮 Usage
 
 ### Commands
 
-Fill this table with real commands:
+  Command         Description          Permission
+  --------------- -------------------- ------------
+  /example        Opens main menu      Everyone
+  /exampleadmin   Admin test command   Admin
 
-| Command             | Description                                  | Permission / Notes              |
-|---------------------|----------------------------------------------|---------------------------------|
-| `/example`          | Opens the main example menu.                 | Everyone                        |
-| `/exampleadmin`     | Admin‑only test command.                     | Requires admin/ACE              |
+------------------------------------------------------------------------
 
 ### Keybinds
 
-- Default key: `F5` – opens main menu. <!-- change if needed -->
-- How to change: for example, in `config.lua` under `Config.Keybind`.
+  Key   Action
+  ----- ----------------------
+  F5    Opens main interface
 
-### UI / Menus
+------------------------------------------------------------------------
 
-Explain any menus, markers, or UI elements players will see.
+# 🔌 Developer Integration
 
----
+## Server Events
 
-# 🔌 Events & Exports (Developers)
-
-Use this section for server owners and developers who integrate your script with others.
-
-### Server Events
-
-```lua
--- Example: triggered when a player uses the example feature
+``` lua
 AddEventHandler('cb_example:usedFeature', function(playerId, data)
-    print(('[cb_example] Player %s used %s'):format(playerId, data.feature))
+    print(('Player %s used %s'):format(playerId, data.feature))
 end)
 ```
 
-Document all of your server events in a table:
+  ------------------------------------------------------------------------
+  Event                    Parameters              Description
+  ------------------------ ----------------------- -----------------------
+  cb_example:usedFeature   playerId, data          Triggered when feature
+                                                   is used
 
-| Event name                 | Parameters                       | Description                                  |
-|----------------------------|----------------------------------|----------------------------------------------|
-| `cb_example:usedFeature` | `playerId`, `data`              | Fired when player uses the example feature   |
+  ------------------------------------------------------------------------
 
-### Client Events
+------------------------------------------------------------------------
 
-```lua
+## Client Events
+
+``` lua
 RegisterNetEvent('cb_example:notify', function(message)
-    -- Show a notification using your framework or custom UI
 end)
 ```
 
-List client events the same way:
+  Event               Parameters   Description
+  ------------------- ------------ --------------------
+  cb_example:notify   message      Shows notification
 
-| Event name            | Parameters          | Description                      |
-|-----------------------|---------------------|----------------------------------|
-| `cb_example:notify` | `message` (string)  | Shows a notification to player  |
+------------------------------------------------------------------------
 
-### Exports
+## Exports
 
-```lua
--- client.lua
-local isActive = exports['cb_example']:IsFeatureActive(playerId)
+Example usage:
 
--- server.lua
-exports['cb_example']:GiveReward(playerId, amount)
+``` lua
+local active = exports['cb_example']:IsFeatureActive(playerId)
 ```
 
-Describe each export:
+  Export            Side     Description
+  ----------------- -------- ------------------------
+  IsFeatureActive   Client   Checks feature state
+  GiveReward        Server   Gives reward to player
 
-| Export name       | Side    | Parameters                | Returns         | Description                         |
-|-------------------|---------|---------------------------|-----------------|-------------------------------------|
-| `IsFeatureActive` | Client  | `playerId` (number)       | `bool`          | Checks if feature is active.        |
-| `GiveReward`      | Server  | `playerId`, `amount`      | `nil`           | Gives a custom reward to a player.  |
-
-When you have your real events/exports ready, paste them in a future chat and I will generate these tables for you.
-
----
+------------------------------------------------------------------------
 
 # 🧪 Debugging & Common Issues
 
-List common problems you expect users to hit and how to solve them.
+### Resource does not start
 
-**Examples you can adapt:**
+-   Verify folder name
+-   Check server.cfg
+-   Look for console errors
 
-1. **Resource does not start**
-   - Check console for red errors.
-   - Make sure the folder name matches exactly (for example `cb_example`).
-   - Confirm `ensure cb_example` is in `server.cfg`.
+### Database errors
 
-2. **Database errors**
-   - Check connection credentials.
-   - Verify that migration/SQL file has been executed.
-   - Confirm you selected the correct adapter (`oxmysql` / `mysql-async`).
+-   Verify SQL was imported
+-   Check connection credentials
 
-3. **Permissions not working**
-   - Verify ACE groups or framework perms.
-   - Check that admin commands are not available to normal users.
+### Permissions issues
 
----
+-   Check ACE permissions
+-   Verify framework permissions
 
-# 🔄 UPDATES:
+------------------------------------------------------------------------
 
-Explain how to safely update the script:
+# 🔄 Updating the Script
 
-1. Backup your current `config.lua` and any modified files.
-2. Stop the resource.
-3. Replace the old resource folder with the new version.
-4. Re‑apply or merge your configuration changes.
-5. Start the resource and test everything.
+1.  Backup config.lua
+2.  Stop the resource
+3.  Replace the old version
+4.  Merge config changes
+5.  Restart the resource
 
-You can also link to release notes if you keep them somewhere else.
+------------------------------------------------------------------------
 
----
+# 📬 Support
 
-# 📌 NOTES:
+When requesting support provide:
 
-- Always test new versions on a **test server** before pushing to production.
-- Keep backups of configs and custom changes.
-- Consider using **Git** to track local modifications to the resource.
+  Information    Example
+  -------------- -----------------------
+  Script         cb_example v1.0.0
+  Framework      ESX
+  Server Build   Latest
+  Issue          Steps to reproduce
+  Logs           Server console output
 
----
+------------------------------------------------------------------------
 
-# 📬 SUPPORT:
-
-When users ask for support, request at least:
-
-- Script name and version (for example: `cb_example v1.0.0`).
-- Framework and version (ESX / QBCore / Standalone).
-- FiveM artifacts/build version.
-- Steps to reproduce the issue.
-- Relevant console/server logs.
-
-In future chats, you can paste this template and tell me the details of a specific script; I’ll turn it into a complete, polished documentation page for that resource.
+<div style="text-align: center;">
+  <strong>CB Studios</strong><br />
+  FiveM Development Resources
+</div>
