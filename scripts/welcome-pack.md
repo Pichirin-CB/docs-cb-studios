@@ -70,7 +70,7 @@ Note: If you use `mysql-async`, replace `@oxmysql/lib/MySQL.lua` with `@mysql-as
 2. Extract into your FiveM resources:
 
 ```text
-resources/[cb]/cb_welcome_pack
+resources/[your_folder]/cb_welcome_pack
 ```
 
 3. Import the SQL file (optional if auto-create enabled):

@@ -99,7 +99,7 @@ Example: - `client/main.lua` - `server/main.lua` - `config.lua` -
 
 -   Added support for custom notification systems.
 
-### 🌍 Localization
+### 🌍 Languages
 
 -   Added new languages:
     -   French

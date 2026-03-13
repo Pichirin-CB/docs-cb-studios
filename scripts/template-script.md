@@ -86,7 +86,7 @@ Download the resource and extract it.
 
 ### 2️⃣ Place in resources folder
 
-    resources/[cb]/cb_example
+    resources/[your_folder]/cb_example
 
 ### 3️⃣ Add to server.cfg
 

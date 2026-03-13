@@ -1,4 +1,4 @@
-# 🚁 CB Deadzone Extract - Full Documentation
+# CB Studios - Deadzone Extract Documentation
 
 <div style="text-align: center;">
   <img src="https://img.shields.io/badge/CB%20Studios-FiveM%20Development-blue?style=for-the-badge" alt="CB Studios" />
@@ -85,7 +85,7 @@ Download the resource and extract it.
 ### 2️⃣ Place in resources folder
 
 ```txt
-resources/[cb_script]/cb_deadzone-extract
+resources/[your_folder]/cb_deadzone-extract
 ```
 
 ### 3️⃣ Add to server.cfg
