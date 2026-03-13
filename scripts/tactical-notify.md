@@ -1,4 +1,4 @@
-# 🔔 cb_opsNotify - Full Documentation
+# 🔔 Tactical Notification - Full Documentation
 
 # 📌 OVERVIEW
 
@@ -292,5 +292,5 @@ When requesting support, provide:
 
 ## 👤 Credits
 - Author: `Pichirin_CB`
-- Discord: `https://discord.gg/hsx6AvBg5s`
-- Store: `https://store.pichirincb.com/`
+- 💬 Discord: `https://discord.gg/hsx6AvBg5s`
+- 🛒 Store: `https://store.pichirincb.com/`

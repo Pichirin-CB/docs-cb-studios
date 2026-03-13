@@ -1,15 +1,15 @@
-<div class="hero-logo-panel">
-  <div class="hero-logo-inner">
-    <img src="assets/logo.png" alt="CB Studios Logo" style="max-width: 390px; max-height: 390px;" />
+<div class="hero-logo-panel" style="text-align: center;">
+  <div class="hero-logo-inner" style="display: flex; justify-content: center;">
+    <img src="assets/logo.png" alt="CB Studios Logo" style="display: block; width: 100%; max-width: 460px; height: auto;" />
   </div>
 </div>
-<div class="hero-header-wrapper" style="margin-top: 0.5rem; margin-bottom: 1.8rem; text-align: center;">
-  <h1 class="hero-main-title">
-    OFFICIAL DOCUMENTATION
+<div class="hero-header-wrapper">
+  <h1 class="hero-main-title" style="margin-top: 0 !important;">
+   OFFICIAL DOCUMENTATION
   </h1>
 </div>
 
-# ⚡ **QUICK START FOR NEW CUSTOMERS:**
+# &#9889; **QUICK START FOR NEW CUSTOMERS:**
 
 If you are here because you just purchased a script, follow this path before touching your live server:
 
@@ -111,3 +111,5 @@ Depending on what you need right now:
 
 Use the **search bar** in the sidebar whenever you remember a keyword but not the exact page name.  
 Everything here is designed to save you time and reduce guesswork when running your FiveM server with CB Studios scripts. 💚
+
+

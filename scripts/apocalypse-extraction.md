@@ -398,6 +398,5 @@ No client/server core logic edits are required for new numeric routes.
 
 ## 👤 Credits
 - Author: `Pichirin_CB`
-- Discord: `https://discord.gg/hsx6AvBg5s`
-- Store: `https://store.pichirincb.com/`
-
+- 💬 Discord: `https://discord.gg/hsx6AvBg5s`
+- 🛒 Store: `https://store.pichirincb.com/`
