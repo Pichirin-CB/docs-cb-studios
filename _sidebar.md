@@ -23,8 +23,8 @@
 
 
 
-- **MLO / MAPS**
-  - [🏢 | Industrial Truck Workshop](/mlo-mapping/industrial-truck-workshop.md)
+<!-- - **MLO / MAPS**
+  - [🏢 | Industrial Truck Workshop](/mlo-mapping/industrial-truck-workshop.md) -->
 
 
 

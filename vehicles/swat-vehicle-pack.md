@@ -9,13 +9,13 @@
 
 ------------------------------------------------------------------------
 
-# Showcase
+# 📺 Showcase
 
 <div align="center" style="margin-bottom: 1.5rem;">
   <iframe
     width="640"
     height="360"
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    src="https://www.youtube.com/embed/3LCLa4nuZuI"
     title="cb_truck-swat showcase"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -7,22 +7,22 @@
   <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QBCore%20%7C%20QBox%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
 </div>
 
-------------------------------------------------------------------------
 
-# Showcase
+<!-- # Showcase
 
 <div align="center" style="margin-bottom: 1.5rem;">
+  
   <iframe
     width="640"
     height="360"
     src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-    title="cb_pack-truck showcase"
+    title="cb_deadzone-extract showcase"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
     style="max-width: 100%; border-radius: 12px;"
   ></iframe>
-</div>
+</div> -->
 
 ------------------------------------------------------------------------
 

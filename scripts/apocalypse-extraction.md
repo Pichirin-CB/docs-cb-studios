@@ -7,9 +7,8 @@
   <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QB%20%7C%20QBX%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
 </div>
 
-------------------------------------------------------------------------
 
-# 📺 Showcase
+<!-- # 📺 Showcase
 
 <div align="center" style="margin-bottom: 1.5rem;">
   
@@ -23,7 +22,7 @@
     allowfullscreen
     style="max-width: 100%; border-radius: 12px;"
   ></iframe>
-</div>
+</div> -->
 
 ------------------------------------------------------------------------
 
