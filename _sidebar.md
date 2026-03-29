@@ -10,23 +10,16 @@
   - [Common Problems](/problems.md)
   - [Asset Escrow System](/fxap.md)
 
+
+
 - **PAID RESOURCES**
   - [⚡ | Cuban Electric Company](/scripts/electric-cuba.md)
 
 
 
-<!-- - **REDESIGNS** -->
-  <!-- - [🎨 | Ox Target (Crystal Style)](/scripts/ox-target-redesing-crystal.md) -->
-
-
 - **FREE RESOURCES**
   - [🔔 | Tactical Notify](/scripts/tactical-notify.md)
   - [🚁 | Apocalypse Extraction](/scripts/apocalypse-extraction.md) 
-
-
-
-<!-- - **MLO / MAPS**
-  - [🏢 | Industrial Truck Workshop](/mlo-mapping/industrial-truck-workshop.md) -->
 
 
 
