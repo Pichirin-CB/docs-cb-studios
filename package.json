@@ -1,0 +1,16 @@
+{
+  "name": "docs-cb-studios",
+  "version": "1.0.0",
+  "description": "Documentation site for CB Studios built with Docsify.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "docsify serve . -p 3000",
+    "start": "docsify serve . -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}
