@@ -9,7 +9,7 @@
 
 ------------------------------------------------------------------------
 
-# 📺 Showcase
+<!-- # 📺 Showcase
 
 <div align="center" style="margin-bottom: 1.5rem;">
   <iframe
@@ -22,7 +22,7 @@
     allowfullscreen
     style="max-width: 100%; border-radius: 12px;"
   ></iframe>
-</div>
+</div> -->
 
 ------------------------------------------------------------------------
 
