@@ -10,8 +10,8 @@
   - [Common Problems](/problems.md)
   - [Asset Escrow System](/fxap.md)
 
-<!-- - **PAID RESOURCES** -->
-  <!-- - [🧰 | Fast Repair — v 1.0](/scripts/fast-repair.md) -->
+- **PAID RESOURCES**
+  - [⚡ | Cuban Electric Company](/scripts/electric-cuba.md)
 
 <!-- - **REDESIGNS** -->
   <!-- - [🎨 | Ox Target (Crystal Style)](/scripts/ox-target-redesing-crystal.md) -->
