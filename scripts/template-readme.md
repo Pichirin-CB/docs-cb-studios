@@ -1,9 +1,18 @@
+
+██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗ 
+██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝ 
+██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗   
+██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝   
+██║  ██║███████╗██║  ██║██████╔╝██║ ╚═╝ ██║███████╗ 
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚══════╝ 
+---------------------------------------------------------------------------
+
 # Universal Resource Technical Documentation
 
 Resource Name: resource_name_here Version: 1.0.0 Author: YourName /
 StudioName Type: Script / Vehicle Pack / Audio Pack / Map / Asset Pack
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Resource Overview
 
@@ -13,7 +22,7 @@ configure and troubleshoot this resource.
 This file is intended for administrators and developers who install or
 maintain the resource.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Resource Structure
 
@@ -25,7 +34,7 @@ stream/ │ └─ assets │ └─ html/ └─ ui files
 
 Note: Some folders may differ depending on the type of resource.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Installation
 
@@ -47,7 +56,7 @@ ensure resource_name
 
 restart resource_name
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Configuration
 
@@ -67,7 +76,7 @@ Config.Debug = false Config.EnableLogs = true
 
 Modify configuration values according to your server needs.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Dependencies
 
@@ -80,7 +89,7 @@ This resource may require the following components:
 
 If no dependencies are required, the resource works standalone.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Compatibility
 
@@ -93,7 +102,7 @@ This resource may be compatible with:
 
 Compatibility depends on the resource type and configuration.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Updating the Resource
 
@@ -105,7 +114,7 @@ To update the resource:
 4.  Review configuration changes.
 5.  Restart the resource.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Troubleshooting
 
@@ -129,7 +138,7 @@ Assets not loading
 • Verify streamed files\
 • Check file paths
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Technical Notes
 
@@ -143,7 +152,7 @@ Changing resource names may require adjusting:
 
 Always keep backups before modifying the resource.
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # Support
 
@@ -156,12 +165,17 @@ Framework (if used)\
 Error logs\
 Description of the issue
 
-------------------------------------------------------------------------
+ ██████╗██████╗     ███████╗████████╗██╗   ██╗██████╗ ██╗ ██████╗ ███████╗ 
+██╔════╝██╔══██╗    ██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║██╔═══██╗██╔════╝ 
+██║     ██████╔╝    ███████╗   ██║   ██║   ██║██║  ██║██║██║   ██║███████╗ 
+██║     ██╔══██╗    ╚════██║   ██║   ██║   ██║██║  ██║██║██║   ██║╚════██║ 
+╚██████╗██████╔╝    ███████║   ██║   ╚██████╔╝██████╔╝██║╚██████╔╝███████║ 
+ ╚═════╝╚═════╝     ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝ 
 
-Support Discord → https://discord.gg/hsx6AvBg5s  
-Store → https://store.pichirincb.com  
-Documentation → https://docs.pichirincb.com
+Store -> https://store.pichirincb.com  
+Documentation -> https://docs.pichirincb.com
+Support Discord -> https://discord.gg/hsx6AvBg5s  
 
-------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 End of documentation

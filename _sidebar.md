@@ -14,6 +14,7 @@
 
 - **PAID RESOURCES**
   - [⚡ | Cuban Electric Company](/scripts/electric-cuba.md)
+  - [💱 | CADECA Cuba Exchange](/scripts/cadeca-cuba.md)
 
 
 
