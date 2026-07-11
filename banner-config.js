@@ -22,7 +22,7 @@ window.CB_BANNER_CONFIG = {
   cta: {
     enabled: true,
     label: "Visit Store",
-    url: "https://store.pichirincb.com/",
+    url: "https://pichirin-cb.tebex.io/",
     target: "_self"
   }
 };

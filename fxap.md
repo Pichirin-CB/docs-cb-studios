@@ -35,7 +35,7 @@ All three must align correctly.
 ### STEP 1 – PURCHASE ON TEBEX:
 
 - All official CB Studios scripts are sold exclusively via:  
-  👉 **[CB Studios Tebex Store](https://store.pichirincb.com/)**
+  👉 **[CB Studios Tebex Store](https://pichirin-cb.tebex.io/)**
 
 When you purchase a script:
 

@@ -464,5 +464,5 @@ CREATE TABLE IF NOT EXISTS cb_welcome_code_claims (
 # ⚠️ **IMPORTANT WARNING:**
 🚫 **DO NOT CHANGE THE RESOURCE FOLDER NAME!**
 
-⚖️ If you rename the folder, the script will NOT function and will stop automatically for security reasons. Check: https://store.pichirincb.com/legal
+⚖️ If you rename the folder, the script will NOT function and will stop automatically for security reasons. Check: https://pichirin-cb.tebex.io/legal
 🧩 *If you have an open source version, you can remove this security in the first lines of server.lua, sv_main.lua, etc.*

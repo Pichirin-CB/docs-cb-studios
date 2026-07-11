@@ -9,6 +9,14 @@
   </h1>
 </div>
 
+## Últimas actualizaciones
+
+- **Versión 1.1.0:** [cb_deadzone-extract](/scripts/apocalypse-extraction.md) eliminó la dependencia de `hate-bridge`, agregó compatibilidad con inventarios adicionales y mejoró sus integraciones personalizadas.
+
+[Ver historial completo de cambios](/changelog.md)
+
+---
+
 # &#9889; **QUICK START FOR NEW CUSTOMERS:**
 
 If you are here because you just purchased a script, follow this path before touching your live server:
