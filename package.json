@@ -2,14 +2,15 @@
   "name": "docs-cb-studios",
   "version": "1.0.0",
   "description": "Documentation site for CB Studios built with Docsify.",
+  "private": true,
   "main": "index.html",
   "scripts": {
     "dev": "docsify serve . -p 3000",
     "start": "docsify serve . -p 3000"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "CB Studios / pichirin_cb",
+  "license": "UNLICENSED",
   "devDependencies": {
     "docsify-cli": "^4.4.4"
   }

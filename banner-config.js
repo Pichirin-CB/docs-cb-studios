@@ -1,7 +1,7 @@
 // CB Studios — Global announcement bar configuration
 
 window.CB_BANNER_CONFIG = {
-  enabled: false,
+  enabled: true,
 
   // "info" | "alert" | "sale" | "maintenance" | "announcement" | "warning"
   type: "sale",

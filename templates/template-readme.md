@@ -1,4 +1,4 @@
-
+﻿
 ██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗ 
 ██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝ 
 ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗   
@@ -8,6 +8,14 @@
 ---------------------------------------------------------------------------
 
 # Universal Resource Technical Documentation
+
+Template rules:
+- Replace example values with verified product information.
+- Do not invent prices, ratings, download counts, customer counts, support times, or compatibility claims.
+- Keep official links current:
+  Store -> https://pichirin-cb.tebex.io/
+  Documentation -> https://docs.pichirincb.com
+  Discord -> https://discord.gg/hsx6AvBg5s
 
 Resource Name: resource_name_here Version: 1.0.0 Author: YourName /
 StudioName Type: Script / Vehicle Pack / Audio Pack / Map / Asset Pack
@@ -172,7 +180,7 @@ Description of the issue
 ╚██████╗██████╔╝    ███████║   ██║   ╚██████╔╝██████╔╝██║╚██████╔╝███████║ 
  ╚═════╝╚═════╝     ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝ 
 
-Store -> https://store.pichirincb.com  
+Store -> https://pichirin-cb.tebex.io/
 Documentation -> https://docs.pichirincb.com
 Support Discord -> https://discord.gg/hsx6AvBg5s  
 

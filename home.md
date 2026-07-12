@@ -1,123 +1,116 @@
-<div class="hero-logo-panel" style="text-align: center;">
-  <div class="hero-logo-inner" style="display: flex; justify-content: center;">
-    <img src="assets/logo.png" alt="CB Studios Logo" style="display: block; width: 100%; max-width: 460px; height: auto;" />
-  </div>
-</div>
-<div class="hero-header-wrapper">
-  <h1 class="hero-main-title" style="margin-top: 0 !important;">
-   OFFICIAL DOCUMENTATION
-  </h1>
-</div>
-
-## Últimas actualizaciones
-
-- **Versión 1.1.0:** [cb_deadzone-extract](/scripts/apocalypse-extraction.md) eliminó la dependencia de `hate-bridge`, agregó compatibilidad con inventarios adicionales y mejoró sus integraciones personalizadas.
-
-[Ver historial completo de cambios](/changelog.md)
-
----
-
-# &#9889; **QUICK START FOR NEW CUSTOMERS:**
-
-If you are here because you just purchased a script, follow this path before touching your live server:
-
-1. **Find your script page**  
-   Open the left menu and click on the exact script you bought.
-
-2. **Read the “Requirements” section carefully**  
-   Confirm that you have:
-   - The correct framework: **ESX / QBCore / Standalone**  
-   - Required dependencies: database adapter, target system, UI library, etc.  
-   - Any extra resources mentioned on that script’s page.
-
-3. **Configure before going live**  
-   Open `config.lua` (or similar) and check at least:
-
-   - `Config.Framework` (ESX / QBCore / Standalone)  
-   - Target / interaction system (for example `qb-target`, `ox_target`, etc.)  
-   - Notification / UI system (for example `ox_lib`, `mythic_notify`…)  
-   - Options linked to your economy, jobs, permissions or inventory.
-
-4. **Test in a non‑production environment**  
-   Before using it on your main RP server:
-
-   - Run the script on a **local test server**, or  
-   - Use a dedicated **staging/testing server** with fewer resources loaded.
-
-   This makes it easier to detect conflicts and understand how the script behaves in a clean setup.
-
----
-
-# 🧭 **WHAT YOU WILL FIND IN THESE DOCS:**
-
-Think of this documentation as a focused hub for **server owners** and **developers** using CB Studios scripts:
-
-<div class="feature-row">
-  <div class="feature-card">
-    <h3>🏠 Home</h3>
+<section class="hub-hero">
+  <div class="hub-hero__content">
+    <span class="hub-kicker">CB Studios Documentation Hub</span>
+    <h1>Premium FiveM & RedM Resources</h1>
     <p>
-      A clean entry point with links to the most important areas:
-      scripts list, support, FAQ and troubleshooting.
+      Official documentation for CB Studios resources: installation guides, compatibility notes,
+      product references, support workflows, changelogs, and legal information for server owners
+      and developers.
     </p>
+    <div class="hub-actions">
+      <a class="docs-button docs-button--primary" href="#/products">Browse Products</a>
+      <a class="docs-button" href="#/getting-started">View Documentation</a>
+      <a class="docs-button docs-button--ghost" href="https://discord.gg/hsx6AvBg5s" target="_blank" rel="noopener noreferrer">Join Discord</a>
+    </div>
   </div>
-  <div class="feature-card">
-    <h3>📚 Script pages</h3>
-    <p>
-      Each script has its own page covering:
-      requirements, installation, configuration, usage, developer events and exports.
-    </p>
+  <div class="hub-hero__panel">
+    <img src="assets/logo.png" alt="CB Studios logo" loading="lazy" />
+    <div>
+      <strong>CB Studios</strong>
+      <span>Product Documentation</span>
+    </div>
   </div>
-  <div class="feature-card">
-    <h3>🆘 Support & Troubleshooting</h3>
-    <p>
-      Dedicated sections for common problems, Asset Escrow explanations,
-      performance tips and how to open an effective support ticket.
-    </p>
-  </div>
+</section>
+
+<section class="value-strip" aria-label="CB Studios values">
+  <span>Professional Resources</span>
+  <span>Performance Focused</span>
+  <span>Regular Updates</span>
+  <span>Dedicated Documentation</span>
+  <span>FiveM & RedM Support</span>
+</section>
+
+## Product Categories
+
+<div class="category-grid">
+  <a class="category-card" href="#/products?filter=scripts">
+    <span class="category-card__icon" aria-hidden="true">
+      <img src="assets/scripts.png" alt="" loading="lazy" />
+    </span>
+    <strong>Scripts</strong>
+    <p>Gameplay systems, utilities, UI resources, and integrations documented for server deployment.</p>
+  </a>
+  <a class="category-card" href="#/products?filter=vehicles">
+    <span class="category-card__icon" aria-hidden="true">
+      <img src="assets/vehicle-packs.png" alt="" loading="lazy" />
+    </span>
+    <strong>Vehicle Packs</strong>
+    <p>Vehicle resources with installation, streaming, handling, and troubleshooting guidance.</p>
+  </a>
+  <a class="category-card" href="#/products?filter=audio">
+    <span class="category-card__icon" aria-hidden="true">
+      <img src="assets/audio-packs.png" alt="" loading="lazy" />
+    </span>
+    <strong>Audio Packs</strong>
+    <p>Sound resources documented with setup, testing, and compatibility notes.</p>
+  </a>
+  <a class="category-card" href="#/products?filter=mlo">
+    <span class="category-card__icon" aria-hidden="true">
+      <img src="assets/mlo-mapping.png" alt="" loading="lazy" />
+    </span>
+    <strong>MLO / Mapping</strong>
+    <p>Interior and mapping resources for roleplay environments.</p>
+  </a>
+  <a class="category-card" href="#/products?filter=free">
+    <span class="category-card__icon" aria-hidden="true">
+      <img src="assets/free-Resources.png" alt="" loading="lazy" />
+    </span>
+    <strong>Free Resources</strong>
+    <p>Publicly available resources with the same structured documentation standards.</p>
+  </a>
 </div>
 
----
+## Featured Resources
 
-# 🧩 **HOW TO USE THESE DOCS EFFICIENTLY:**
+<div id="featured-products" class="product-grid product-grid--featured"></div>
 
-To avoid wasting time and to keep your server stable, use this flow whenever you work with a CB Studios resource:
+## Why CB Studios
 
-1. **Start from the script page**  
-   - Read the page of the script you are installing or updating from top to bottom.  
-   - Do not skip the “Requirements” or any “Notes for updates”.
+<div class="docs-feature-grid">
+  <div class="docs-panel">
+    <strong>Clear installation documentation</strong>
+    <p>Each documented resource is organized around setup, configuration, usage, troubleshooting, and support context.</p>
+  </div>
+  <div class="docs-panel">
+    <strong>Compatibility information</strong>
+    <p>Frameworks, dependencies, and integrations are listed from each resource page when that information is available.</p>
+  </div>
+  <div class="docs-panel">
+    <strong>Organized support resources</strong>
+    <p>Support, FAQ, troubleshooting, and Asset Escrow documentation are separated so customers can find the right path quickly.</p>
+  </div>
+  <div class="docs-panel">
+    <strong>Product updates and changelogs</strong>
+    <p>The changelog keeps release notes and compatibility changes separate from the homepage, so the homepage stays stable.</p>
+  </div>
+  <div class="docs-panel">
+    <strong>Secure official purchase links</strong>
+    <p>Official store references point to the CB Studios Tebex store and avoid outdated marketplace links.</p>
+  </div>
+</div>
 
-2. **Search by keyword when you are stuck**  
-   - Use the search box on the left for specific terms such as  
-     `framework`, `export`, `event`, `command`, `target`, `notify`, etc.  
-   - This is useful if you remember the feature but not the exact section.
+## Support And Next Steps
 
-3. **Use troubleshooting before opening a ticket**  
-   - Check **[Common Problems](problems.md)** when:
-     - The resource doesn’t start.  
-     - There are SQL / database issues.  
-     - Permissions do not behave as expected.  
-     - Performance seems worse than it should be.
-
-4. **Go to support when you have a real, reproducible issue**  
-   - When something feels “off” and you can reproduce it, move to **[Support](support.md)**.  
-   - There you will find exactly what information to include so that CB Studios can help effectively.
-
----
-
-# 📬 **WHERE TO GO NEXT:**
-
-Depending on what you need right now:
-
-- 🧩 **You have a problem/error**  
-  → Go to **[Common Problems](problems.md)** for step‑by‑step diagnostics.  
-
-- 🧾 **You want to understand Asset Escrow / entitlements**  
-  → Read **[Asset Escrow System](fxap.md)** to understand how Cfx.re / Tebex protection works and how to fix typical entitlement issues.  
-
-- 🆘 **You need direct help**  
-  → Visit **[Support](support.md)** for contact details and what to include in your ticket so it can be handled quickly and professionally.  
-
-Use the **search bar** in the sidebar whenever you remember a keyword but not the exact page name.  
-Everything here is designed to save you time and reduce guesswork when running your FiveM server with CB Studios scripts. 💚
-
-
+<section class="support-cta">
+  <div>
+    <span class="hub-kicker">Need help?</span>
+    <h2>Start with the docs, then contact support with the right information.</h2>
+    <p>Review requirements, installation steps, known problems, and Asset Escrow notes before opening a ticket.</p>
+  </div>
+  <div class="hub-actions">
+    <a class="docs-button docs-button--primary" href="#/support">Support</a>
+    <a class="docs-button" href="#/faq">FAQ</a>
+    <a class="docs-button" href="#/problems">Troubleshooting</a>
+    <a class="docs-button docs-button--ghost" href="https://pichirin-cb.tebex.io/" target="_blank" rel="noopener noreferrer">Tebex Store</a>
+  </div>
+</section>

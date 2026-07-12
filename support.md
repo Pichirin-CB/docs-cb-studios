@@ -6,6 +6,7 @@ For any question, bug or installation issue related to **CB Studios** FiveM scri
 
 - 📧 **Email:** `pichirincb@gmail.com`  
 - 💬 **Discord:** [Join the CB Studios Discord](https://discord.gg/hsx6AvBg5s)
+- 🛒 **Store:** [CB Studios Tebex Store](https://pichirin-cb.tebex.io/)
 
 Discord is usually the **fastest** way to get help, especially when screenshots or short videos are needed.
 

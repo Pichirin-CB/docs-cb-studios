@@ -616,7 +616,7 @@ When requesting support, include:
 
 Support links:
 - Discord: https://discord.gg/hsx6AvBg5s
-- Store: https://store.pichirincb.com
+- Store: https://pichirin-cb.tebex.io/
 - Docs: https://docs.pichirincb.com
 
 ------------------------------------------------------------------------

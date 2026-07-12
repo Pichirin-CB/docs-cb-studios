@@ -9,6 +9,7 @@ Instrucciones:
 4. Verifica que cada enlace apunte a un archivo existente.
 5. Elimina todas las secciones y subcategorías que no tengan contenido antes de publicar.
 6. Si un recurso todavía no tiene documentación, escribe el nombre sin enlace y agrega "Documentación pendiente."
+7. No inventes cambios, fechas, compatibilidades ni versiones.
 -->
 
 ## [Versión X.X.X] - AAAA-MM-DD

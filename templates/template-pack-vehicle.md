@@ -1,5 +1,13 @@
 # CB Studios - Vehicle Pack Documentation
 
+<!--
+Template rules:
+- Write public documentation in professional English.
+- Replace example values with verified product information.
+- Do not invent prices, ratings, download counts, customer counts, support times, or compatibility claims.
+- After creating a real product page, add verified metadata to products-config.js.
+-->
+
 <div style="text-align: center;">
   <img src="https://img.shields.io/badge/CB%20Studios-FiveM%20Development-blue?style=for-the-badge" alt="CB Studios" />
   <img src="https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge" alt="Version" />
