@@ -39,7 +39,7 @@ Usa esta tabla para saber que archivo tocar segun lo que quieres cambiar.
 | Crear o editar paginas legales | `legal/` y `_sidebar.md` | Las paginas legales ya estan enlazadas bajo **LEGAL**. |
 | Crear una entrada de changelog | `changelog.md` o `changelog/` | Puedes copiar `templates/template-changelog-entry.md`. |
 | Crear un README para un recurso externo | `templates/template-readme.md` | Es plantilla para paquetes fuera de esta web. |
-| Cambiar logo o imagenes | `assets/` | El logo principal usado por la web esta en `assets/logo.png`. |
+| Cambiar logo o imagenes | `assets/branding/` o `assets/categories/` | El logo principal usado por la web esta en `assets/branding/logo.png`. |
 | Activar o editar el banner superior | `banner-config.js` | Cambia `enabled`, `type`, `title`, `subtitle` y `cta`. |
 | Cambiar colores, layout o footer | `index.html` | La mayor parte del CSS y el footer global estan dentro de este archivo. |
 | Cambiar dependencias o scripts npm | `package.json` | Solo necesario si cambias herramientas del proyecto. |
@@ -92,7 +92,11 @@ Decision importante: no cambies la configuracion de Docsify si solo estas agrega
 | `audio/` | Documentacion de packs de sonidos. |
 | `mlo-mapping/` | Documentacion de interiores, mapas y recursos de mapping. |
 | `templates/` | Plantillas base para crear nuevas paginas o docs de recursos. |
-| `assets/` | Logos, imagenes e iconos usados por la web. |
+| `assets/` | Carpeta base de imagenes, organizada por tipo. |
+| `assets/branding/` | Logo principal y logos de marcas/plataformas usados por sidebar, loader, Open Graph y footer. |
+| `assets/categories/` | Iconos pequenos usados en las tarjetas de categorias de Home. |
+| `assets/products/` | Reservado para imagenes especificas de productos. |
+| `assets/ui/` | Reservado para iconos o assets visuales de interfaz. |
 | `banner-config.js` | Configuracion del banner superior global. |
 | `index.html` | Docsify, CSS principal, plugins, footer y comportamiento visual. |
 | `CNAME` | Dominio publico para GitHub Pages u hosting estatico similar. |
@@ -101,11 +105,11 @@ Assets de categorias usados en Home:
 
 | Categoria | Asset |
 | --- | --- |
-| Scripts | `assets/scripts.png` |
-| Vehicle Packs | `assets/vehicle-packs.png` |
-| Audio Packs | `assets/audio-packs.png` |
-| MLO / Mapping | `assets/mlo-mapping.png` |
-| Free Resources | `assets/free-Resources.png` |
+| Scripts | `assets/categories/scripts.png` |
+| Vehicle Packs | `assets/categories/vehicle-packs.png` |
+| Audio Packs | `assets/categories/audio-packs.png` |
+| MLO / Mapping | `assets/categories/mlo-mapping.png` |
+| Free Resources | `assets/categories/free-resources.png` |
 
 Decision importante: estos assets se muestran pequenos dentro de las tarjetas de categorias. Si los reemplazas, manten imagenes limpias y legibles en tamano reducido.
 
@@ -437,7 +441,7 @@ Antes de mover estilos, revisa esto:
 - `index.html` controla tema, layout, sidebar, loader, footer, banner y boton de scroll.
 - `styles.css` existe, pero el sitio actual depende principalmente del CSS embebido en `index.html`.
 - Cambiar colores globales normalmente se hace en las variables `:root` dentro de `index.html`.
-- Cambiar logo del sidebar se hace reemplazando `assets/logo.png` o editando el HTML generado por el plugin de Docsify en `index.html`.
+- Cambiar logo del sidebar se hace reemplazando `assets/branding/logo.png` o editando el HTML generado por el plugin de Docsify en `index.html`.
 
 Decision recomendada: si solo vas a cambiar contenido, no toques `index.html`. Si vas a cambiar apariencia global, entonces si toca `index.html`.
 
@@ -468,7 +472,7 @@ No subas `node_modules/`; esta ignorado por `.gitignore`.
 | PowerShell bloquea `npm` | Windows bloquea `npm.ps1` | Usa `npm.cmd install` y `npm.cmd run dev`. |
 | El puerto `3000` esta ocupado | Hay otro servidor abierto | Cierra el otro servidor o usa `start.bat`. |
 | Una pagina existe pero no aparece | Falta enlace en `_sidebar.md` | Agrega la pagina al menu. |
-| El logo no carga | Ruta incorrecta o archivo faltante | Revisa `assets/logo.png`. |
+| El logo no carga | Ruta incorrecta o archivo faltante | Revisa `assets/branding/logo.png`. |
 | El banner no aparece | `enabled` esta en `false` | Cambia `enabled: true` en `banner-config.js`. |
 | La busqueda no encuentra una pagina | Docsify no la indexo aun o no esta enlazada | Recarga la pagina y revisa que el `.md` sea accesible. |
 | Un link interno no carga | Ruta incorrecta, archivo faltante o falta `.md` | Revisa la ruta y confirma que existe el archivo. |

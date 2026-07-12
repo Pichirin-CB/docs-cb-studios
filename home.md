@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="hub-hero__panel">
-    <img src="assets/logo.png" alt="CB Studios logo" loading="lazy" />
+    <img src="assets/branding/logo.png" alt="CB Studios logo" loading="lazy" />
     <div>
       <strong>CB Studios</strong>
       <span>Product Documentation</span>
@@ -35,35 +35,35 @@
 <div class="category-grid">
   <a class="category-card" href="#/products?filter=scripts">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/scripts.png" alt="" loading="lazy" />
+      <img src="assets/categories/scripts.png" alt="" loading="lazy" />
     </span>
     <strong>Scripts</strong>
     <p>Gameplay systems, utilities, UI resources, and integrations documented for server deployment.</p>
   </a>
   <a class="category-card" href="#/products?filter=vehicles">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/vehicle-packs.png" alt="" loading="lazy" />
+      <img src="assets/categories/vehicle-packs.png" alt="" loading="lazy" />
     </span>
     <strong>Vehicle Packs</strong>
     <p>Vehicle resources with installation, streaming, handling, and troubleshooting guidance.</p>
   </a>
   <a class="category-card" href="#/products?filter=audio">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/audio-packs.png" alt="" loading="lazy" />
+      <img src="assets/categories/audio-packs.png" alt="" loading="lazy" />
     </span>
     <strong>Audio Packs</strong>
     <p>Sound resources documented with setup, testing, and compatibility notes.</p>
   </a>
   <a class="category-card" href="#/products?filter=mlo">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/mlo-mapping.png" alt="" loading="lazy" />
+      <img src="assets/categories/mlo-mapping.png" alt="" loading="lazy" />
     </span>
     <strong>MLO / Mapping</strong>
     <p>Interior and mapping resources for roleplay environments.</p>
   </a>
   <a class="category-card" href="#/products?filter=free">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/free-Resources.png" alt="" loading="lazy" />
+      <img src="assets/categories/free-resources.png" alt="" loading="lazy" />
     </span>
     <strong>Free Resources</strong>
     <p>Publicly available resources with the same structured documentation standards.</p>
