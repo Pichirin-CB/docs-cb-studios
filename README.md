@@ -183,7 +183,7 @@ Recurso retirado actualmente:
 
 El sitio soporta modo claro y oscuro desde `index.html`.
 
-- Respeta `prefers-color-scheme` en la primera visita.
+- El tema por defecto es oscuro.
 - Guarda preferencia en `localStorage` con la clave `cb-theme`.
 - El boton de tema se agrega automaticamente en el brand area del sidebar.
 - Los colores se controlan con variables CSS en `:root` y `:root[data-theme="light"]`.
@@ -194,6 +194,16 @@ Para probar:
 2. Pulsa el boton de tema en el sidebar.
 3. Recarga la pagina.
 4. Confirma que el tema elegido persiste.
+
+## Scroll y navegacion
+
+El sitio guarda la posicion de scroll por ruta usando `localStorage` con la clave `cb-scroll-positions`.
+
+- Si entras a una pagina nueva, abre arriba.
+- Si regresas a una pagina ya visitada, restaura la posicion exacta donde estabas.
+- `history.scrollRestoration` se controla manualmente desde `index.html` para evitar saltos inconsistentes del navegador.
+
+Decision importante: si cambias la navegacion por hash, revisa las funciones `saveScrollPosition` y `restoreScrollPosition` en `index.html`.
 
 ## Componentes reutilizables
 

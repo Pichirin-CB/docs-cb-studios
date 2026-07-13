@@ -20,8 +20,7 @@
   <script>
     (function () {
       var saved = localStorage.getItem("cb-theme");
-      var system = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", saved || system);
+      document.documentElement.setAttribute("data-theme", saved || "dark");
     })();
   </script>
 
@@ -2219,6 +2218,52 @@
         });
       }
 
+      var scrollStorageKey = "cb-scroll-positions";
+      var currentRoute = location.hash || "#/home";
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+      function readScrollPositions() {
+        try {
+          return JSON.parse(localStorage.getItem(scrollStorageKey) || "{}");
+        } catch (error) {
+          return {};
+        }
+      }
+
+      function writeScrollPositions(positions) {
+        try {
+          var keys = Object.keys(positions);
+          if (keys.length > 80) {
+            keys.slice(0, keys.length - 80).forEach(function (key) {
+              delete positions[key];
+            });
+          }
+          localStorage.setItem(scrollStorageKey, JSON.stringify(positions));
+        } catch (error) {}
+      }
+
+      function saveScrollPosition(route) {
+        if (!route) return;
+        var positions = readScrollPositions();
+        positions[route] = {
+          top: Math.max(0, Math.round(window.scrollY || window.pageYOffset || 0)),
+          updatedAt: Date.now()
+        };
+        writeScrollPositions(positions);
+      }
+
+      function restoreScrollPosition(route) {
+        var positions = readScrollPositions();
+        var saved = positions[route];
+        var top = saved && typeof saved.top === "number" ? saved.top : 0;
+        setTimeout(function () {
+          window.scrollTo({ top: top, left: 0, behavior: "auto" });
+        }, 180);
+        setTimeout(function () {
+          window.scrollTo({ top: top, left: 0, behavior: "auto" });
+        }, 520);
+      }
+
       document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
           var active = document.activeElement;
@@ -2227,14 +2272,27 @@
       });
 
       window.addEventListener("hashchange", function () {
+        saveScrollPosition(currentRoute);
+        currentRoute = location.hash || "#/home";
         setTimeout(function () {
           renderProducts();
           enhanceCodeBlocks();
+          restoreScrollPosition(currentRoute);
         }, 120);
       });
+
+      window.addEventListener("beforeunload", function () {
+        saveScrollPosition(currentRoute);
+      });
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") saveScrollPosition(currentRoute);
+      });
+
       setTimeout(function () {
         renderProducts();
         enhanceCodeBlocks();
+        restoreScrollPosition(currentRoute);
       }, 500);
 
       /* ── LOADER DISMISS ── */
