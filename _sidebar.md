@@ -3,7 +3,7 @@
   - [Getting Started](/getting-started.md)
   - [All Products](/products.md)
 
-- **PRODUCTS**
+- **FIVEM**
   - **Paid Resources**
     - [⚡ | Cuban Electric Company](/scripts/electric-cuba.md)
     - [💱 | CADECA Cuba Exchange](/scripts/cadeca-cuba.md)
@@ -17,6 +17,10 @@
     - [🔊 | Car Sound Pack](/audio/car-sound-pack.md)
   - **MLO / Mapping**
     - [🏭 | Industrial Truck Workshop](/mlo-mapping/industrial-truck-workshop.md)
+
+- **REDM**
+  - **Free Resources**
+    - [🦌 | Fortuna Hunting Wagon](/scripts/fortuna-hunting-wagon.md)
 
 - **GUIDES**
   - [Installation](/guides/installation.md)
