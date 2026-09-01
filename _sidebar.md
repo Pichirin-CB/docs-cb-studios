@@ -21,6 +21,7 @@
 - **REDM**
   - **Free Resources**
     - [🦌 | Fortuna Hunting Wagon](/scripts/fortuna-hunting-wagon.md)
+    - [🗺️ | Fortuna Hunting Zones](/scripts/fortuna-hunting-zones.md)
 
 - **GUIDES**
   - [Installation](/guides/installation.md)
