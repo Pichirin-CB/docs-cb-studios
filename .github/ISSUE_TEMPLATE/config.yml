@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Customer support
+    url: https://discord.gg/hsx6AvBg5s
+    about: Get installation and product support through the official CB Studios Discord.
+  - name: Security report
+    url: https://github.com/Pichirin-CB/docs-cb-studios/security/policy
+    about: Read the security policy before reporting a vulnerability.
+  - name: License or infringement question
+    url: https://docs.pichirincb.com/#/legal/copyright
+    about: Review the copyright policy and official legal contact.
+

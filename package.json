@@ -11,7 +11,10 @@
   "keywords": [],
   "author": "CB Studios / pichirin_cb",
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20.11.0"
+  },
   "devDependencies": {
-    "docsify-cli": "^4.4.4"
+    "docsify-cli": "^5.0.0"
   }
 }

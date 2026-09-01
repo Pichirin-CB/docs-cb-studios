@@ -1,0 +1,46 @@
+name: Documentation quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Audit production and development dependencies
+        run: npm audit --audit-level=high
+
+      - name: Validate JavaScript configuration
+        run: |
+          node --check products-config.js
+          node --check banner-config.js
+
+      - name: Reject accidental public placeholders
+        shell: bash
+        run: |
+          if grep -R -n -E 'VIDEO_ID_HERE' \
+            --include='*.md' --include='*.js' \
+            --exclude-dir=node_modules --exclude-dir=templates \
+            --exclude='template-script.md' .; then
+            echo 'Public placeholder found.'
+            exit 1
+          fi

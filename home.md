@@ -11,13 +11,19 @@
       <a class="docs-button docs-button--ghost" href="https://discord.gg/hsx6AvBg5s" target="_blank" rel="noopener noreferrer">Join Discord</a>
       <a class="docs-button docs-button--ghost" href="https://github.com/Pichirin-CB?tab=repositories" target="_blank" rel="noopener noreferrer">View GitHub</a>
     </div>
+    <div class="hub-hero__meta" aria-label="Documentation benefits">
+      <span>Official source</span>
+      <span>Verified requirements</span>
+      <span>Customer-ready guides</span>
+    </div>
   </div>
   <div class="hub-hero__panel">
+    <span class="hub-panel-label">Official documentation</span>
     <div class="hub-hero__brand">
-      <img src="assets/branding/logo.png" alt="CB Studios logo" />
+      <img src="assets/branding/logo.png" alt="CB Studios logo" width="256" height="256" />
       <div>
         <strong>CB Studios</strong>
-        <span>Official resource documentation</span>
+        <span>Resources built for serious roleplay communities.</span>
       </div>
     </div>
     <div class="hub-platform-list" aria-label="Supported platforms">
@@ -25,6 +31,7 @@
       <div><span class="status-dot status-dot--redm"></span><strong>RedM</strong><small>Immersive gameplay resources</small></div>
       <div><span class="status-dot status-dot--support"></span><strong>Support</strong><small>Guides, troubleshooting & updates</small></div>
     </div>
+    <div class="hub-panel-footer"><span>Install</span><span>Configure</span><span>Integrate</span><span>Maintain</span></div>
   </div>
 </section>
 
@@ -58,35 +65,35 @@
 <div class="category-grid">
   <a class="category-card" href="#/products?filter=scripts">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/scripts.png" alt="" loading="lazy" />
+      <img src="assets/categories/scripts.png" alt="" width="128" height="128" />
     </span>
     <strong>Scripts</strong>
     <p>Gameplay systems, utilities, UI resources, and integrations documented for server deployment.</p>
   </a>
   <a class="category-card" href="#/products?filter=vehicles">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/vehicle-packs.png" alt="" loading="lazy" />
+      <img src="assets/categories/vehicle-packs.png" alt="" width="128" height="128" />
     </span>
     <strong>Vehicle Packs</strong>
     <p>Vehicle resources with installation, streaming, handling, and troubleshooting guidance.</p>
   </a>
   <a class="category-card" href="#/products?filter=audio">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/audio-packs.png" alt="" loading="lazy" />
+      <img src="assets/categories/audio-packs.png" alt="" width="128" height="128" />
     </span>
     <strong>Audio Packs</strong>
     <p>Sound resources documented with setup, testing, and compatibility notes.</p>
   </a>
   <a class="category-card" href="#/products?filter=mlo">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/mlo-mapping.png" alt="" loading="lazy" />
+      <img src="assets/categories/mlo-mapping.png" alt="" width="128" height="128" />
     </span>
     <strong>MLO / Mapping</strong>
     <p>Interior and mapping resources for roleplay environments.</p>
   </a>
   <a class="category-card" href="#/products?filter=free">
     <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/free-resources.png" alt="" loading="lazy" />
+      <img src="assets/categories/free-resources.png" alt="" width="128" height="128" />
     </span>
     <strong>Free Resources</strong>
     <p>Publicly available resources with the same structured documentation standards.</p>

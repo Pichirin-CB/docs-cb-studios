@@ -401,7 +401,7 @@ Copyright © 2026 **pichirin_cb / CB Studios**.
 
 This resource is licensed under the GNU General Public License v3.0 or later. You may use, study, modify and redistribute it under the license terms. Derivative distributions must preserve copyright and license notices and provide the corresponding source code under the GPL.
 
-See [LICENSE](LICENSE) for the complete terms.
+See the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html) for the complete terms.
 
 ------------------------------------------------------------------------
 

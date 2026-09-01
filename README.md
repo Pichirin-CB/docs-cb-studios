@@ -532,10 +532,10 @@ El proyecto usa:
 {
   "private": true,
   "license": "UNLICENSED",
-  "docsify-cli": "^4.4.4"
+  "docsify-cli": "^5.0.0"
 }
 ```
 
-No necesitas instalar `docsify-cli` globalmente. El proyecto usa la dependencia local instalada en `node_modules/`.
+No necesitas instalar `docsify-cli` globalmente. El proyecto usa la dependencia local instalada en `node_modules/`. Docsify CLI 5 requiere Node.js `20.11.0` o superior.
 
 Decision importante: `private: true` y `UNLICENSED` evitan que la metadata de npm contradiga los avisos legales de CB Studios.

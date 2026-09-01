@@ -1,0 +1,38 @@
+name: Documentation issue
+description: Report incorrect, missing, or unclear public documentation.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: Do not include license keys, credentials, customer data, private webhooks, paid source code, or protected files.
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      description: Provide the documentation URL or repository path.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain what is incorrect, missing, broken, or unclear.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected documentation
+      description: Explain what the page should say or do. Include public evidence when relevant.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public information check
+      options:
+        - label: I removed secrets, private customer information, license keys, and protected product files.
+          required: true
+
