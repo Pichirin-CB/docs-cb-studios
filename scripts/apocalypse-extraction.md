@@ -8,24 +8,6 @@
 </div>
 
 
-<!-- # 📺 Showcase
-
-<div align="center" style="margin-bottom: 1.5rem;">
-  
-  <iframe
-    width="640"
-    height="360"
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-    title="cb_deadzone-extract showcase"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    style="max-width: 100%; border-radius: 12px;"
-  ></iframe>
-</div> -->
-
-------------------------------------------------------------------------
-
 # 📖 Overview
 
 | Field | Value |

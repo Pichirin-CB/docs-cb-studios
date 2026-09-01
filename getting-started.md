@@ -24,6 +24,7 @@ Use this page as the first stop before installing or updating a CB Studios resou
 | --- | --- |
 | Store | https://pichirin-cb.tebex.io/ |
 | Discord | https://discord.gg/hsx6AvBg5s |
+| GitHub | https://github.com/Pichirin-CB?tab=repositories |
 | Email | pichirincb@gmail.com |
 | Documentation | https://docs.pichirincb.com |
 

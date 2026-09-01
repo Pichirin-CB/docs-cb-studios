@@ -8,6 +8,7 @@ Use this index to access the official CB Studios legal documents.
 
 | Document | Purpose |
 | --- | --- |
+| [Repository License](/LICENSE.md) | Protects the public documentation repository, website source, original content, design, metadata, templates, and branding. |
 | [License Agreement](/legal/license.md) | Explains license rights, ownership, restrictions, support, termination, and liability. |
 | [Terms of Service](/legal/terms.md) | Covers purchases, digital products, support, updates, chargebacks, termination, and Florida governing law. |
 | [Copyright Policy](/legal/copyright.md) | Explains copyright protection for resources, source code, documentation, assets, branding, and media. |

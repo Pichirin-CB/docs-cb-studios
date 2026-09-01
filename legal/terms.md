@@ -2,7 +2,7 @@
 
 [Home](/home.md) / Legal / Terms of Service
 
-**Last updated:** July 12, 2026
+**Last updated:** September 1, 2026
 
 !> **Important:** These Terms of Service govern purchases, access, support, and use of CB Studios digital products and documentation.
 
@@ -11,6 +11,8 @@
 These Terms of Service apply to all CB Studios customers, users, visitors, and purchasers who access or use CB Studios resources, documentation, support channels, store pages, download systems, license systems, or related services.
 
 By purchasing, downloading, installing, accessing, or using a CB Studios resource, you agree to these terms and the applicable [License Agreement](/legal/license.md).
+
+Access to the public documentation repository is also subject to the [CB Studios Proprietary Repository License](/LICENSE.md). Public repository access does not authorize resale, redistribution, mirroring, rebranding, or commercial reuse of the website or documentation.
 
 ## Purchases
 

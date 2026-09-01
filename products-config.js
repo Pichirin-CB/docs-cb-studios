@@ -106,5 +106,31 @@ window.CB_PRODUCTS = [
     status: "Stable",
     featured: false,
     description: "Truck workshop interior and mapping resource for FiveM servers, focused on industrial roleplay environments."
+  },
+  {
+    slug: "fortuna-hunting-wagon",
+    name: "Fortuna Hunting Wagon",
+    resource: "fortuna_huntingwagon",
+    category: "Free Resources",
+    type: "free",
+    docPath: "/scripts/fortuna-hunting-wagon.md",
+    storeUrl: null,
+    frameworks: ["RedM", "Standalone", "VORP"],
+    status: "Stable",
+    featured: false,
+    description: "Secure RedM hunting-wagon cargo system with validated storage, configurable capacity, localization, and optional VORP integration."
+  },
+  {
+    slug: "fortuna-hunting-zones",
+    name: "Fortuna Hunting Zones",
+    resource: "fortuna_huntingzones",
+    category: "Free Resources",
+    type: "free",
+    docPath: "/scripts/fortuna-hunting-zones.md",
+    storeUrl: null,
+    frameworks: ["RedM", "VORP"],
+    status: "Stable",
+    featured: false,
+    description: "Collaborative RedM hunting heatmap with proximity-based observations, persistent filters, localization, and VORP integration."
   }
 ];

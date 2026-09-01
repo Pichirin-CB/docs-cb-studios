@@ -2,7 +2,7 @@
 
 [Home](/home.md) / Legal / License Agreement
 
-**Last updated:** July 12, 2026
+**Last updated:** September 1, 2026
 
 !> **Important:** This End User License Agreement is a legal document. By purchasing, downloading, installing, accessing, or using any CB Studios resource, you agree to follow this agreement.
 
@@ -20,6 +20,16 @@ For the purposes of this agreement, "CB Studios", "we", "our", or "us" refers to
 | Public location reference | Tampa, Florida, United States |
 
 ?> **Note:** Purchasing a CB Studios resource does not transfer ownership of the source code, assets, intellectual property, brand, or product. You receive a limited license to use the resource under the terms below.
+
+## Public Documentation Repository
+
+The source of the CB Studios documentation website is publicly visible on GitHub. Public visibility is provided for customer access, transparency, issue reporting, and repository functionality; it does not make the website or documentation open source.
+
+The website source, original documentation, design, product metadata, templates, and CB Studios assets in that repository are governed by the [CB Studios Proprietary Repository License](/LICENSE.md). Unless CB Studios gives prior written permission, they may not be resold, mirrored, rebranded, republished, or used to create another commercial documentation portal.
+
+GitHub users may exercise only the repository access and fork functionality granted separately by GitHub's Terms of Service. That platform access does not grant an independent right to sell, redistribute, sublicense, or commercially exploit CB Studios materials.
+
+?> **License exception:** A product or file expressly identified as MIT, GPL, or another license remains governed by that specific license. The repository license does not remove rights already granted by an applicable product-specific or third-party license.
 
 ## License Grant
 

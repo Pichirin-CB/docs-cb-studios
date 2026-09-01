@@ -4,7 +4,7 @@ window.CB_BANNER_CONFIG = {
   enabled: true,
 
   // "info" | "alert" | "sale" | "maintenance" | "announcement" | "warning"
-  type: "sale",
+  type: "announcement",
 
   // "full" | "compact"
   layout: "compact",
@@ -12,17 +12,17 @@ window.CB_BANNER_CONFIG = {
   // "center" | "left"
   align: "center",
 
-  icon: "💡",
+  icon: "CB",
 
-  title: "Discover CB Scripts! Go to our documentation to explore available scripts.",
+  title: "Explore CB Studios resources for FiveM and RedM.",
 
   subtitle:
     "",
 
   cta: {
     enabled: true,
-    label: "Visit Store",
-    url: "https://pichirin-cb.tebex.io/",
+    label: "Browse Products",
+    url: "#/products",
     target: "_self"
   }
 };

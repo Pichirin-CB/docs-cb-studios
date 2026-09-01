@@ -2,7 +2,7 @@
 
 [Home](/home.md) / Legal / Copyright Policy
 
-**Last updated:** July 12, 2026
+**Last updated:** September 1, 2026
 
 !> **Important:** All CB Studios resources are protected by copyright and other intellectual property laws. Unauthorized redistribution, resale, publication, leaking, or copying is prohibited.
 
@@ -11,6 +11,12 @@
 This Copyright Policy explains how CB Studios protects its creative and technical works, including commercial resources, source code, documentation, design assets, and brand materials.
 
 CB Studios retains all rights not expressly granted through a written license or the [License Agreement](/legal/license.md).
+
+## Public Repository Notice
+
+Making the documentation repository publicly visible does not dedicate its contents to the public domain and does not authorize copying, resale, mirroring, rebranding, or commercial reuse. The original repository materials are governed by the [CB Studios Proprietary Repository License](/LICENSE.md).
+
+GitHub platform permissions that allow viewing or forking do not transfer copyright ownership. Product-specific open-source licenses remain effective only for the products or files to which they expressly apply.
 
 | Rights holder / publisher | Details |
 | --- | --- |

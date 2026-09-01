@@ -4,6 +4,8 @@ Documentacion oficial de **CB Studios** creada con **Docsify**.
 
 Este repositorio no es una app con backend. Es una web estatica de documentacion: `index.html` carga Docsify, Docsify lee archivos `.md`, y el menu lateral se arma desde `_sidebar.md`.
 
+> **Repositorio publico, contenido propietario:** el codigo de la web, la documentacion, el diseno, los templates, la metadata y los assets originales de este repositorio estan protegidos por [LICENSE.md](LICENSE.md). La visibilidad publica no autoriza reventa, redistribucion, clonacion comercial, rebranding ni publicacion de versiones derivadas. Los productos que declaran expresamente MIT, GPL u otra licencia conservan su licencia especifica.
+
 La documentacion publica del sitio debe estar escrita en **ingles profesional**. Este `README.md` es una guia interna de mantenimiento en espanol para decidir que archivo tocar.
 
 ## Identidad oficial
@@ -14,12 +16,13 @@ La documentacion publica del sitio debe estar escrita en **ingles profesional**.
 | Creator / owner name | pichirin_cb |
 | Email oficial | `pichirincb@gmail.com` |
 | Discord oficial | `https://discord.gg/hsx6AvBg5s` |
+| GitHub oficial | `https://github.com/Pichirin-CB?tab=repositories` |
 | Tienda oficial | `https://pichirin-cb.tebex.io/` |
 | Docs publicas | `https://docs.pichirincb.com` |
 | Dominio en `CNAME` | `docs.pichirincb.com` |
 | Referencia publica legal | Tampa, Florida, United States |
 
-Decision importante: si cambia la tienda, Discord, email, dominio o identidad, revisa `support.md`, `fxap.md`, `legal/`, `banner-config.js`, templates y paginas de recursos que tengan enlaces de soporte.
+Decision importante: si cambia la tienda, GitHub, Discord, email, dominio o identidad, revisa `home.md`, `getting-started.md`, `support.md`, `fxap.md`, `legal/`, `index.html`, `banner-config.js`, templates y paginas de recursos que tengan enlaces oficiales.
 
 ## Que decision quieres tomar?
 
@@ -100,6 +103,12 @@ Decision importante: no cambies la configuracion de Docsify si solo estas agrega
 | `banner-config.js` | Configuracion del banner superior global. |
 | `index.html` | Docsify, CSS principal, plugins, footer y comportamiento visual. |
 | `CNAME` | Dominio publico para GitHub Pages u hosting estatico similar. |
+| `robots.txt`, `sitemap.xml` | Instrucciones basicas de indexacion para buscadores. |
+| `LICENSE.md` | Licencia propietaria aplicable a la web, documentacion y materiales originales del repositorio. |
+| `NOTICE.md` | Copyright, atribuciones, terceros y orden de precedencia de licencias. |
+| `SECURITY.md` | Canal privado y reglas para reportar vulnerabilidades. |
+| `CONTRIBUTING.md` | Condiciones para issues, pull requests y contribuciones. |
+| `.github/` | CODEOWNERS y plantilla de pull request para el repositorio publico. |
 
 Assets de categorias usados en Home:
 
@@ -172,6 +181,8 @@ Estado actual de productos:
 | Truck Vehicle Pack | sin precio confirmado en docs | Tebex |
 | Car Sound Pack | sin precio confirmado en docs | Tebex |
 | Industrial Truck Workshop | sin precio confirmado en docs | Tebex |
+| Fortuna Hunting Wagon | free / open source | Support |
+| Fortuna Hunting Zones | free / open source | Support |
 
 Recurso retirado actualmente:
 
@@ -319,6 +330,10 @@ scripts/mi-nuevo-script.md
 Decision importante: si el recurso es comercial, confirma que tenga una seccion **License** o que use el template actualizado.
 
 ## Legal
+
+El repositorio publico usa `LICENSE.md` como licencia raiz. `package.json` debe permanecer con `"license": "UNLICENSED"`; no se debe cambiar a MIT, ISC, GPL u otra licencia abierta salvo una decision expresa del propietario.
+
+La licencia raiz no reemplaza licencias especificas declaradas por un producto o archivo. Por ejemplo, Fortuna Hunting Wagon y Fortuna Hunting Zones siguen bajo GPL-3.0-or-later, y Tactical Notify declara MIT en su propia documentacion.
 
 La seccion legal vive en:
 
