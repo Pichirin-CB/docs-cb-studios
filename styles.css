@@ -1,40 +1,40 @@
 :root {
-  --page-bg: #070b11;
-  --page-bg-soft: #0d131d;
-  --surface-0: #0f1724;
-  --surface-1: #151f2e;
-  --surface-2: #1d293a;
-  --surface-glass: rgba(19, 28, 42, 0.76);
+  --page-bg: #0b0c0e;
+  --page-bg-soft: #101216;
+  --surface-0: #14161a;
+  --surface-1: #1a1d22;
+  --surface-2: #22262c;
+  --surface-glass: rgba(24, 27, 31, 0.76);
 
-  --text-strong: #e7edf8;
-  --text-main: #c9d4e7;
-  --text-muted: #8d9bb4;
+  --text-strong: #f2eee7;
+  --text-main: #c8c0b5;
+  --text-muted: #918a80;
 
-  --border-soft: rgba(139, 160, 190, 0.22);
-  --border-strong: rgba(148, 174, 210, 0.42);
+  --border-soft: rgba(180, 169, 153, 0.22);
+  --border-strong: rgba(201, 178, 141, 0.42);
 
-  --accent: #34b6ff;
-  --accent-strong: #149fff;
-  --accent-soft: rgba(52, 182, 255, 0.2);
-  --accent-glow: rgba(20, 159, 255, 0.28);
+  --accent: #f0a43a;
+  --accent-strong: #d98527;
+  --accent-soft: rgba(240, 164, 58, 0.20);
+  --accent-glow: rgba(217, 133, 39, 0.28);
 
   --sidebar-width: 300px;
   --content-max-width: 980px;
   --base-font-size: 16px;
 
-  --announce-info-bg: linear-gradient(90deg, #125b8c, #2a7db6);
+  --announce-info-bg: linear-gradient(90deg, #8c5b22, #b9782d);
   --announce-alert-bg: linear-gradient(90deg, #8f1f2d, #c92c40);
-  --announce-sale-bg: linear-gradient(90deg, #0f6c83, #16a7c6);
+  --announce-sale-bg: linear-gradient(90deg, #7f6129, #b68a3a);
   --announce-maintenance-bg: linear-gradient(90deg, #896315, #b88f2d);
-  --announce-text-color: #e8f2ff;
+  --announce-text-color: #f2eee7;
 }
 
 html,
 body {
   min-height: 100%;
   background:
-    radial-gradient(1200px 700px at 85% -5%, #15304f 0%, rgba(21, 48, 79, 0) 58%),
-    radial-gradient(900px 550px at 2% 100%, rgba(28, 82, 128, 0.42) 0%, rgba(28, 82, 128, 0) 60%),
+    radial-gradient(1200px 700px at 85% -5%, #33281b 0%, rgba(51, 40, 27, 0) 58%),
+    radial-gradient(900px 550px at 2% 100%, rgba(92, 67, 31, 0.32) 0%, rgba(92, 67, 31, 0) 60%),
     var(--page-bg);
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 .announcement-type-announcement {
-  background: linear-gradient(90deg, #104d88, #1f74ba);
+  background: linear-gradient(90deg, #76511f, #a56e2b);
 }
 
 .announcement-type-warning {
@@ -146,7 +146,7 @@ body {
   padding: 0.2rem 0.78rem;
   font-size: 0.74rem;
   border: 1px solid rgba(232, 242, 255, 0.58);
-  color: #e8f2ff;
+  color: #f2eee7;
   text-decoration: none;
   background: rgba(8, 18, 30, 0.24);
   transition: background 0.15s ease, transform 0.15s ease;
@@ -190,7 +190,7 @@ body {
   margin-top: 0.34rem;
   font-size: 0.7rem;
   letter-spacing: 0.14em;
-  color: #aebcd3;
+  color: #a69d91;
 }
 
 .search {
@@ -250,21 +250,21 @@ body {
   border-radius: 999px;
   padding: 0.44rem 0.92rem;
   font-size: 0.83rem;
-  color: #bdcae0;
+  color: #c7beb2;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .sidebar-nav a:hover {
-  color: #eff5ff;
+  color: #f2eee7;
   background: rgba(49, 73, 102, 0.38);
   transform: translateX(2px);
 }
 
 .sidebar-nav .active > a,
 .sidebar-nav a.active {
-  color: #ecf6ff;
+  color: #f4eee5;
   background: linear-gradient(90deg, rgba(17, 66, 110, 0.9), rgba(19, 100, 155, 0.86));
-  box-shadow: inset 0 0 0 1px rgba(95, 188, 255, 0.4), 0 10px 20px rgba(10, 38, 65, 0.42);
+  box-shadow: inset 0 0 0 1px rgba(240, 164, 58, 0.40), 0 10px 20px rgba(10, 38, 65, 0.42);
 }
 
 .sidebar-toggle {
@@ -328,18 +328,18 @@ body {
 }
 
 .markdown-section strong {
-  color: #edf3ff;
+  color: #f2eee7;
 }
 
 .markdown-section a {
-  color: #69c9ff;
+  color: #e0a14a;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .markdown-section a:hover {
-  color: #9ddfff;
+  color: #f0bd70;
   border-bottom-color: rgba(157, 223, 255, 0.5);
 }
 
@@ -389,7 +389,7 @@ body {
 }
 
 .tip {
-  border-left-color: #2fbcff !important;
+  border-left-color: #d99434 !important;
 }
 
 .warning {
@@ -405,7 +405,7 @@ code {
   background: rgba(20, 31, 47, 0.9);
   border: 1px solid rgba(119, 145, 178, 0.28);
   border-radius: 7px;
-  color: #d4e7ff;
+  color: #e8dfd2;
   padding: 0.07rem 0.34rem;
   font-size: 0.82em;
 }
@@ -424,14 +424,14 @@ pre {
 pre code {
   border: none !important;
   background: transparent !important;
-  color: #d8e8fb;
+  color: #e9e1d5;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #8094b3;
+  color: #8e877d;
 }
 
 /* Images */
@@ -446,7 +446,7 @@ pre code {
   padding-top: 1.2rem;
   border-top: 1px solid rgba(130, 156, 192, 0.24);
   font-size: 0.75rem;
-  color: #92a3bc;
+  color: #958e84;
   text-align: center;
 }
 
@@ -477,7 +477,7 @@ pre code {
   letter-spacing: -0.02em;
   font-size: clamp(1.8rem, 4vw, 2.7rem);
   font-family: "Sora", "Plus Jakarta Sans", sans-serif;
-  color: #eef4ff;
+  color: #f2eee7;
   text-shadow: 0 8px 28px rgba(4, 10, 19, 0.64);
 }
 
@@ -519,7 +519,7 @@ pre code {
 
 .feature-card h3 {
   margin: 0 0 0.32rem;
-  color: #eff5ff;
+  color: #f2eee7;
   font-size: 0.95rem;
 }
 
@@ -531,7 +531,7 @@ pre code {
 
 .feature-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(95, 188, 255, 0.42);
+  border-color: rgba(240, 164, 58, 0.42);
   box-shadow: 0 16px 32px rgba(4, 12, 23, 0.52);
 }
 
@@ -555,8 +555,8 @@ pre code {
 }
 
 .badge--new {
-  border-color: rgba(69, 188, 255, 0.68);
-  color: #9cdcff;
+  border-color: rgba(240, 164, 58, 0.68);
+  color: #f0bd70;
 }
 
 .badge--beta {
@@ -582,9 +582,9 @@ pre code {
   width: 42px;
   height: 42px;
   border-radius: 999px;
-  border: 1px solid rgba(95, 188, 255, 0.38);
+  border: 1px solid rgba(240, 164, 58, 0.38);
   background: rgba(18, 30, 46, 0.88);
-  color: #d8ebff;
+  color: #eadfce;
   font-size: 18px;
   cursor: pointer;
   z-index: 20;
@@ -608,7 +608,7 @@ pre code {
   background:
     radial-gradient(900px 520px at 80% 8%, rgba(21, 88, 151, 0.34), rgba(21, 88, 151, 0)),
     radial-gradient(900px 540px at 0% 100%, rgba(37, 93, 145, 0.26), rgba(37, 93, 145, 0)),
-    #070b11;
+    #0b0c0e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -645,7 +645,7 @@ pre code {
 
 .page-loader-text {
   font-size: 0.86rem;
-  color: #dce8fb;
+  color: #e8dfd2;
   letter-spacing: 0.04em;
 }
 
