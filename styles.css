@@ -210,3 +210,154 @@ a { color: inherit; }
   .announcement-inner { align-items: flex-start; flex-direction: column; }
   .announcement-cta { margin-left: 0; }
 }
+
+/* ===== v1.1 responsive / cross-browser layout hardening ===== */
+html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+body { min-width: 0; }
+#app { min-width: 0; }
+
+/* Keep Docsify's content column synchronized with our sidebar width. */
+body:not(.close) .content {
+  left: var(--sidebar-w) !important;
+  width: calc(100% - var(--sidebar-w)) !important;
+  max-width: calc(100% - var(--sidebar-w)) !important;
+}
+body.close .content {
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.sidebar {
+  left: 0 !important;
+  max-width: min(var(--sidebar-w), 88vw) !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.sidebar > * { max-width: 100%; }
+.sidebar-nav {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+.sidebar-nav ul,
+.sidebar-nav li,
+.sidebar-nav li a {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+.sidebar-nav ul ul {
+  margin-left: 0 !important;
+  padding-left: 8px !important;
+}
+.sidebar-nav li a {
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  white-space: normal !important;
+}
+/* Themeable/Docsify markers can sit at a negative X position; neutralize them. */
+.sidebar-nav li::before,
+.sidebar-nav li a::before { left: 0 !important; }
+
+.content,
+.markdown-section,
+#main-content,
+.page-nav-actions,
+.cb-footer {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+.markdown-section,
+.page-nav-actions,
+.cb-footer {
+  width: min(100%, var(--content-w)) !important;
+  max-width: var(--content-w) !important;
+}
+.markdown-section img,
+.markdown-section video,
+.markdown-section iframe,
+.markdown-section svg { max-width: 100% !important; height: auto; }
+.markdown-section pre,
+.markdown-section table { max-width: 100% !important; }
+.markdown-section pre { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+.markdown-section table { display: block; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+.markdown-section code { overflow-wrap: normal; }
+
+.journey-grid, .category-grid, .docs-feature-grid, .product-grid { min-width: 0; }
+.journey-card, .category-card, .docs-panel, .product-card,
+.journey-card > *, .category-card > *, .docs-panel > *, .product-card > * { min-width: 0; }
+.hub-hero h1, .hub-hero p { overflow-wrap: anywhere; }
+
+/* Safari/WebKit-safe flex sizing. */
+.hub-actions, .product-actions, .cb-footer__links, .value-strip, .filter-bar {
+  min-width: 0;
+}
+.docs-button { max-width: 100%; white-space: normal; text-align: center; }
+
+@media (min-width: 769px) {
+  .sidebar-toggle { left: calc(var(--sidebar-w) + 10px) !important; }
+  body.close .sidebar-toggle { left: 10px !important; }
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  :root { --sidebar-w: 260px; --content-w: 760px; }
+  .markdown-section { padding-left: 24px !important; padding-right: 24px !important; }
+  .page-nav-actions, .cb-footer { padding-left: 24px !important; padding-right: 24px !important; }
+}
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: min(292px, 86vw); }
+
+  /* On phones/tablets Docsify must overlay the sidebar, never reserve its width. */
+  body:not(.close) .content,
+  body.close .content,
+  .content {
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 18px !important;
+  }
+  .sidebar {
+    width: var(--sidebar-w) !important;
+    max-width: 86vw !important;
+  }
+  .sidebar-toggle {
+    position: fixed !important;
+    left: 10px !important;
+    top: 10px !important;
+    z-index: 1001 !important;
+  }
+  .markdown-section,
+  .page-nav-actions,
+  .cb-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+  }
+  .markdown-section { padding-top: 18px !important; padding-bottom: 46px !important; }
+  .hub-hero { padding-top: 20px; }
+  .hub-hero h1 { font-size: clamp(2rem, 11vw, 3.1rem) !important; }
+  .hub-actions .docs-button { flex: 1 1 140px; }
+  .page-nav-actions .docs-button { flex: 1 1 auto; }
+  .scroll-toggle-btn { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 420px) {
+  html { font-size: 14px; }
+  .brand-header { padding-left: 12px; padding-right: 12px; }
+  .search { margin-left: 10px !important; margin-right: 10px !important; }
+  .sidebar-nav { padding-left: 6px !important; padding-right: 6px !important; }
+  .markdown-section h1 { font-size: clamp(1.8rem, 10vw, 2.45rem) !important; }
+  .hub-actions, .product-actions { flex-direction: column; align-items: stretch; }
+  .hub-actions .docs-button, .product-actions .docs-button { width: 100%; }
+  .support-cta { padding: 15px; }
+  .cb-footer__brand { align-items: flex-start; }
+}
+
+@supports (height: 100dvh) {
+  .sidebar { height: 100dvh !important; }
+}
