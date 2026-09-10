@@ -211,153 +211,380 @@ a { color: inherit; }
   .announcement-cta { margin-left: 0; }
 }
 
-/* ===== v1.1 responsive / cross-browser layout hardening ===== */
-html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
-body { min-width: 0; }
-#app { min-width: 0; }
-
-/* Keep Docsify's content column synchronized with our sidebar width. */
-body:not(.close) .content {
-  left: var(--sidebar-w) !important;
-  width: calc(100% - var(--sidebar-w)) !important;
-  max-width: calc(100% - var(--sidebar-w)) !important;
+/* ========================================================================== 
+   v1.2 — LAYOUT / RESPONSIVE HARDENING
+   Explicitly neutralizes Docsify theme geometry so sidebar/content cannot
+   overlap or clip each other at browser zoom, narrow desktops, tablets, or
+   mobile widths.
+   ========================================================================== */
+:root {
+  --topbar-h: 0px;
+  --layout-gutter: clamp(18px, 3vw, 40px);
+  --content-w: 980px;
 }
-body.close .content {
-  left: 0 !important;
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+body,
+#app,
+main,
+.content,
+.markdown-section,
+.markdown-section > *,
+.hub-hero,
+.journey-grid,
+.category-grid,
+.docs-feature-grid,
+.product-grid,
+.support-cta,
+.cb-footer,
+.page-nav-actions {
+  min-width: 0 !important;
+}
+
+/* Top announcement/header: never let it cover the sidebar brand. */
+.announcement-bar--visible {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
   width: 100% !important;
-  max-width: 100% !important;
+  z-index: 500 !important;
 }
 
+.announcement-inner {
+  width: min(100%, 1200px) !important;
+  min-width: 0 !important;
+  padding-left: max(16px, env(safe-area-inset-left)) !important;
+  padding-right: max(16px, env(safe-area-inset-right)) !important;
+}
+
+.announcement-copy,
+.announcement-copy strong,
+.announcement-copy span {
+  min-width: 0 !important;
+  overflow-wrap: anywhere;
+}
+
+/* Sidebar geometry. */
 .sidebar {
+  position: fixed !important;
   left: 0 !important;
-  max-width: min(var(--sidebar-w), 88vw) !important;
+  top: var(--topbar-h) !important;
+  bottom: 0 !important;
+  width: var(--sidebar-w) !important;
+  height: auto !important;
+  max-height: calc(100dvh - var(--topbar-h)) !important;
   overflow-x: hidden !important;
   overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
+  z-index: 210 !important;
 }
-.sidebar > * { max-width: 100%; }
-.sidebar-nav {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
+
+@supports not (height: 100dvh) {
+  .sidebar { max-height: calc(100vh - var(--topbar-h)) !important; }
 }
-.sidebar-nav ul,
+
+.brand-header,
+.brand-lockup,
+.brand-lockup span,
+.search,
+.search .input-wrap,
+.sidebar-nav,
 .sidebar-nav li,
 .sidebar-nav li a {
   min-width: 0 !important;
   max-width: 100% !important;
 }
-.sidebar-nav ul ul {
-  margin-left: 0 !important;
-  padding-left: 8px !important;
+
+.brand-header {
+  position: relative;
+  overflow: hidden;
 }
+
+.brand-lockup small,
 .sidebar-nav li a {
-  overflow-wrap: anywhere !important;
-  word-break: normal !important;
-  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
-/* Themeable/Docsify markers can sit at a negative X position; neutralize them. */
-.sidebar-nav li::before,
-.sidebar-nav li a::before { left: 0 !important; }
 
-.content,
-.markdown-section,
-#main-content,
-.page-nav-actions,
-.cb-footer {
+.search input {
   min-width: 0 !important;
-  box-sizing: border-box !important;
-}
-.markdown-section,
-.page-nav-actions,
-.cb-footer {
-  width: min(100%, var(--content-w)) !important;
-  max-width: var(--content-w) !important;
-}
-.markdown-section img,
-.markdown-section video,
-.markdown-section iframe,
-.markdown-section svg { max-width: 100% !important; height: auto; }
-.markdown-section pre,
-.markdown-section table { max-width: 100% !important; }
-.markdown-section pre { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
-.markdown-section table { display: block; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
-.markdown-section code { overflow-wrap: normal; }
-
-.journey-grid, .category-grid, .docs-feature-grid, .product-grid { min-width: 0; }
-.journey-card, .category-card, .docs-panel, .product-card,
-.journey-card > *, .category-card > *, .docs-panel > *, .product-card > * { min-width: 0; }
-.hub-hero h1, .hub-hero p { overflow-wrap: anywhere; }
-
-/* Safari/WebKit-safe flex sizing. */
-.hub-actions, .product-actions, .cb-footer__links, .value-strip, .filter-bar {
-  min-width: 0;
-}
-.docs-button { max-width: 100%; white-space: normal; text-align: center; }
-
-@media (min-width: 769px) {
-  .sidebar-toggle { left: calc(var(--sidebar-w) + 10px) !important; }
-  body.close .sidebar-toggle { left: 10px !important; }
+  max-width: 100% !important;
 }
 
-@media (max-width: 1100px) and (min-width: 769px) {
-  :root { --sidebar-w: 260px; --content-w: 760px; }
-  .markdown-section { padding-left: 24px !important; padding-right: 24px !important; }
-  .page-nav-actions, .cb-footer { padding-left: 24px !important; padding-right: 24px !important; }
-}
-
-@media (max-width: 768px) {
-  :root { --sidebar-w: min(292px, 86vw); }
-
-  /* On phones/tablets Docsify must overlay the sidebar, never reserve its width. */
-  body:not(.close) .content,
-  body.close .content,
+/* Desktop: content starts AFTER the sidebar, never beneath it. */
+@media (min-width: 901px) {
   .content {
+    position: relative !important;
+    top: var(--topbar-h) !important;
     left: 0 !important;
+    right: auto !important;
+    width: calc(100% - var(--sidebar-w)) !important;
+    max-width: none !important;
+    margin: 0 0 var(--topbar-h) var(--sidebar-w) !important;
+    padding: 28px 0 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  body.close .content {
     width: 100% !important;
-    max-width: 100% !important;
-    padding-top: 18px !important;
+    margin-left: 0 !important;
   }
+
   .sidebar {
-    width: var(--sidebar-w) !important;
-    max-width: 86vw !important;
+    transform: translateX(0) !important;
   }
-  .sidebar-toggle {
-    position: fixed !important;
-    left: 10px !important;
-    top: 10px !important;
-    z-index: 1001 !important;
+
+  body.close .sidebar {
+    transform: translateX(calc(-1 * var(--sidebar-w))) !important;
   }
+
   .markdown-section,
   .page-nav-actions,
   .cb-footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: max(16px, env(safe-area-inset-left)) !important;
-    padding-right: max(16px, env(safe-area-inset-right)) !important;
+    box-sizing: border-box !important;
+    width: min(calc(100% - (var(--layout-gutter) * 2)), var(--content-w)) !important;
+    max-width: var(--content-w) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
-  .markdown-section { padding-top: 18px !important; padding-bottom: 46px !important; }
-  .hub-hero { padding-top: 20px; }
-  .hub-hero h1 { font-size: clamp(2rem, 11vw, 3.1rem) !important; }
-  .hub-actions .docs-button { flex: 1 1 140px; }
-  .page-nav-actions .docs-button { flex: 1 1 auto; }
-  .scroll-toggle-btn { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
+
+  .markdown-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .page-nav-actions,
+  .cb-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* The hero must always remain inside the content column. */
+.hub-hero {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+.hub-hero h1 {
+  width: min(100%, 780px) !important;
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  hyphens: none;
+  text-wrap: balance;
+}
+
+.hub-hero p {
+  width: min(100%, 760px) !important;
+  max-width: 760px !important;
+  overflow-wrap: break-word;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section p,
+.markdown-section li,
+.docs-button,
+.product-card,
+.category-card,
+.journey-card,
+.docs-panel {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Rows/grids never force a wider page. */
+.journey-grid,
+.category-grid,
+.docs-feature-grid,
+.product-grid {
+  width: 100% !important;
+}
+
+.journey-card,
+.category-card,
+.docs-panel,
+.product-card,
+.support-cta {
+  overflow: hidden;
+}
+
+.hub-actions,
+.product-actions,
+.page-nav-actions,
+.cb-footer__links,
+.value-strip,
+.filter-bar {
+  max-width: 100%;
+}
+
+/* Long technical content gets local scrolling instead of moving the page. */
+.markdown-section pre,
+.markdown-section table,
+.catalog-toolbar,
+.catalog-search {
+  max-width: 100% !important;
+}
+
+.markdown-section pre {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-section table {
+  display: block !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-section img,
+.markdown-section video,
+.markdown-section iframe {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Narrow desktop/tablet: use overlay navigation instead of squeezing content. */
+@media (max-width: 900px) {
+  :root {
+    --sidebar-w: min(84vw, 292px);
+    --layout-gutter: 18px;
+  }
+
+  .content,
+  body.close .content {
+    position: relative !important;
+    top: var(--topbar-h) !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 var(--topbar-h) 0 !important;
+    padding: 22px 0 0 !important;
+    transform: none !important;
+  }
+
+  .markdown-section,
+  .page-nav-actions,
+  .cb-footer {
+    box-sizing: border-box !important;
+    width: calc(100% - 36px) !important;
+    max-width: var(--content-w) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .sidebar {
+    width: var(--sidebar-w) !important;
+    transform: translateX(0) !important;
+    box-shadow: 18px 0 42px rgba(0,0,0,.32) !important;
+  }
+
+  body.close .sidebar {
+    transform: translateX(-102%) !important;
+  }
+
+  .sidebar-toggle {
+    position: fixed !important;
+    top: calc(var(--topbar-h) + 10px) !important;
+    left: 12px !important;
+    z-index: 260 !important;
+  }
+
+  .hub-hero {
+    padding: 28px 0 8px !important;
+  }
+
+  .hub-hero h1 {
+    font-size: clamp(2.15rem, 8vw, 3.7rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  :root { --layout-gutter: 14px; }
+
+  .announcement-inner {
+    gap: 6px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .announcement-copy span {
+    display: none;
+  }
+
+  .announcement-cta {
+    margin-left: auto !important;
+    white-space: nowrap;
+  }
+
+  .markdown-section,
+  .page-nav-actions,
+  .cb-footer {
+    width: calc(100% - 28px) !important;
+  }
+
+  .hub-hero h1 {
+    font-size: clamp(2rem, 11vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .hub-actions .docs-button,
+  .product-actions .docs-button {
+    flex: 1 1 150px;
+  }
+
+  .value-strip {
+    justify-content: flex-start;
+  }
+
+  .journey-grid,
+  .category-grid,
+  .docs-feature-grid,
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .support-cta {
+    padding: 16px !important;
+  }
+
+  .cb-footer__links {
+    gap: 8px 12px !important;
+  }
 }
 
 @media (max-width: 420px) {
-  html { font-size: 14px; }
-  .brand-header { padding-left: 12px; padding-right: 12px; }
-  .search { margin-left: 10px !important; margin-right: 10px !important; }
-  .sidebar-nav { padding-left: 6px !important; padding-right: 6px !important; }
-  .markdown-section h1 { font-size: clamp(1.8rem, 10vw, 2.45rem) !important; }
-  .hub-actions, .product-actions { flex-direction: column; align-items: stretch; }
-  .hub-actions .docs-button, .product-actions .docs-button { width: 100%; }
-  .support-cta { padding: 15px; }
-  .cb-footer__brand { align-items: flex-start; }
+  .announcement-copy strong { font-size: 10px !important; }
+  .announcement-cta { font-size: 8px !important; }
+  .hub-actions { align-items: stretch; flex-direction: column; }
+  .hub-actions .docs-button { width: 100%; flex: none; }
+  .page-nav-actions .docs-button { flex: 1 1 auto; }
 }
 
-@supports (height: 100dvh) {
-  .sidebar { height: 100dvh !important; }
+/* Safari/iOS safe-area support. */
+@supports (padding: max(0px)) {
+  .sidebar {
+    padding-left: env(safe-area-inset-left) !important;
+  }
+  .scroll-toggle-btn {
+    right: max(16px, env(safe-area-inset-right)) !important;
+    bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  }
 }

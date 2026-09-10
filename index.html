@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CB Studios — FiveM & RedM Documentation</title>
   <meta name="description" content="Official CB Studios documentation for FiveM and RedM resources." />
   <meta name="theme-color" content="#15171c" />
-  <meta name="color-scheme" content="dark light" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -114,6 +113,20 @@
       function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('cb-theme', theme);
+      }
+
+      /* Keep fixed header/sidebar/content geometry synchronized at every zoom/resize. */
+      var topbar = document.getElementById('announcement-bar');
+      function syncTopbarHeight() {
+        var height = topbar && topbar.classList.contains('announcement-bar--visible')
+          ? Math.ceil(topbar.getBoundingClientRect().height)
+          : 0;
+        document.documentElement.style.setProperty('--topbar-h', height + 'px');
+      }
+      window.addEventListener('resize', syncTopbarHeight, { passive: true });
+      window.addEventListener('orientationchange', syncTopbarHeight, { passive: true });
+      if (window.ResizeObserver && topbar) {
+        new ResizeObserver(syncTopbarHeight).observe(topbar);
       }
 
       document.addEventListener('click', function (event) {
@@ -229,6 +242,9 @@
       }
 
       mountAnnouncement();
+      syncTopbarHeight();
+      setTimeout(syncTopbarHeight, 50);
+      setTimeout(syncTopbarHeight, 300);
       setTimeout(renderProducts, 500);
       window.addEventListener('hashchange', function () { setTimeout(renderProducts, 120); });
     });
