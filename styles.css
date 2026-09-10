@@ -218,7 +218,6 @@ a { color: inherit; }
    mobile widths.
    ========================================================================== */
 :root {
-  --topbar-h: 0px;
   --layout-gutter: clamp(18px, 3vw, 40px);
   --content-w: 980px;
 }
@@ -273,18 +272,18 @@ main,
 .sidebar {
   position: fixed !important;
   left: 0 !important;
-  top: var(--topbar-h) !important;
+  top: var(--chrome-h) !important;
   bottom: 0 !important;
   width: var(--sidebar-w) !important;
   height: auto !important;
-  max-height: calc(100dvh - var(--topbar-h)) !important;
+  max-height: calc(100dvh - var(--chrome-h)) !important;
   overflow-x: hidden !important;
   overscroll-behavior: contain;
   z-index: 210 !important;
 }
 
 @supports not (height: 100dvh) {
-  .sidebar { max-height: calc(100vh - var(--topbar-h)) !important; }
+  .sidebar { max-height: calc(100vh - var(--chrome-h)) !important; }
 }
 
 .brand-header,
@@ -319,12 +318,12 @@ main,
 @media (min-width: 901px) {
   .content {
     position: relative !important;
-    top: var(--topbar-h) !important;
+    top: var(--chrome-h) !important;
     left: 0 !important;
     right: auto !important;
     width: calc(100% - var(--sidebar-w)) !important;
     max-width: none !important;
-    margin: 0 0 var(--topbar-h) var(--sidebar-w) !important;
+    margin: 0 0 0 var(--sidebar-w) !important;
     padding: 28px 0 0 !important;
     transform: none !important;
     overflow: visible !important;
@@ -468,7 +467,7 @@ main,
   .content,
   body.close .content {
     position: relative !important;
-    top: var(--topbar-h) !important;
+    top: var(--chrome-h) !important;
     left: 0 !important;
     right: auto !important;
     width: 100% !important;
@@ -502,7 +501,7 @@ main,
 
   .sidebar-toggle {
     position: fixed !important;
-    top: calc(var(--topbar-h) + 10px) !important;
+    top: calc(var(--chrome-h) + 10px) !important;
     left: 12px !important;
     z-index: 260 !important;
   }
@@ -587,4 +586,165 @@ main,
     right: max(16px, env(safe-area-inset-right)) !important;
     bottom: max(16px, env(safe-area-inset-bottom)) !important;
   }
+}
+
+
+/* ========================================================================== 
+   v1.3 — DETERMINISTIC TOP CHROME
+   A dedicated fixed header replaces Docsify's variable top navigation. This
+   prevents the sidebar brand/search and page content from ever mounting under
+   the top bar across Chromium, Firefox, Safari, browser zoom, and mobile.
+   ========================================================================== */
+:root {
+  --header-h: 56px;
+  --announcement-h: 0px;
+  --chrome-h: calc(var(--header-h) + var(--announcement-h));
+}
+
+/* Docsify's own nav can appear depending on theme/cache/config. Never allow a
+   second header to compete with our fixed application chrome. */
+.app-nav,
+nav.app-nav {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.cb-topbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: var(--header-h);
+  min-height: var(--header-h);
+  background: #191b20;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(255,255,255,.02);
+}
+
+.cb-topbar__inner {
+  width: min(100% - 32px, 1200px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.cb-topbar__brand {
+  flex: 0 0 auto;
+  color: var(--accent-2);
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.cb-topbar__tagline {
+  min-width: 0;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cb-topbar__nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.cb-topbar__nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--text-2);
+  font: 700 10px var(--font-mono);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cb-topbar__nav a:hover {
+  color: var(--accent-2);
+  border-color: rgba(242,166,64,.28);
+  background: var(--accent-soft);
+}
+
+.cb-topbar__nav .cb-topbar__store {
+  color: #18130d;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Optional announcement always lives BELOW the main header. */
+.announcement-bar--visible {
+  top: var(--header-h) !important;
+  z-index: 900 !important;
+}
+
+/* Sidebar begins below all top chrome. */
+.sidebar {
+  top: var(--chrome-h) !important;
+  bottom: 0 !important;
+  height: auto !important;
+  max-height: calc(100vh - var(--chrome-h)) !important;
+  max-height: calc(100dvh - var(--chrome-h)) !important;
+  padding-top: 0 !important;
+}
+
+/* The Docsify sidebar toggle also stays below the top bar. */
+.sidebar-toggle {
+  top: calc(var(--chrome-h) + 10px) !important;
+}
+
+/* Content starts below the fixed chrome. Do not use top: on .content; that can
+   create visual overlap while Docsify calculates its own transforms. */
+.content,
+body.close .content {
+  top: auto !important;
+  padding-top: calc(var(--chrome-h) + 28px) !important;
+  margin-bottom: 0 !important;
+}
+
+/* First sidebar blocks must remain fully visible and never be clipped by a
+   negative theme offset. */
+.sidebar .brand-header {
+  margin-top: 0 !important;
+  transform: none !important;
+}
+.sidebar .search,
+.sidebar .sidebar-menu-label,
+.sidebar .sidebar-nav {
+  transform: none !important;
+}
+
+@media (max-width: 900px) {
+  .cb-topbar__inner { width: calc(100% - 24px); gap: 10px; }
+  .cb-topbar__tagline { display: none; }
+  .cb-topbar__nav { gap: 4px; }
+  .cb-topbar__nav a { padding: 0 9px; font-size: 9px; }
+  .content,
+  body.close .content { padding-top: calc(var(--chrome-h) + 22px) !important; }
+}
+
+@media (max-width: 560px) {
+  :root { --header-h: 52px; }
+  .cb-topbar__inner { width: calc(100% - 20px); }
+  .cb-topbar__nav a:not(.cb-topbar__store) { display: none; }
+  .cb-topbar__store { min-height: 32px !important; padding: 0 10px !important; }
+  .sidebar-toggle { left: 10px !important; }
+}
+
+@supports not (height: 100dvh) {
+  .sidebar { max-height: calc(100vh - var(--chrome-h)) !important; }
 }

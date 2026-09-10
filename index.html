@@ -20,6 +20,17 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to documentation</a>
+  <header id="cb-topbar" class="cb-topbar" role="banner">
+    <div class="cb-topbar__inner">
+      <a class="cb-topbar__brand" href="#/home" aria-label="CB Studios documentation home">CB</a>
+      <span class="cb-topbar__tagline">Explore CB Studios resources for FiveM and RedM.</span>
+      <nav class="cb-topbar__nav" aria-label="Primary navigation">
+        <a href="#/home">Home</a>
+        <a href="#/products">All guides</a>
+        <a class="cb-topbar__store" href="https://pichirin-cb.tebex.io/" target="_blank" rel="noopener noreferrer">Store</a>
+      </nav>
+    </div>
+  </header>
   <div id="announcement-bar" class="announcement-bar"></div>
   <div id="app">Loading CB Studios documentation…</div>
   <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button" aria-label="Scroll to bottom">↓</button>
@@ -115,18 +126,18 @@
         localStorage.setItem('cb-theme', theme);
       }
 
-      /* Keep fixed header/sidebar/content geometry synchronized at every zoom/resize. */
-      var topbar = document.getElementById('announcement-bar');
-      function syncTopbarHeight() {
-        var height = topbar && topbar.classList.contains('announcement-bar--visible')
-          ? Math.ceil(topbar.getBoundingClientRect().height)
+      /* Keep the fixed top header and optional announcement geometry synchronized. */
+      var announcement = document.getElementById('announcement-bar');
+      function syncChromeHeights() {
+        var announcementHeight = announcement && announcement.classList.contains('announcement-bar--visible')
+          ? Math.ceil(announcement.getBoundingClientRect().height)
           : 0;
-        document.documentElement.style.setProperty('--topbar-h', height + 'px');
+        document.documentElement.style.setProperty('--announcement-h', announcementHeight + 'px');
       }
-      window.addEventListener('resize', syncTopbarHeight, { passive: true });
-      window.addEventListener('orientationchange', syncTopbarHeight, { passive: true });
-      if (window.ResizeObserver && topbar) {
-        new ResizeObserver(syncTopbarHeight).observe(topbar);
+      window.addEventListener('resize', syncChromeHeights, { passive: true });
+      window.addEventListener('orientationchange', syncChromeHeights, { passive: true });
+      if (window.ResizeObserver && announcement) {
+        new ResizeObserver(syncChromeHeights).observe(announcement);
       }
 
       document.addEventListener('click', function (event) {
@@ -242,6 +253,7 @@
       }
 
       mountAnnouncement();
+      syncChromeHeights();
       syncTopbarHeight();
       setTimeout(syncTopbarHeight, 50);
       setTimeout(syncTopbarHeight, 300);
