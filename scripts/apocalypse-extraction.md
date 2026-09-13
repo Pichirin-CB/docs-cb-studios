@@ -7,6 +7,19 @@
   <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QB%20%7C%20QBX%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
 </div>
 
+------------------------------------------------------------------------
+
+# 🖼️ Showcase
+
+<div align="center" style="margin-bottom: 1.5rem;">
+  <img
+    src="https://i.gyazo.com/ab0b9ec51c8e185316330193fe89b284.jpg"
+    alt="Deadzone Extract Showcase"
+    style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
+  />
+</div>
+
+------------------------------------------------------------------------
 
 # 📖 Overview
 
