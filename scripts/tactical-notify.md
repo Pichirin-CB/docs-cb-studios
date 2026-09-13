@@ -8,6 +8,20 @@
 </div>
 
 
+------------------------------------------------------------------------
+
+# 🖼️ Showcase
+
+<div align="center" style="margin-bottom: 1.5rem;">
+  <img
+    src="https://i.gyazo.com/90dfa978448d986168b5f53db5ff60c8.jpg"
+    alt="Tactical Notification Showcase"
+    style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
+  />
+</div>
+
+------------------------------------------------------------------------
+
 # 📖 Overview
 
 | Field | Value |
