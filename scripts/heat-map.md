@@ -11,6 +11,18 @@
 
 ------------------------------------------------------------------------
 
+# 🖼️ Showcase
+
+<div align="center" style="margin-bottom: 1.5rem;">
+  <img
+    src="https://i.gyazo.com/3148b681820d5858c6ba6672ccefc1f7.jpg"
+    alt="CB Heatmap Showcase"
+    style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
+  />
+</div>
+
+------------------------------------------------------------------------
+
 # 📖 Overview
 
 | Field     | Value                     |
