@@ -2386,9 +2386,12 @@
       function productMatches(product, filter) {
         if (!filter || filter === "all") return true;
         var category = product.category.toLowerCase();
+        var platform = (product.platform || "").toLowerCase();
         var frameworks = (product.frameworks || []).map(function (item) { return item.toLowerCase(); });
         if (filter === "paid") return product.type === "paid";
         if (filter === "free") return product.type === "free";
+        if (filter === "fivem") return platform === "fivem";
+        if (filter === "redm") return platform === "redm";
         if (filter === "scripts") return category.indexOf("script") !== -1 || category.indexOf("resource") !== -1;
         if (filter === "vehicles") return category.indexOf("vehicle") !== -1;
         if (filter === "audio") return category.indexOf("audio") !== -1;
@@ -2398,7 +2401,7 @@
 
       function productCard(product) {
         var category = (product.category || "Resource");
-        var icon = (product.frameworks || []).indexOf("RedM") !== -1 ? "R" :
+        var icon = product.platform === "RedM" ? "R" :
           category.indexOf("Vehicle") !== -1 ? "V" :
           category.indexOf("Audio") !== -1 ? "A" :
           category.indexOf("MLO") !== -1 ? "M" : "C";
@@ -2461,8 +2464,8 @@
           activeFilter = normalized;
           var query = (search.value || "").trim().toLowerCase();
           var visibleProducts = products.filter(function (product) {
-            var searchable = [product.name, product.resource, product.category, product.description]
-              .concat(product.frameworks || []).join(" ").toLowerCase();
+          var searchable = [product.name, product.resource, product.platform, product.category, product.description]
+            .concat(product.frameworks || []).join(" ").toLowerCase();
             return productMatches(product, normalized) && (!query || searchable.indexOf(query) !== -1);
           });
           grid.innerHTML = visibleProducts.length
