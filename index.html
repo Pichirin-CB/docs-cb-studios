@@ -2413,7 +2413,9 @@
           ? '<a class="docs-button docs-button--ghost" href="' + product.storeUrl + '" target="_blank" rel="noopener noreferrer">Store</a>'
           : product.githubUrl
             ? '<a class="docs-button docs-button--ghost" href="' + product.githubUrl + '" target="_blank" rel="noopener noreferrer">GitHub</a>'
-            : '<a class="docs-button docs-button--ghost" href="#/support">Support</a>';
+            : product.discordUrl
+              ? '<a class="docs-button docs-button--ghost" href="' + product.discordUrl + '" target="_blank" rel="noopener noreferrer">Discord</a>'
+              : '<a class="docs-button docs-button--ghost" href="#/support">Support</a>';
         return '' +
           '<article class="product-card" data-category="' + product.category + '">' +
             '<div class="product-card__heading">' +
