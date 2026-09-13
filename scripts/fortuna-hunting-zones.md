@@ -1,4 +1,4 @@
-# CB Studios — Fortuna Hunting Zones
+# CB Studios — Fortuna Hunting Zones Documentation
 
 <div style="text-align: center;">
   <img src="https://img.shields.io/badge/CB%20Studios-RedM%20Development-blue?style=for-the-badge" alt="CB Studios" />
