@@ -13,7 +13,7 @@
 
 <div align="center" style="margin-bottom: 1.5rem;">
   <img
-    src="https://i.gyazo.com/ab0b9ec51c8e185316330193fe89b284.jpg"
+    src="https://i.gyazo.com/f4b3f021c0161c8bb74097f91022cde5.jpg"
     alt="Deadzone Extract Showcase"
     style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
   />
