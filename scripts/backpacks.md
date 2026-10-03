@@ -9,9 +9,19 @@
 
 ------------------------------------------------------------------------
 
-# 🎒 Backpacks
+# 🖼️ Showcase
 
-## 📖 Overview
+<div align="center" style="margin-bottom: 1.5rem;">
+  <img
+    src="https://i.gyazo.com/71ad6ebc279f1b1e95e89a0b579059af.jpg"
+    alt="Deadzone Extract Showcase"
+    style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
+  />
+</div>
+
+------------------------------------------------------------------------
+
+# 📖 Overview
 
 | Field | Value |
 |---|---|
