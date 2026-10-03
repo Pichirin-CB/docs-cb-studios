@@ -10,6 +10,8 @@
 
   - **Scripts**
 
+    - [Backpacks](/scripts/backpacks.md)
+
     - [Heat Map](/scripts/heat-map.md)
 
     - [Tactical Notify](/scripts/tactical-notify.md)

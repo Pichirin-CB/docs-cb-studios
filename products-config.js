@@ -3,6 +3,22 @@
 
 window.CB_PRODUCTS = [
   {
+    slug: "backpacks",
+    name: "Backpacks",
+    resource: "cb-backpacks",
+    platform: "FiveM",
+    category: "Scripts",
+    type: "free",
+    docPath: "/scripts/backpacks.md",
+    storeUrl: "https://pichirin-cb.tebex.io/",
+    githubUrl: null,
+    discordUrl: null,
+    frameworks: ["QBCore", "ESX","QBox", "Standalone"],
+    status: "Stable",
+    featured: false,
+    description: "Customizable backpack system for FiveM servers with inventory integration, weight management, and framework compatibility."
+  },
+  {
     slug: "heat-map",
     name: "CB Heatmap",
     resource: "cb_heatmap",
