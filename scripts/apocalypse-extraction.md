@@ -1,8 +1,8 @@
-# CB Studios - Deadzone Extract Documentation
+# CB Studios - Survival Extract Documentation
 
 <div style="text-align: center;">
   <img src="https://img.shields.io/badge/CB%20Studios-FiveM%20Development-blue?style=for-the-badge" alt="CB Studios" />
-  <img src="https://img.shields.io/badge/version-1.1.0-green?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/version-1.1.1-green?style=for-the-badge" alt="Version" />
   <img src="https://img.shields.io/badge/status-stable-brightgreen?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/framework-ESX%20%7C%20QB%20%7C%20QBX%20%7C%20Standalone-orange?style=for-the-badge" alt="Framework" />
 </div>
@@ -13,8 +13,8 @@
 
 <div align="center" style="margin-bottom: 1.5rem;">
   <img
-    src="https://i.gyazo.com/f4b3f021c0161c8bb74097f91022cde5.jpg"
-    alt="Deadzone Extract Showcase"
+    src="https://i.gyazo.com/904ba6c84f2456a31142526ba73e9e29.jpg"
+    alt="Survival Extract Showcase"
     style="width: 640px; max-width: 100%; height: auto; border-radius: 12px;"
   />
 </div>
@@ -23,19 +23,24 @@
 
 # 📖 Overview
 
+> **Renaming notice:** This documentation uses the new resource name `cb-survivalextract`. The event namespaces and exports shown below assume the installed Lua resource was also migrated. If the code still registers `cb_deadzone-extract:*` events, keep using those original event names until the source code is updated. The SQL table `cb_deadzone_extract_logs` is intentionally unchanged to preserve existing data.
+
+**Development began:** January 2026. The exact day has not been specified.
+
+
 | Field | Value |
 | --- | --- |
-| Resource | `cb_deadzone-extract` |
+| Resource | `cb-survivalextract` |
 | Author | **CB Studios** (`Pichirin_CB`) |
 | Framework | ESX / QB / QBX / Standalone |
-| Version | `1.1.0` |
+| Version | `1.1.1` |
 | Status | Stable |
 
 ### Description
 
-`cb_deadzone-extract` is a helicopter extraction system for deadzone gameplay with route traffic control, configurable extraction costs, SQL logging, and modular adapters for inventory and notifications.
+`cb-survivalextract` is a helicopter extraction system for deadzone gameplay with route traffic control, configurable extraction costs, SQL logging, and modular adapters for inventory and notifications.
 
-Version `1.1.0` removes hard dependency on `hate-bridge`, adds more inventory compatibility (`qs_inventory`, `core_inventory`, `tgiann-inventory`), and introduces `custom.lua` hook files for custom integrations.
+Version `1.1.0` removed the hard dependency on `hate-bridge`, adds more inventory compatibility (`qs_inventory`, `core_inventory`, `tgiann-inventory`), and introduced `custom.lua` hook files for custom integrations. Version `1.1.1` adds `ashenlabs_inventory` compatibility and fixes helicopter model configuration.
 
 ------------------------------------------------------------------------
 
@@ -64,7 +69,7 @@ Version `1.1.0` removes hard dependency on `hate-bridge`, adds more inventory co
 
 Common optional dependencies:
 
-- `ox_inventory` or `qs_inventory` or `core_inventory` or `tgiann-inventory`
+- `ox_inventory`, `qs_inventory`, `core_inventory`, `tgiann-inventory`, or `ashenlabs_inventory`
 - `ox_target` / `qb-target` / `qtarget` (if `Config.Interaction.UseKey = false`)
 - `ox_lib`, `cb_opsNotify`, or other notify resource configured in `Config.Notifications.System`
 
@@ -79,7 +84,7 @@ Download the resource and extract it.
 ### 2️⃣ Place in resources folder
 
 ```txt
-resources/[your_folder]/cb_deadzone-extract
+resources/[your_folder]/cb-survivalextract
 ```
 
 ### 3️⃣ Add to server.cfg
@@ -87,7 +92,7 @@ resources/[your_folder]/cb_deadzone-extract
 ```cfg
 ## CB Studios
 ensure oxmysql
-ensure cb_deadzone-extract
+ensure cb-survivalextract
 ```
 
 ### 4️⃣ Import SQL (if persistence enabled)
@@ -111,7 +116,7 @@ Use one snippet from:
 ### 6️⃣ Restart server
 
 ```cfg
-restart cb_deadzone-extract
+restart cb-survivalextract
 ```
 
 ------------------------------------------------------------------------
@@ -132,7 +137,7 @@ Config.ExtractionCost = {
   MinAmount = 2,
   MaxAmount = 5,
   ShowOnUI = true,
-  RequireBridge = true
+  RequireBridge = true -- Verify this option against the installed version
 }
 
 Config.Persistence = {
@@ -200,35 +205,35 @@ Config.Interaction = {
 ## Server Events
 
 ```lua
-AddEventHandler('cb_deadzone-extract:RouteSpawnFailed', function(routeKey, reason)
+AddEventHandler('cb-survivalextract:RouteSpawnFailed', function(routeKey, reason)
     print(('Route %s failed: %s'):format(routeKey, reason))
 end)
 ```
 
 | Event | Parameters | Description |
 | --- | --- | --- |
-| `cb_deadzone-extract:GetRouteStatus` | `routeKey, requestId` | Returns current route availability state |
-| `cb_deadzone-extract:PrepareExtractionCost` | `routeKey, requestId` | Generates cost payload/token for client UI |
-| `cb_deadzone-extract:RequestRouteSeat` | `routeKey, costToken` | Validates payment and starts extraction flow |
-| `cb_deadzone-extract:RouteSpawnFailed` | `routeKey, reason` | Marks route as failed and logs failure |
-| `cb_deadzone-extract:server:playerLoaded` | `playerSource` | Player lifecycle sync event for logs/state |
+| `cb-survivalextract:GetRouteStatus` | `routeKey, requestId` | Returns current route availability state |
+| `cb-survivalextract:PrepareExtractionCost` | `routeKey, requestId` | Generates cost payload/token for client UI |
+| `cb-survivalextract:RequestRouteSeat` | `routeKey, costToken` | Validates payment and starts extraction flow |
+| `cb-survivalextract:RouteSpawnFailed` | `routeKey, reason` | Marks route as failed and logs failure |
+| `cb-survivalextract:server:playerLoaded` | `playerSource` | Player lifecycle sync event for logs/state |
 
 ------------------------------------------------------------------------
 
 ## Client Events
 
 ```lua
-RegisterNetEvent('cb_deadzone-extract:RequestDenied', function(routeKey, payload)
+RegisterNetEvent('cb-survivalextract:RequestDenied', function(routeKey, payload)
 end)
 ```
 
 | Event | Parameters | Description |
 | --- | --- | --- |
-| `cb_deadzone-extract:RouteStatus` | `routeKey, requestId, payload` | Receives route status response |
-| `cb_deadzone-extract:ExtractionCostPrepared` | `routeKey, requestId, payload` | Receives extraction cost details for NUI |
-| `cb_deadzone-extract:RequestDenied` | `routeKey, payload` | Receives denial reason/message |
-| `cb_deadzone-extract:SpawnHeli` | `routeKey, serverData` | Spawns helicopter and starts extraction mission |
-| `cb_deadzone-extract:ClientDisembark` | `heli, routeKey` | Forces final disembark on route completion |
+| `cb-survivalextract:RouteStatus` | `routeKey, requestId, payload` | Receives route status response |
+| `cb-survivalextract:ExtractionCostPrepared` | `routeKey, requestId, payload` | Receives extraction cost details for NUI |
+| `cb-survivalextract:RequestDenied` | `routeKey, payload` | Receives denial reason/message |
+| `cb-survivalextract:SpawnHeli` | `routeKey, serverData` | Spawns helicopter and starts extraction mission |
+| `cb-survivalextract:ClientDisembark` | `heli, routeKey` | Forces final disembark on route completion |
 
 ------------------------------------------------------------------------
 
@@ -237,8 +242,8 @@ end)
 Example usage:
 
 ```lua
-local cfg = exports['cb_deadzone-extract']:GetResourceConfig()
-local inventorySource = exports['cb_deadzone-extract']:GetInventoryAdapterSource()
+local cfg = exports['cb-survivalextract']:GetResourceConfig()
+local inventorySource = exports['cb-survivalextract']:GetInventoryAdapterSource()
 ```
 
 | Export | Side | Description |
@@ -269,8 +274,8 @@ Use these files to integrate custom inventory or custom notification systems wit
 
 ### Resource does not start
 
-- Verify folder name is `cb_deadzone-extract` (or legacy `cb_deadzone_extract`)
-- Verify `ensure oxmysql` and `ensure cb_deadzone-extract`
+- Verify the installed resource folder name matches `ensure cb-survivalextract`. If upgrading from the old name, update references across other resources.
+- Verify `ensure oxmysql` and `ensure cb-survivalextract`
 - Check console errors from manifest/dependencies
 
 ### Item payment always denied
@@ -300,6 +305,9 @@ Use these files to integrate custom inventory or custom notification systems wit
 
 # 🔄 Updating the Script
 
+When migrating from `cb_deadzone-extract`, rename the actual resource directory and update `server.cfg`, dependent resources, and any resource-name checks. Renaming documentation alone does not rename registered events or guarantee compatibility.
+
+
 1. Backup edited files (`shared/config.lua`, custom integration files).
 2. Stop the resource.
 3. Replace with the new version.
@@ -314,7 +322,7 @@ When requesting support provide:
 
 | Information | Example |
 | --- | --- |
-| Script | `cb_deadzone-extract v1.1.0` |
+| Script | `cb-survivalextract v1.1.1` |
 | Framework | `ESX` / `QB` / `QBX` / Standalone |
 | Inventory | `ox_inventory` (or your custom adapter) |
 | Server Build | Latest |
