@@ -2418,6 +2418,35 @@
     .store-featured-section .product-card .product-card__category,
     .store-featured-section .product-card .product-card__meta { color: #a79a8d !important; }
 
+    /* Product-card actions mirror the store's .cb-add control: square corners,
+       outlined amber treatment, and no legacy Docsify pill styling. */
+    .store-featured-section .product-card a.docs-button,
+    .store-featured-section .product-card a.docs-button:link,
+    .store-featured-section .product-card a.docs-button:visited,
+    .store-featured-section .product-card a.docs-button:hover,
+    .store-featured-section .product-card a.docs-button:focus-visible {
+      min-height: 40px !important;
+      padding: 10px !important;
+      border: 1px solid #81542a !important;
+      border-radius: 0 !important;
+      clip-path: none !important;
+      background: transparent !important;
+      color: #f2a33a !important;
+      -webkit-text-fill-color: #f2a33a !important;
+      font: 700 10px/1 'DM Mono', monospace !important;
+      letter-spacing: .06em !important;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+    .store-featured-section .product-card a.docs-button:hover,
+    .store-featured-section .product-card a.docs-button:focus-visible {
+      border-color: #ffd18a !important;
+      background: #2a1b0d !important;
+      color: #ffd18a !important;
+      -webkit-text-fill-color: #ffd18a !important;
+      transform: translateY(-2px) !important;
+    }
+
     @media (max-width: 640px) {
       .markdown-section:has(.store-home-hero) { padding: 0 16px 56px !important; }
       .store-home-actions { align-items: stretch; flex-direction: column; }
