@@ -3,7 +3,7 @@
     <span class="hub-kicker">CB Studios Documentation Hub</span>
     <h1>Build better roleplay experiences.</h1>
     <p>
-      Everything you need to install, configure, integrate, and maintain CB Studios resources for FiveM and RedMâ€”organized for server owners and developers.
+      Everything you need to install, configure, integrate, and maintain CB Studios resources for FiveM and RedM—organized for server owners and developers.
     </p>
     <div class="hub-actions">
       <a class="docs-button docs-button--primary" href="#/products">Browse Products</a>
@@ -145,4 +145,3 @@
     <a class="docs-button docs-button--ghost" href="https://pichirin-cb.tebex.io/" target="_blank" rel="noopener noreferrer">Tebex Store</a>
   </div>
 </section>
-

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CB Studios â€” FiveM &amp; RedM Documentation</title>
+  <title>CB Studios — FiveM &amp; RedM Documentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Official CB Studios documentation for FiveM and RedM resources, including installation, configuration, integrations, troubleshooting, and updates." />
   <meta name="keywords" content="CB Studios, FiveM resources, RedM resources, GTA RP, Red Dead RP, ESX, QBCore, QBox, VORP, installation guides, developer documentation" />
   <meta name="author" content="CB Studios" />
-  <meta name="copyright" content="Copyright 2025â€“2026 CB Studios. All rights reserved." />
+  <meta name="copyright" content="Copyright 2025–2026 CB Studios. All rights reserved." />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CB Studios â€” FiveM &amp; RedM Documentation" />
+  <meta property="og:title" content="CB Studios — FiveM &amp; RedM Documentation" />
   <meta property="og:description" content="Official documentation for CB Studios FiveM and RedM resources." />
   <meta property="og:image" content="https://pichirin-cb.github.io/docs-cb-studios/assets/branding/cbstudios-banner.png?v=f0d391" />
   <meta property="og:url" content="https://docs.pichirincb.com/" />
@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
   <style>
-    /* â”€â”€â”€ TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── TOKENS ─────────────────────────────────────────────── */
     :root {
       --brand:       #f2a33a;
       --brand-dim:   #b96f25;
@@ -98,7 +98,7 @@
       --shadow-soft: 0 18px 60px rgba(15,23,42,0.1);
     }
 
-    /* â”€â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── RESET & BASE ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; font-size: 15px; }
@@ -132,7 +132,7 @@
 
     .skip-link:focus { transform: translateY(0); }
 
-    /* â”€â”€â”€ SCANLINE TEXTURE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── SCANLINE TEXTURE ───────────────────────────────────── */
     body::before {
       content: '';
       position: fixed;
@@ -148,7 +148,7 @@
       z-index: 0;
     }
 
-    /* â”€â”€â”€ PAGE LOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── PAGE LOADER ────────────────────────────────────────── */
     .page-loader {
       position: fixed;
       inset: 0;
@@ -208,7 +208,7 @@
       text-transform: uppercase;
     }
 
-    /* â”€â”€â”€ ANNOUNCEMENT BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── ANNOUNCEMENT BANNER ────────────────────────────────── */
     .announcement-bar {
       position: fixed;
       top: 0;
@@ -332,7 +332,7 @@
       box-shadow: 0 0 24px rgba(245, 158, 11, 0.16);
     }
 
-    /* â”€â”€â”€ DOCSIFY SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── DOCSIFY SIDEBAR ────────────────────────────────────── */
     .sidebar {
       background: var(--bg-card) !important;
       border-right: 1px solid var(--border) !important;
@@ -510,7 +510,7 @@
 
     .search input::placeholder { color: var(--text-muted) !important; }
 
-    /* â”€â”€â”€ MAIN CONTENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── MAIN CONTENT ───────────────────────────────────────── */
     .content {
       padding-top: calc(32px + var(--banner-h)) !important;
       margin-left: var(--content-offset) !important;
@@ -1094,7 +1094,7 @@
       color: var(--brand) !important;
     }
 
-    /* â”€â”€â”€ NAVBAR / TOP BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── NAVBAR / TOP BAR ───────────────────────────────────── */
     .app-nav {
       background: rgba(10,12,16,0.92) !important;
       backdrop-filter: blur(12px) !important;
@@ -1102,7 +1102,7 @@
       height: var(--header-h) !important;
     }
 
-    /* â”€â”€â”€ COPY CODE BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── COPY CODE BUTTON ───────────────────────────────────── */
     .docsify-copy-code-button {
       font-family: var(--font-display) !important;
       font-size: 10px !important;
@@ -1120,7 +1120,7 @@
       border-color: var(--border-brand) !important;
     }
 
-    /* â”€â”€â”€ SCROLL BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── SCROLL BUTTON ──────────────────────────────────────── */
     .scroll-toggle-btn {
       position: fixed;
       bottom: 28px;
@@ -1147,7 +1147,7 @@
       box-shadow: 0 0 24px var(--brand-glow);
     }
 
-    /* â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── FOOTER ─────────────────────────────────────────────── */
     .cb-footer {
       margin-top: 80px;
       padding: 32px 0 24px;
@@ -1180,7 +1180,7 @@
       filter: none;
     }
 
-    /* â”€â”€â”€ BADGE HELPERS (for .md use) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── BADGE HELPERS (for .md use) ────────────────────────── */
     .badge {
       display: inline-block;
       font-family: var(--font-display);
@@ -1198,7 +1198,7 @@
     .badge-orange { background: rgba(255,160,50,0.12);  color: #ffa032;      border: 1px solid rgba(255,160,50,0.3); }
     .badge-red    { background: rgba(255,70,70,0.12);   color: #ff4646;      border: 1px solid rgba(255,70,70,0.3); }
 
-    /* â”€â”€â”€ PRODUCT HUB COMPONENTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── PRODUCT HUB COMPONENTS ─────────────────────────────── */
     .markdown-section { max-width: var(--container) !important; }
 
     .hub-hero {
@@ -1437,7 +1437,7 @@
       letter-spacing: .07em;
       text-transform: uppercase;
     }
-    .hub-hero__meta span::before { content: 'âœ“'; margin-right: 6px; color: var(--success); }
+    .hub-hero__meta span::before { content: '✓'; margin-right: 6px; color: var(--success); }
     .hub-panel-footer span:not(:last-child)::after { content: '/'; margin-left: 8px; color: var(--border-hover); }
 
     .hub-hero__panel strong,
@@ -1478,7 +1478,7 @@
     }
 
     .value-strip { justify-content: center; }
-    .value-strip span::before { content: 'âœ“'; margin-right: 7px; color: var(--success); }
+    .value-strip span::before { content: '✓'; margin-right: 7px; color: var(--success); }
 
     .journey-grid {
       display: grid;
@@ -1818,11 +1818,11 @@
 
     .cb-footer a:hover { color: var(--brand) !important; }
 
-    /* â”€â”€â”€ HIDDEN / APP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── HIDDEN / APP ───────────────────────────────────────── */
     .app-hidden { opacity: 0; transition: opacity 0.4s ease; }
     .app-visible { opacity: 1; }
 
-    /* â”€â”€â”€ PRISM OVERRIDES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── PRISM OVERRIDES ────────────────────────────────────── */
     .token.comment    { color: #3d5166 !important; }
     .token.keyword    { color: #c792ea !important; }
     .token.string     { color: #c3e88d !important; }
@@ -1831,7 +1831,7 @@
     .token.operator   { color: var(--brand) !important; }
     .token.punctuation{ color: var(--text-muted) !important; }
 
-    /* â”€â”€â”€ LIGHT THEME CONTRAST FIXES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── LIGHT THEME CONTRAST FIXES ─────────────────────────── */
     :root[data-theme="light"] {
       --theme-color: var(--brand);
       --base-background-color: var(--bg-base);
@@ -1966,7 +1966,7 @@
       border-color: rgba(197,106,8,0.32) !important;
     }
 
-    /* â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 768px) {
       :root { --sidebar-w: 240px; }
 
@@ -2167,6 +2167,65 @@
       background: #f1ebe2;
     }
 
+    /* Final storefront controls: always readable, visible, and keyboard accessible. */
+    a.docs-button,
+    a.docs-button:visited,
+    button.docs-button,
+    .markdown-section a.docs-button {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-height: 42px !important;
+      padding: 0 16px !important;
+      border: 1px solid #6f4927 !important;
+      border-radius: 5px !important;
+      background: #1b130d !important;
+      color: #f2a33a !important;
+      font-family: 'DM Mono', monospace !important;
+      font-size: 11px !important;
+      font-weight: 500 !important;
+      letter-spacing: .08em !important;
+      line-height: 1 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      text-transform: uppercase !important;
+      box-shadow: none !important;
+    }
+
+    a.docs-button:hover,
+    a.docs-button:focus-visible,
+    button.docs-button:hover,
+    button.docs-button:focus-visible {
+      background: #2b1d10 !important;
+      border-color: #f2a33a !important;
+      color: #ffd18a !important;
+      transform: translateY(-1px);
+    }
+
+    a.docs-button.docs-button--primary,
+    .markdown-section a.docs-button.docs-button--primary {
+      background: #f2a33a !important;
+      border-color: #f2a33a !important;
+      color: #1a1108 !important;
+      box-shadow: 0 8px 22px rgba(242,163,58,.18) !important;
+    }
+
+    a.docs-button.docs-button--primary:hover,
+    a.docs-button.docs-button--primary:focus-visible {
+      background: #ffd18a !important;
+      border-color: #ffd18a !important;
+      color: #1a1108 !important;
+    }
+
+    .filter-button,
+    button.theme-toggle,
+    .scroll-toggle-btn,
+    .docsify-copy-code-button {
+      font-family: 'DM Mono', monospace !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
   </style>
 </head>
 <body>
@@ -2177,10 +2236,10 @@
   <div id="announcement-bar" class="announcement-bar"></div>
 
   <!-- DOCSIFY ROOT -->
-  <div id="app">Loading CB Studios documentationâ€¦</div>
+  <div id="app">Loading CB Studios documentation…</div>
 
   <!-- SCROLL TOGGLE -->
-  <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">â†“</button>
+  <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">↓</button>
 
   <!-- DOCSIFY CONFIG -->
   <script>
@@ -2199,7 +2258,7 @@
       search: {
         maxAge: 86400000,
         paths: "auto",
-        placeholder: "Search CB Studios docsâ€¦",
+        placeholder: "Search CB Studios docs…",
         noData: "No results found.",
         depth: 3
       },
@@ -2210,7 +2269,7 @@
       },
 
       plugins: [
-        /* â”€â”€ SIDEBAR BRAND â”€â”€ */
+        /* ── SIDEBAR BRAND ── */
         function (hook) {
           hook.doneEach(function () {
             var sidebar = document.querySelector(".sidebar");
@@ -2226,7 +2285,7 @@
                   '<div class="sidebar-logo-name">CB Studios</div>' +
                   '<div class="sidebar-logo-tagline">FiveM &amp; RedM Docs</div>' +
                 '</div>' +
-                '<button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-toggle__icon" aria-hidden="true">â˜€ï¸Ž</span></button>' +
+                '<button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-toggle__icon" aria-hidden="true">☀︎</span></button>' +
               '</div>';
             sidebar.insertBefore(header, sidebar.firstChild);
 
@@ -2237,7 +2296,7 @@
           });
         },
 
-        /* â”€â”€ FOOTER â”€â”€ */
+        /* ── FOOTER ── */
         function (hook) {
           hook.afterEach(function (html, next) {
             next(html +
@@ -2250,7 +2309,7 @@
                 '<div class="cb-footer-grid">' +
                   '<div>' +
                     '<div class="cb-footer-title">CB Studios</div>' +
-                    '&copy; 2025â€“2026 CB Studios. All Rights Reserved.<br>' +
+                    '&copy; 2025–2026 CB Studios. All Rights Reserved.<br>' +
                     'Not affiliated with Rockstar Games.<br>' +
                     'All scripts, source code, documentation, images, audio, branding and digital assets are protected by copyright.<br>' +
                     'Unauthorized redistribution, resale, publication or reverse engineering is prohibited.' +
@@ -2318,7 +2377,7 @@
           toggle.setAttribute("title", "Switch to " + nextTheme + " theme");
           toggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
           var icon = toggle.querySelector(".theme-toggle__icon");
-          if (icon) icon.textContent = nextTheme === "light" ? "â˜€ï¸Ž" : "â˜¾ï¸Ž";
+          if (icon) icon.textContent = nextTheme === "light" ? "☀︎" : "☾︎";
         }
       }
 
@@ -2374,7 +2433,7 @@
       setTimeout(syncContentOffset, 250);
       setTimeout(syncContentOffset, 1200);
 
-      /* â”€â”€ SCROLL BUTTON â”€â”€ */
+      /* ── SCROLL BUTTON ── */
       if (btn) {
         btn.style.opacity = "0";
         function atBottom() {
@@ -2383,7 +2442,7 @@
         function syncBtn() {
           var direction = atBottom() ? "up" : "down";
           var label = direction === "up" ? "Scroll to top" : "Scroll to bottom";
-          btn.textContent = direction === "up" ? "â†‘" : "â†“";
+          btn.textContent = direction === "up" ? "↑" : "↓";
           btn.setAttribute("data-dir", direction);
           btn.setAttribute("aria-label", label);
           btn.setAttribute("title", label);
@@ -2400,7 +2459,7 @@
         syncBtn();
       }
 
-      /* â”€â”€ ANNOUNCEMENT BANNER â”€â”€ */
+      /* ── ANNOUNCEMENT BANNER ── */
       if (window.CB_BANNER_CONFIG) {
         var cfg = window.CB_BANNER_CONFIG;
         var bar = document.getElementById("announcement-bar");
@@ -2554,7 +2613,7 @@
         var filters = ["all", "paid", "free", "scripts", "vehicles", "audio", "mlo", "FiveM", "RedM", "QBCore", "ESX", "VORP", "Standalone"];
         productsApp.innerHTML =
           '<div class="catalog-toolbar">' +
-            '<input class="catalog-search" type="search" aria-label="Search products" placeholder="Search products, platforms, or frameworksâ€¦" autocomplete="off">' +
+            '<input class="catalog-search" type="search" aria-label="Search products" placeholder="Search products, platforms, or frameworks…" autocomplete="off">' +
             '<span class="catalog-count" aria-live="polite"></span>' +
           '</div>' +
           '<div class="filter-bar">' +
@@ -2707,4 +2766,3 @@
   </script>
 </body>
 </html>
-
