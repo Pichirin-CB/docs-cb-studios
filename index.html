@@ -2354,8 +2354,9 @@
       gap: 10px !important;
       padding: 0 17px !important;
       border: 1px solid #634421 !important;
-      border-radius: 3px !important;
-      background: #17100b !important;
+      border-radius: 0 !important;
+      clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px) !important;
+      background: rgba(18, 13, 9, .75) !important;
       color: #f2a33a !important;
       -webkit-text-fill-color: #f2a33a !important;
       font: 500 11px/1 'DM Mono', monospace !important;
@@ -2365,19 +2366,22 @@
       text-shadow: none !important;
       opacity: 1 !important;
       visibility: visible !important;
+      transition: transform .2s ease, filter .2s ease, box-shadow .2s ease, border-color .2s ease !important;
       box-shadow: none !important;
       transform: none;
     }
 
     .markdown-section a.store-button span { color: inherit !important; -webkit-text-fill-color: currentColor !important; }
     .markdown-section a.store-button:hover,
-    .markdown-section a.store-button:focus-visible { background: #2b1d10 !important; border-color: #f2a33a !important; color: #ffd18a !important; -webkit-text-fill-color: #ffd18a !important; transform: translateY(-1px) !important; }
+    .markdown-section a.store-button:focus-visible { background: #2a1b0d !important; border-color: #ffd18a !important; color: #ffd18a !important; -webkit-text-fill-color: #ffd18a !important; transform: translateY(-2px) !important; }
     .markdown-section a.store-button.store-button-primary,
     .markdown-section a.store-button.store-button-primary:link,
-    .markdown-section a.store-button.store-button-primary:visited { background: #f2a33a !important; border-color: #f2a33a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; box-shadow: 0 10px 24px rgba(242,163,58,.2) !important; }
+    .markdown-section a.store-button.store-button-primary:visited { background: linear-gradient(180deg, #ffd98d, #f2a33a 60%, #b96f25) !important; border-color: #f2a33a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; box-shadow: inset 0 1px #fff8, 0 9px 24px -10px #000 !important; }
     .markdown-section a.store-button.store-button-primary:hover,
-    .markdown-section a.store-button.store-button-primary:focus-visible { background: #ffd18a !important; border-color: #ffd18a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; }
-    .markdown-section a.store-button.store-button-text { min-width: 0 !important; border-color: transparent !important; background: transparent !important; color: #f2a33a !important; -webkit-text-fill-color: #f2a33a !important; }
+    .markdown-section a.store-button.store-button-primary:focus-visible { background: linear-gradient(180deg, #fff0bd, #ffd18a 60%, #d58b2c) !important; border-color: #ffd18a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; box-shadow: inset 0 1px #fff8, 0 15px 28px -11px #d9a44199 !important; }
+    .markdown-section a.store-button.store-button-text { min-width: 0 !important; border-color: rgba(217,164,65,.38) !important; background: rgba(18,13,9,.75) !important; color: #eee7df !important; -webkit-text-fill-color: #eee7df !important; }
+    .markdown-section a.store-button.store-button-text:hover,
+    .markdown-section a.store-button.store-button-text:focus-visible { background: #2a1b0d !important; color: #eee7df !important; -webkit-text-fill-color: #eee7df !important; }
 
     .markdown-section .store-category-grid a,
     .markdown-section .store-category-grid a:visited,
