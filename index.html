@@ -2457,10 +2457,20 @@
     }
     .store-featured-section .product-card a.docs-button.docs-button--primary:hover,
     .store-featured-section .product-card a.docs-button.docs-button--primary:focus-visible {
-      background: linear-gradient(180deg, #fff0bd, #ffd18a 60%, #d58b2c) !important;
+      background: #2a1b0d !important;
       border-color: #ffd18a !important;
-      color: #1a1108 !important;
-      -webkit-text-fill-color: #1a1108 !important;
+      color: #ffd18a !important;
+      -webkit-text-fill-color: #ffd18a !important;
+    }
+    /* Card buttons borrow the store geometry only; Docs must not be a solid gold block. */
+    .store-featured-section .product-card a.docs-button.docs-button--primary,
+    .store-featured-section .product-card a.docs-button.docs-button--primary:link,
+    .store-featured-section .product-card a.docs-button.docs-button--primary:visited {
+      background: rgba(18, 13, 9, .75) !important;
+      border-color: #81542a !important;
+      color: #f2a33a !important;
+      -webkit-text-fill-color: #f2a33a !important;
+      box-shadow: none !important;
     }
 
     @media (max-width: 640px) {
