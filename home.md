@@ -20,7 +20,7 @@
   <div class="hub-hero__panel">
     <span class="hub-panel-label">Official documentation</span>
     <div class="hub-hero__brand">
-      <img src="assets/branding/cbstudios-logo.png" alt="CB Studios logo" width="256" height="256" />
+      <img src="assets/branding/cbstudios-logo.png?v=f0d391" alt="CB Studios logo" width="256" height="256" />
       <div>
         <strong>CB Studios</strong>
         <span>Resources built for serious roleplay communities.</span>
