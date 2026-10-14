@@ -13,10 +13,10 @@
   --border-soft: rgba(142, 133, 119, 0.22);
   --border-strong: rgba(160, 146, 126, 0.42);
 
-  --accent: #f59e0b;
-  --accent-strong: #f08a0b;
-  --accent-soft: rgba(245, 158, 11, 0.2);
-  --accent-glow: rgba(240, 138, 11, 0.28);
+  --accent: #f2a33a;
+  --accent-strong: #b96f25;
+  --accent-soft: rgba(242, 163, 58, 0.2);
+  --accent-glow: rgba(185, 111, 37, 0.28);
 
   --sidebar-width: 300px;
   --content-max-width: 980px;
@@ -389,7 +389,7 @@ body {
 }
 
 .tip {
-  border-left-color: #f59e0b !important;
+  border-left-color: #f2a33a !important;
 }
 
 .warning {
@@ -692,3 +692,4 @@ pre code {
     max-height: 200px;
   }
 }
+
