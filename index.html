@@ -2337,6 +2337,56 @@
       .store-home-proof { gap: 14px; }
     }
 
+    /* Hard reset for action controls: never render the old rounded Docsify pills. */
+    .markdown-section a.store-button,
+    .markdown-section a.store-button:link,
+    .markdown-section a.store-button:visited,
+    .markdown-section a.store-button:hover,
+    .markdown-section a.store-button:focus,
+    .markdown-section a.store-button:active {
+      display: inline-flex !important;
+      width: auto !important;
+      min-width: 148px !important;
+      height: 42px !important;
+      min-height: 42px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      padding: 0 17px !important;
+      border: 1px solid #634421 !important;
+      border-radius: 3px !important;
+      background: #17100b !important;
+      color: #f2a33a !important;
+      -webkit-text-fill-color: #f2a33a !important;
+      font: 500 11px/1 'DM Mono', monospace !important;
+      letter-spacing: .08em !important;
+      text-decoration: none !important;
+      text-transform: uppercase !important;
+      text-shadow: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      box-shadow: none !important;
+      transform: none;
+    }
+
+    .markdown-section a.store-button span { color: inherit !important; -webkit-text-fill-color: currentColor !important; }
+    .markdown-section a.store-button:hover,
+    .markdown-section a.store-button:focus-visible { background: #2b1d10 !important; border-color: #f2a33a !important; color: #ffd18a !important; -webkit-text-fill-color: #ffd18a !important; transform: translateY(-1px) !important; }
+    .markdown-section a.store-button.store-button-primary,
+    .markdown-section a.store-button.store-button-primary:link,
+    .markdown-section a.store-button.store-button-primary:visited { background: #f2a33a !important; border-color: #f2a33a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; box-shadow: 0 10px 24px rgba(242,163,58,.2) !important; }
+    .markdown-section a.store-button.store-button-primary:hover,
+    .markdown-section a.store-button.store-button-primary:focus-visible { background: #ffd18a !important; border-color: #ffd18a !important; color: #1a1108 !important; -webkit-text-fill-color: #1a1108 !important; }
+    .markdown-section a.store-button.store-button-text { min-width: 0 !important; border-color: transparent !important; background: transparent !important; color: #f2a33a !important; -webkit-text-fill-color: #f2a33a !important; }
+
+    .markdown-section .store-category-grid a,
+    .markdown-section .store-category-grid a:visited,
+    .markdown-section .store-category-grid a:hover { color: #eee7df !important; -webkit-text-fill-color: initial !important; text-decoration: none !important; }
+    .markdown-section .store-category-grid a em { color: #f2a33a !important; -webkit-text-fill-color: #f2a33a !important; }
+    .markdown-section .filter-button,
+    .markdown-section .product-badge,
+    .markdown-section .value-strip span { border-radius: 4px !important; }
+
   </style>
 </head>
 <body>
