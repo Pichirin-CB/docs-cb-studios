@@ -1,147 +1,31 @@
-<section class="hub-hero">
-  <div class="hub-hero__content">
-    <span class="hub-kicker">CB Studios Documentation Hub</span>
-    <h1>Build better roleplay experiences.</h1>
-    <p>
-      Everything you need to install, configure, integrate, and maintain CB Studios resources for FiveM and RedM—organized for server owners and developers.
-    </p>
-    <div class="hub-actions">
-      <a class="docs-button docs-button--primary" href="#/products">Browse Products</a>
-      <a class="docs-button" href="#/getting-started">Get Started</a>
-      <a class="docs-button docs-button--ghost" href="https://discord.gg/hsx6AvBg5s" target="_blank" rel="noopener noreferrer">Join Discord</a>
-      <a class="docs-button docs-button--ghost" href="https://github.com/Pichirin-CB?tab=repositories" target="_blank" rel="noopener noreferrer">View GitHub</a>
+<section class="store-home-hero">
+  <div class="store-home-copy">
+    <div class="store-kicker"><i></i> CB STUDIOS / DOCUMENTATION</div>
+    <h1>Build a server<br><em>worth playing.</em></h1>
+    <p>Production-ready resources for serious FiveM and RedM communities. Clear installation paths, framework notes, compatibility references and support from the people who build the resources.</p>
+    <div class="store-home-actions">
+      <a class="store-button store-button-primary" href="#/products">Browse resources <span>-></span></a>
+      <a class="store-button store-button-text" href="#/getting-started">Start with the docs <span>-></span></a>
     </div>
-    <div class="hub-hero__meta" aria-label="Documentation benefits">
-      <span>Official source</span>
-      <span>Verified requirements</span>
-      <span>Customer-ready guides</span>
-    </div>
+    <div class="store-home-proof"><span><b>01</b><small>Built for live servers</small></span><span><b>02</b><small>Clear installation</small></span><span><b>03</b><small>Developer support</small></span></div>
   </div>
-  <div class="hub-hero__panel">
-    <span class="hub-panel-label">Official documentation</span>
-    <div class="hub-hero__brand">
-      <img src="https://pichirin-cb.github.io/docs-cb-studios/assets/branding/cbstudios-logo.png?v=f0d391" alt="CB Studios logo" width="256" height="256" />
-      <div>
-        <strong>CB Studios</strong>
-        <span>Resources built for serious roleplay communities.</span>
-      </div>
-    </div>
-    <div class="hub-platform-list" aria-label="Supported platforms">
-      <div><span class="status-dot"></span><strong>FiveM</strong><small>Scripts, vehicles, audio & mapping</small></div>
-      <div><span class="status-dot status-dot--redm"></span><strong>RedM</strong><small>Immersive gameplay resources</small></div>
-      <div><span class="status-dot status-dot--support"></span><strong>Support</strong><small>Guides, troubleshooting & updates</small></div>
-    </div>
-    <div class="hub-panel-footer"><span>Install</span><span>Configure</span><span>Integrate</span><span>Maintain</span></div>
+  <div class="store-home-art">
+    <div class="store-art-top"><span>CB STUDIOS / DOCS 02.26</span><span>STATUS <i></i></span></div>
+    <div class="store-art-title"><span>RESOURCE<br><b>WORKSPACE</b></span><strong>CB</strong></div>
+    <div class="store-art-lines"><span></span><span></span><span></span></div>
+    <div class="store-art-code"><code><b>local</b> resource = <i>require</i>(<u>"cb-studios"</u>)</code><code>resource.<strong>configure</strong>({ framework = <u>"qbox"</u> })</code><code><b>docs</b>(<u>"install"</u>, <b>true</b>)</code></div>
+    <div class="store-art-footer"><span>+ Production ready</span><b>DOCS / 2.0</b></div>
   </div>
 </section>
 
-<section class="value-strip" aria-label="CB Studios values">
-  <span>Official Documentation</span>
-  <span>FiveM & RedM</span>
-  <span>Clear Installation</span>
-  <span>Developer References</span>
-  <span>Dedicated Support</span>
-</section>
+<section class="store-trust-strip"><span>+ Official documentation</span><span>+ FiveM and RedM</span><span>+ Developer-first references</span><span class="store-trust-note">Built for builders</span></section>
 
-## Start Here
+<section class="store-doc-section"><div class="store-section-heading"><div><div class="store-kicker">THE CATALOG</div><h2>Resources that earn their place.</h2></div><p>Every resource is documented to be installed, understood and maintained on a live server.</p></div><div class="store-category-grid"><a href="#/products?filter=scripts"><span>01</span><b>Scripts</b><small>Gameplay systems, utilities and integrations.</small><em>Explore -></em></a><a href="#/products?filter=vehicles"><span>02</span><b>Vehicle packs</b><small>Streaming, handling and deployment references.</small><em>Explore -></em></a><a href="#/products?filter=audio"><span>03</span><b>Audio packs</b><small>Setup, testing and compatibility notes.</small><em>Explore -></em></a><a href="#/products?filter=mlo"><span>04</span><b>MLO and mapping</b><small>Interiors and environments for roleplay.</small><em>Explore -></em></a></div></section>
 
-<div class="journey-grid">
-  <a class="journey-card" href="#/getting-started">
-    <span>01</span>
-    <div><strong>Choose your resource</strong><p>Review requirements, frameworks, and dependencies before installation.</p></div>
-  </a>
-  <a class="journey-card" href="#/guides/installation">
-    <span>02</span>
-    <div><strong>Install with confidence</strong><p>Follow the recommended deployment order and verify each step.</p></div>
-  </a>
-  <a class="journey-card" href="#/support">
-    <span>03</span>
-    <div><strong>Get the right support</strong><p>Use troubleshooting first, then contact us with the required details.</p></div>
-  </a>
-</div>
+<section class="store-doc-section store-featured-section"><div class="store-section-heading"><div><div class="store-kicker">FEATURED RESOURCES</div><h2>Install with confidence.</h2></div><p>Requirements, framework support, documentation and direct links in one place.</p></div><div id="featured-products" class="product-grid product-grid--featured"></div></section>
 
-## Product Categories
+<section class="store-how-section"><div><div class="store-kicker">HOW IT WORKS</div><h2>From docs<br><em>to server.</em></h2><p>One clear flow for choosing, installing and maintaining a CB Studios resource.</p><a class="store-button store-button-text" href="#/guides/installation">Read installation docs <span>-></span></a></div><div class="store-steps"><div><strong>01</strong><span><b>Choose your resource</b><small>Compare platform, framework and dependency requirements.</small></span></div><div><strong>02</strong><span><b>Follow the install path</b><small>Use the documented order and verify each stage.</small></span></div><div><strong>03</strong><span><b>Keep it maintained</b><small>Check updates, troubleshooting and support notes.</small></span></div></div></section>
 
-<div class="category-grid">
-  <a class="category-card" href="#/products?filter=scripts">
-    <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/scripts.png" alt="" width="128" height="128" />
-    </span>
-    <strong>Scripts</strong>
-    <p>Gameplay systems, utilities, UI resources, and integrations documented for server deployment.</p>
-  </a>
-  <a class="category-card" href="#/products?filter=vehicles">
-    <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/vehicle-packs.png" alt="" width="128" height="128" />
-    </span>
-    <strong>Vehicle Packs</strong>
-    <p>Vehicle resources with installation, streaming, handling, and troubleshooting guidance.</p>
-  </a>
-  <a class="category-card" href="#/products?filter=audio">
-    <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/audio-packs.png" alt="" width="128" height="128" />
-    </span>
-    <strong>Audio Packs</strong>
-    <p>Sound resources documented with setup, testing, and compatibility notes.</p>
-  </a>
-  <a class="category-card" href="#/products?filter=mlo">
-    <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/mlo-mapping.png" alt="" width="128" height="128" />
-    </span>
-    <strong>MLO / Mapping</strong>
-    <p>Interior and mapping resources for roleplay environments.</p>
-  </a>
-  <a class="category-card" href="#/products?filter=free">
-    <span class="category-card__icon" aria-hidden="true">
-      <img src="assets/categories/free-resources.png" alt="" width="128" height="128" />
-    </span>
-    <strong>Free Resources</strong>
-    <p>Publicly available resources with the same structured documentation standards.</p>
-  </a>
-</div>
+<section class="store-about-section"><div class="store-about-mark">CB<span>.</span></div><div><div class="store-kicker">BUILT DIFFERENT</div><h2>Less noise.<br>Better documentation.</h2></div><p>We make systems and references for server owners who care about performance, maintainability and the details players actually feel.</p></section>
 
-## Featured Resources
-
-<div id="featured-products" class="product-grid product-grid--featured"></div>
-
-## Documentation You Can Use
-
-<div class="docs-feature-grid">
-  <div class="docs-panel">
-    <span class="feature-mark">01</span><strong>Practical installation</strong>
-    <p>Requirements, start order, configuration, verification, and update steps in one predictable structure.</p>
-  </div>
-  <div class="docs-panel">
-    <span class="feature-mark">02</span><strong>Verified compatibility</strong>
-    <p>Frameworks, dependencies, and integrations are documented from the actual resource information.</p>
-  </div>
-  <div class="docs-panel">
-    <span class="feature-mark">03</span><strong>Faster troubleshooting</strong>
-    <p>Common failures, Asset Escrow guidance, and support requirements are easy to find and act on.</p>
-  </div>
-  <div class="docs-panel">
-    <span class="feature-mark">04</span><strong>Transparent updates</strong>
-    <p>Release notes keep changes and compatibility information separate from evergreen documentation.</p>
-  </div>
-  <div class="docs-panel">
-    <span class="feature-mark">05</span><strong>Official channels</strong>
-    <p>Store, GitHub, Discord, support, and legal references stay connected to the verified CB Studios channels.</p>
-  </div>
-</div>
-
-## Support And Next Steps
-
-<section class="support-cta">
-  <div>
-    <span class="hub-kicker">Need help?</span>
-    <h2>Start with the docs, then contact support with the right information.</h2>
-    <p>Review requirements, installation steps, known problems, and Asset Escrow notes before opening a ticket.</p>
-  </div>
-  <div class="hub-actions">
-    <a class="docs-button docs-button--primary" href="#/support">Support</a>
-    <a class="docs-button" href="#/faq">FAQ</a>
-    <a class="docs-button" href="#/problems">Troubleshooting</a>
-    <a class="docs-button docs-button--ghost" href="https://github.com/Pichirin-CB?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="docs-button docs-button--ghost" href="https://pichirin-cb.tebex.io/" target="_blank" rel="noopener noreferrer">Tebex Store</a>
-  </div>
-</section>
+<section class="store-support-section"><div><div class="store-kicker">SUPPORT</div><h2>Questions, answered.</h2><p>Start with the documentation, then bring the right information to support.</p></div><div class="store-home-actions"><a class="store-button store-button-primary" href="#/support">Open support <span>-></span></a><a class="store-button" href="#/faq">FAQ</a><a class="store-button" href="#/problems">Troubleshooting</a></div></section>
