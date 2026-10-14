@@ -2418,23 +2418,23 @@
     .store-featured-section .product-card .product-card__category,
     .store-featured-section .product-card .product-card__meta { color: #a79a8d !important; }
 
-    /* Product-card actions mirror the store's .cb-add control: square corners,
-       outlined amber treatment, and no legacy Docsify pill styling. */
+    /* Product-card actions use the same chamfered control language as the store
+       buttons above; only the primary/secondary color treatment differs. */
     .store-featured-section .product-card a.docs-button,
     .store-featured-section .product-card a.docs-button:link,
     .store-featured-section .product-card a.docs-button:visited,
     .store-featured-section .product-card a.docs-button:hover,
     .store-featured-section .product-card a.docs-button:focus-visible {
-      min-height: 40px !important;
-      padding: 10px !important;
+      min-height: 42px !important;
+      padding: 0 16px !important;
       border: 1px solid #81542a !important;
       border-radius: 0 !important;
-      clip-path: none !important;
-      background: transparent !important;
+      clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px) !important;
+      background: rgba(18, 13, 9, .75) !important;
       color: #f2a33a !important;
       -webkit-text-fill-color: #f2a33a !important;
-      font: 700 10px/1 'DM Mono', monospace !important;
-      letter-spacing: .06em !important;
+      font: 500 11px/1 'DM Mono', monospace !important;
+      letter-spacing: .08em !important;
       box-shadow: none !important;
       transform: none !important;
     }
@@ -2445,6 +2445,22 @@
       color: #ffd18a !important;
       -webkit-text-fill-color: #ffd18a !important;
       transform: translateY(-2px) !important;
+    }
+    .store-featured-section .product-card a.docs-button.docs-button--primary,
+    .store-featured-section .product-card a.docs-button.docs-button--primary:link,
+    .store-featured-section .product-card a.docs-button.docs-button--primary:visited {
+      background: linear-gradient(180deg, #ffd98d, #f2a33a 60%, #b96f25) !important;
+      border-color: #f2a33a !important;
+      color: #1a1108 !important;
+      -webkit-text-fill-color: #1a1108 !important;
+      box-shadow: inset 0 1px #fff8, 0 9px 24px -10px #000 !important;
+    }
+    .store-featured-section .product-card a.docs-button.docs-button--primary:hover,
+    .store-featured-section .product-card a.docs-button.docs-button--primary:focus-visible {
+      background: linear-gradient(180deg, #fff0bd, #ffd18a 60%, #d58b2c) !important;
+      border-color: #ffd18a !important;
+      color: #1a1108 !important;
+      -webkit-text-fill-color: #1a1108 !important;
     }
 
     @media (max-width: 640px) {
