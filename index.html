@@ -2437,6 +2437,9 @@
       letter-spacing: .08em !important;
       box-shadow: none !important;
       transform: none !important;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      transition: transform .2s ease, filter .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease !important;
     }
     .store-featured-section .product-card a.docs-button:hover,
     .store-featured-section .product-card a.docs-button:focus-visible {
@@ -2445,6 +2448,14 @@
       color: #ffd18a !important;
       -webkit-text-fill-color: #ffd18a !important;
       transform: translateY(-2px) !important;
+    }
+    .store-featured-section .product-card a.docs-button:active {
+      transform: translateY(1px) !important;
+      filter: brightness(.96) !important;
+    }
+    .store-featured-section .product-card a.docs-button:focus-visible {
+      outline: 2px solid #ffd18a !important;
+      outline-offset: 3px !important;
     }
     .store-featured-section .product-card a.docs-button.docs-button--primary,
     .store-featured-section .product-card a.docs-button.docs-button--primary:link,
