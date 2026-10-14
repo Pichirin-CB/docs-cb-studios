@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CB Studios — FiveM &amp; RedM Documentation</title>
+  <title>CB Studios â€” FiveM &amp; RedM Documentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Official CB Studios documentation for FiveM and RedM resources, including installation, configuration, integrations, troubleshooting, and updates." />
   <meta name="keywords" content="CB Studios, FiveM resources, RedM resources, GTA RP, Red Dead RP, ESX, QBCore, QBox, VORP, installation guides, developer documentation" />
   <meta name="author" content="CB Studios" />
-  <meta name="copyright" content="Copyright 2025–2026 CB Studios. All rights reserved." />
+  <meta name="copyright" content="Copyright 2025â€“2026 CB Studios. All rights reserved." />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CB Studios — FiveM &amp; RedM Documentation" />
+  <meta property="og:title" content="CB Studios â€” FiveM &amp; RedM Documentation" />
   <meta property="og:description" content="Official documentation for CB Studios FiveM and RedM resources." />
-  <meta property="og:image" content="https://docs.pichirincb.com/assets/branding/logo.png" />
+  <meta property="og:image" content="https://docs.pichirincb.com/assets/branding/cbstudios-banner.png" />
   <meta property="og:url" content="https://docs.pichirincb.com/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#f59e0b" />
+  <meta name="theme-color" content="#f2a33a" />
   <link rel="canonical" href="https://docs.pichirincb.com/" />
+  <link rel="icon" type="image/png" href="assets/branding/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/branding/favicon.png" />
 
   <script>
     (function () {
@@ -27,39 +29,39 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
   <style>
-    /* ─── TOKENS ─────────────────────────────────────────────── */
+    /* â”€â”€â”€ TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     :root {
-      --brand:       #f59e0b;
-      --brand-dim:   #d97706;
-      --accent-2:     #fbbf24;
-      --brand-glow:  rgba(245,158,11,0.18);
-      --brand-glass: rgba(245,158,11,0.07);
+      --brand:       #f2a33a;
+      --brand-dim:   #b96f25;
+      --accent-2:     #ffd18a;
+      --brand-glow:  rgba(242,163,58,0.18);
+      --brand-glass: rgba(242,163,58,0.08);
 
-      --bg-base:  #0b0c0e;
-      --bg-card:  #111317;
-      --bg-panel: #17191e;
-      --bg-hover: #1f2229;
-      --surface-elevated: rgba(19,22,29,0.82);
+      --bg-base:  #0a0908;
+      --bg-card:  #120e0b;
+      --bg-panel: #1d1712;
+      --bg-hover: #2a1b0e;
+      --surface-elevated: rgba(23,17,13,0.9);
 
-      --border:       rgba(255,255,255,0.07);
-      --border-brand: rgba(245,158,11,0.35);
-      --border-hover: rgba(245,158,11,0.60);
+      --border:       #403126;
+      --border-brand: rgba(242,163,58,0.42);
+      --border-hover: rgba(242,163,58,0.72);
 
-      --text-primary:   #f2efe9;
-      --text-secondary: #aaa49a;
-      --text-muted:     #716c64;
+      --text-primary:   #eee7df;
+      --text-secondary: #a79a8d;
+      --text-muted:     #76695e;
       --success: #4cc38a;
       --warning: #f2b84b;
       --error: #e96767;
-      --info: #f59e0b;
+      --info: #f2a33a;
 
-      --font-display: 'Space Mono', monospace;
-      --font-body:    'DM Sans', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body:    'DM Mono', monospace;
 
       --radius-sm: 4px;
       --radius-md: 8px;
@@ -77,11 +79,11 @@
     }
 
     :root[data-theme="light"] {
-      --brand: #c56a08;
-      --brand-dim: #a95705;
-      --accent-2: #b97816;
-      --brand-glow: rgba(197,106,8,0.14);
-      --brand-glass: rgba(197,106,8,0.08);
+      --brand: #c47b2d;
+      --brand-dim: #a96122;
+      --accent-2: #a96122;
+      --brand-glow: rgba(196,123,45,0.14);
+      --brand-glass: rgba(196,123,45,0.08);
       --bg-base: #f6f3ed;
       --bg-card: #fffdf8;
       --bg-panel: #eee9e0;
@@ -92,11 +94,11 @@
       --border-hover: rgba(197,106,8,0.55);
       --text-primary: #191714;
       --text-secondary: #5c574f;
-      --text-muted: #777168;
+      --text-muted: #776b61;
       --shadow-soft: 0 18px 60px rgba(15,23,42,0.1);
     }
 
-    /* ─── RESET & BASE ───────────────────────────────────────── */
+    /* â”€â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; font-size: 15px; }
@@ -130,7 +132,7 @@
 
     .skip-link:focus { transform: translateY(0); }
 
-    /* ─── SCANLINE TEXTURE ───────────────────────────────────── */
+    /* â”€â”€â”€ SCANLINE TEXTURE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     body::before {
       content: '';
       position: fixed;
@@ -146,7 +148,7 @@
       z-index: 0;
     }
 
-    /* ─── PAGE LOADER ────────────────────────────────────────── */
+    /* â”€â”€â”€ PAGE LOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .page-loader {
       position: fixed;
       inset: 0;
@@ -206,7 +208,7 @@
       text-transform: uppercase;
     }
 
-    /* ─── ANNOUNCEMENT BANNER ────────────────────────────────── */
+    /* â”€â”€â”€ ANNOUNCEMENT BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .announcement-bar {
       position: fixed;
       top: 0;
@@ -330,7 +332,7 @@
       box-shadow: 0 0 24px rgba(245, 158, 11, 0.16);
     }
 
-    /* ─── DOCSIFY SIDEBAR ────────────────────────────────────── */
+    /* â”€â”€â”€ DOCSIFY SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .sidebar {
       background: var(--bg-card) !important;
       border-right: 1px solid var(--border) !important;
@@ -508,7 +510,7 @@
 
     .search input::placeholder { color: var(--text-muted) !important; }
 
-    /* ─── MAIN CONTENT ───────────────────────────────────────── */
+    /* â”€â”€â”€ MAIN CONTENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .content {
       padding-top: calc(32px + var(--banner-h)) !important;
       margin-left: var(--content-offset) !important;
@@ -1092,7 +1094,7 @@
       color: var(--brand) !important;
     }
 
-    /* ─── NAVBAR / TOP BAR ───────────────────────────────────── */
+    /* â”€â”€â”€ NAVBAR / TOP BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .app-nav {
       background: rgba(10,12,16,0.92) !important;
       backdrop-filter: blur(12px) !important;
@@ -1100,7 +1102,7 @@
       height: var(--header-h) !important;
     }
 
-    /* ─── COPY CODE BUTTON ───────────────────────────────────── */
+    /* â”€â”€â”€ COPY CODE BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .docsify-copy-code-button {
       font-family: var(--font-display) !important;
       font-size: 10px !important;
@@ -1118,7 +1120,7 @@
       border-color: var(--border-brand) !important;
     }
 
-    /* ─── SCROLL BUTTON ──────────────────────────────────────── */
+    /* â”€â”€â”€ SCROLL BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .scroll-toggle-btn {
       position: fixed;
       bottom: 28px;
@@ -1145,7 +1147,7 @@
       box-shadow: 0 0 24px var(--brand-glow);
     }
 
-    /* ─── FOOTER ─────────────────────────────────────────────── */
+    /* â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .cb-footer {
       margin-top: 80px;
       padding: 32px 0 24px;
@@ -1178,7 +1180,7 @@
       filter: none;
     }
 
-    /* ─── BADGE HELPERS (for .md use) ────────────────────────── */
+    /* â”€â”€â”€ BADGE HELPERS (for .md use) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .badge {
       display: inline-block;
       font-family: var(--font-display);
@@ -1196,7 +1198,7 @@
     .badge-orange { background: rgba(255,160,50,0.12);  color: #ffa032;      border: 1px solid rgba(255,160,50,0.3); }
     .badge-red    { background: rgba(255,70,70,0.12);   color: #ff4646;      border: 1px solid rgba(255,70,70,0.3); }
 
-    /* ─── PRODUCT HUB COMPONENTS ─────────────────────────────── */
+    /* â”€â”€â”€ PRODUCT HUB COMPONENTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .markdown-section { max-width: var(--container) !important; }
 
     .hub-hero {
@@ -1435,7 +1437,7 @@
       letter-spacing: .07em;
       text-transform: uppercase;
     }
-    .hub-hero__meta span::before { content: '✓'; margin-right: 6px; color: var(--success); }
+    .hub-hero__meta span::before { content: 'âœ“'; margin-right: 6px; color: var(--success); }
     .hub-panel-footer span:not(:last-child)::after { content: '/'; margin-left: 8px; color: var(--border-hover); }
 
     .hub-hero__panel strong,
@@ -1476,7 +1478,7 @@
     }
 
     .value-strip { justify-content: center; }
-    .value-strip span::before { content: '✓'; margin-right: 7px; color: var(--success); }
+    .value-strip span::before { content: 'âœ“'; margin-right: 7px; color: var(--success); }
 
     .journey-grid {
       display: grid;
@@ -1816,11 +1818,11 @@
 
     .cb-footer a:hover { color: var(--brand) !important; }
 
-    /* ─── HIDDEN / APP ───────────────────────────────────────── */
+    /* â”€â”€â”€ HIDDEN / APP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .app-hidden { opacity: 0; transition: opacity 0.4s ease; }
     .app-visible { opacity: 1; }
 
-    /* ─── PRISM OVERRIDES ────────────────────────────────────── */
+    /* â”€â”€â”€ PRISM OVERRIDES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .token.comment    { color: #3d5166 !important; }
     .token.keyword    { color: #c792ea !important; }
     .token.string     { color: #c3e88d !important; }
@@ -1829,7 +1831,7 @@
     .token.operator   { color: var(--brand) !important; }
     .token.punctuation{ color: var(--text-muted) !important; }
 
-    /* ─── LIGHT THEME CONTRAST FIXES ─────────────────────────── */
+    /* â”€â”€â”€ LIGHT THEME CONTRAST FIXES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     :root[data-theme="light"] {
       --theme-color: var(--brand);
       --base-background-color: var(--bg-base);
@@ -1964,7 +1966,7 @@
       border-color: rgba(197,106,8,0.32) !important;
     }
 
-    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    /* â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     @media (max-width: 768px) {
       :root { --sidebar-w: 240px; }
 
@@ -2061,6 +2063,110 @@
         right: 12px;
       }
     }
+    /* CB Studios store identity */
+    body {
+      background:
+        radial-gradient(900px 520px at 82% -5%, rgba(58,36,18,.72), transparent 58%),
+        radial-gradient(760px 500px at 0% 100%, rgba(72,40,14,.24), transparent 62%),
+        var(--bg-base);
+    }
+
+    .hub-hero {
+      isolation: isolate;
+      position: relative;
+      border: 1px solid var(--border);
+      background: linear-gradient(90deg, rgba(10,9,8,.98) 0%, rgba(10,9,8,.86) 42%, rgba(10,9,8,.58) 100%), url('assets/branding/cbstudios-banner.png') center/cover;
+      box-shadow: 0 20px 70px rgba(0,0,0,.28);
+    }
+
+    .hub-hero::before {
+      content: 'CB_STUDIOS // DOCUMENTATION';
+      position: absolute;
+      top: 22px;
+      right: 26px;
+      color: #795c3b;
+      font: 9px 'DM Mono', monospace;
+      letter-spacing: .16em;
+    }
+
+    .hub-hero__panel,
+    .journey-card,
+    .category-card,
+    .docs-panel,
+    .support-cta,
+    .product-card {
+      border-color: var(--border) !important;
+      background: linear-gradient(180deg, #17110d, #100d0b) !important;
+      box-shadow: 0 12px 35px rgba(0,0,0,.20);
+    }
+
+    .hub-hero__panel {
+      background: radial-gradient(circle, #4b2a10 0, #17100b 65%, #0b0908) !important;
+    }
+
+    .hub-hero__panel img,
+    .sidebar-logo-wrapper img,
+    .page-loader-logo img,
+    .cb-footer-logos img:first-child {
+      object-fit: contain !important;
+    }
+
+    .hub-hero h1,
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .hub-hero__brand strong,
+    .journey-card strong,
+    .category-card strong,
+    .docs-panel strong,
+    .support-cta h2 {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+
+    .hub-hero p,
+    .markdown-section,
+    .sidebar,
+    .sidebar-nav li a,
+    .journey-card p,
+    .category-card p,
+    .docs-panel p,
+    .support-cta p {
+      font-family: 'DM Mono', monospace !important;
+    }
+
+    .docs-button,
+    .announcement-cta,
+    .sidebar-nav li.active > a,
+    .sidebar-nav li a.active,
+    .category-card:hover,
+    .journey-card:hover {
+      border-color: var(--brand) !important;
+      color: var(--brand) !important;
+    }
+
+    .docs-button--primary {
+      background: var(--brand) !important;
+      color: #1a1108 !important;
+    }
+
+    .sidebar-logo-wrapper img {
+      background: #0a0908;
+      border-color: var(--border-brand);
+    }
+
+    .markdown-section a,
+    .hub-kicker,
+    .feature-mark,
+    .category-card strong,
+    .journey-card > span {
+      color: var(--brand) !important;
+    }
+
+    :root[data-theme="light"] body {
+      background: #f1ebe2;
+    }
+
   </style>
 </head>
 <body>
@@ -2071,10 +2177,10 @@
   <div id="announcement-bar" class="announcement-bar"></div>
 
   <!-- DOCSIFY ROOT -->
-  <div id="app">Loading CB Studios documentation…</div>
+  <div id="app">Loading CB Studios documentationâ€¦</div>
 
   <!-- SCROLL TOGGLE -->
-  <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">↓</button>
+  <button id="scroll-toggle-btn" class="scroll-toggle-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">â†“</button>
 
   <!-- DOCSIFY CONFIG -->
   <script>
@@ -2086,14 +2192,14 @@
       autoHeader: false,
       coverpage: false,
       notFoundPage: true,
-      themeColor: "#f59e0b",
+      themeColor: "#f2a33a",
       maxLevel: 4,
       homepage: "home.md",
 
       search: {
         maxAge: 86400000,
         paths: "auto",
-        placeholder: "Search CB Studios docs…",
+        placeholder: "Search CB Studios docsâ€¦",
         noData: "No results found.",
         depth: 3
       },
@@ -2104,7 +2210,7 @@
       },
 
       plugins: [
-        /* ── SIDEBAR BRAND ── */
+        /* â”€â”€ SIDEBAR BRAND â”€â”€ */
         function (hook) {
           hook.doneEach(function () {
             var sidebar = document.querySelector(".sidebar");
@@ -2115,12 +2221,12 @@
             header.className = "brand-header";
             header.innerHTML =
               '<div class="sidebar-logo-wrapper">' +
-                '<img src="assets/branding/logo.png" alt="CB Studios Logo" />' +
+                '<img src="assets/branding/cbstudios-logo.png" alt="CB Studios Logo" />' +
                 '<div class="sidebar-logo-copy">' +
                   '<div class="sidebar-logo-name">CB Studios</div>' +
                   '<div class="sidebar-logo-tagline">FiveM &amp; RedM Docs</div>' +
                 '</div>' +
-                '<button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-toggle__icon" aria-hidden="true">☀︎</span></button>' +
+                '<button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-toggle__icon" aria-hidden="true">â˜€ï¸Ž</span></button>' +
               '</div>';
             sidebar.insertBefore(header, sidebar.firstChild);
 
@@ -2131,7 +2237,7 @@
           });
         },
 
-        /* ── FOOTER ── */
+        /* â”€â”€ FOOTER â”€â”€ */
         function (hook) {
           hook.afterEach(function (html, next) {
             next(html +
@@ -2144,7 +2250,7 @@
                 '<div class="cb-footer-grid">' +
                   '<div>' +
                     '<div class="cb-footer-title">CB Studios</div>' +
-                    '&copy; 2025–2026 CB Studios. All Rights Reserved.<br>' +
+                    '&copy; 2025â€“2026 CB Studios. All Rights Reserved.<br>' +
                     'Not affiliated with Rockstar Games.<br>' +
                     'All scripts, source code, documentation, images, audio, branding and digital assets are protected by copyright.<br>' +
                     'Unauthorized redistribution, resale, publication or reverse engineering is prohibited.' +
@@ -2169,7 +2275,7 @@
                   '</div>' +
                 '</div>' +
                 '<div class="cb-footer-logos">' +
-                  '<img src="assets/branding/logo.png"   alt="CB Studios">' +
+                  '<img src="assets/branding/cbstudios-logo.png"   alt="CB Studios">' +
                   '<img src="assets/branding/cfx.png"    alt="Cfx.re">' +
                   '<img src="assets/branding/esx.png"    alt="ESX">' +
                   '<img src="assets/branding/qbcore.png" alt="QBCore">' +
@@ -2212,7 +2318,7 @@
           toggle.setAttribute("title", "Switch to " + nextTheme + " theme");
           toggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
           var icon = toggle.querySelector(".theme-toggle__icon");
-          if (icon) icon.textContent = nextTheme === "light" ? "☀︎" : "☾︎";
+          if (icon) icon.textContent = nextTheme === "light" ? "â˜€ï¸Ž" : "â˜¾ï¸Ž";
         }
       }
 
@@ -2268,7 +2374,7 @@
       setTimeout(syncContentOffset, 250);
       setTimeout(syncContentOffset, 1200);
 
-      /* ── SCROLL BUTTON ── */
+      /* â”€â”€ SCROLL BUTTON â”€â”€ */
       if (btn) {
         btn.style.opacity = "0";
         function atBottom() {
@@ -2277,7 +2383,7 @@
         function syncBtn() {
           var direction = atBottom() ? "up" : "down";
           var label = direction === "up" ? "Scroll to top" : "Scroll to bottom";
-          btn.textContent = direction === "up" ? "↑" : "↓";
+          btn.textContent = direction === "up" ? "â†‘" : "â†“";
           btn.setAttribute("data-dir", direction);
           btn.setAttribute("aria-label", label);
           btn.setAttribute("title", label);
@@ -2294,7 +2400,7 @@
         syncBtn();
       }
 
-      /* ── ANNOUNCEMENT BANNER ── */
+      /* â”€â”€ ANNOUNCEMENT BANNER â”€â”€ */
       if (window.CB_BANNER_CONFIG) {
         var cfg = window.CB_BANNER_CONFIG;
         var bar = document.getElementById("announcement-bar");
@@ -2448,7 +2554,7 @@
         var filters = ["all", "paid", "free", "scripts", "vehicles", "audio", "mlo", "FiveM", "RedM", "QBCore", "ESX", "VORP", "Standalone"];
         productsApp.innerHTML =
           '<div class="catalog-toolbar">' +
-            '<input class="catalog-search" type="search" aria-label="Search products" placeholder="Search products, platforms, or frameworks…" autocomplete="off">' +
+            '<input class="catalog-search" type="search" aria-label="Search products" placeholder="Search products, platforms, or frameworksâ€¦" autocomplete="off">' +
             '<span class="catalog-count" aria-live="polite"></span>' +
           '</div>' +
           '<div class="filter-bar">' +
@@ -2601,3 +2707,4 @@
   </script>
 </body>
 </html>
+
